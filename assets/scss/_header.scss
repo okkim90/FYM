@@ -1,0 +1,74 @@
+.header {
+    position: sticky;
+    flex-shrink: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 64px;
+    box-sizing: border-box;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+
+    padding: 0 32px;
+    //border-bottom: 1px solid $c_line;
+    .logo {
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                height: 40px;
+            }
+        }
+    }
+    .nav {
+        display: flex;
+        gap: 0 8px;
+        margin-left: 50px;
+        &_btn {
+            padding: 0 10px;
+            line-height: 33px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}
+
+
+.custom-select {
+    position: relative;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    .select-box {
+        padding: 10px;
+      }
+      
+      .options {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        list-style: none;
+        padding: 0;
+      }
+      
+      .options li {
+        padding: 10px;
+      }
+      
+      .options li:hover {
+        background: #f0f0f0;
+      }
+  }
+  
+  

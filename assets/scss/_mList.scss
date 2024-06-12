@@ -1,0 +1,196 @@
+.mList {
+    &_item {
+        font-size: 12px;
+        
+        
+        & + & {
+            margin-top: 14px;
+        }
+        
+    }
+    &_inner {
+        box-shadow: 0 4px 4px rgba(#000,.04);
+        display: flex;
+        gap: 6px 0;
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid $c_line;
+        background-color: #fff;
+    }
+    &_sec {
+        & + & {
+            padding-top: 5px;
+            border-top: 1px dashed $c_line;
+        }
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        &.jc_sb {
+            justify-content: space-between;
+        }
+        &.jc_sa {
+            justify-content: space-around;
+        }
+        @for $i from 1 through 10 {
+            &._gap#{$i} {
+                gap : #{$i}px
+            } 
+            &._gapX#{$i} {
+                column-gap : #{$i}px;
+            } 
+            &._gapY#{$i} {
+                row-gap : #{$i}px
+            } 
+        } 
+        
+    }
+    &_top {
+        .num {
+            font-weight: bold;
+        }
+    }
+    .btn_link {
+        color: $c_blue;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+    &_prod {
+        display: block;
+        
+    }
+
+
+    &_chk_wrap {
+        display: flex;
+        position: relative;
+        .chk_hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            z-index: -999;
+            &:checked ~ .mList_chk_box {
+                border-color: $c_key;
+                .mList_chk {
+                    border-color: $c_key;
+                    background-color: $c_key;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &_chk {
+        flex-shrink: 0;
+        width: 1.4em;
+        height: 1.4em;
+        border: 2px solid $c_line;
+        border-radius: 2px;
+        color: $c_line;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::after {
+            content: '\f00c';
+            font-family: "Font Awesome 6 Free";
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+    }
+}
+
+.deal_box {
+    display: flex;
+    position: relative;
+
+    &_inner {
+        width: 100%;
+        border: 2px solid $c_line;
+        border-radius: 6px;
+        padding: 10px;
+    }
+    &_sec {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        & + & {
+            margin-top: 10px;
+            padding-top: 8px;
+            border-top: 1px dashed $c_line;
+        }
+        &.jc_sb {
+            justify-content: space-between;
+        }
+
+    }
+    &_info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        line-height: 1.3;
+        gap: 8px 0;
+        & + & {
+            margin-top: 10px;
+        }
+
+        dt {
+            width: 100px;
+        }
+        dd {
+            width: calc(100% - 100px);
+            text-align: right;
+        }
+    }
+}
+
+.mBorad {
+    &_box {
+        border: 1px solid $c_line;
+        border-radius: 6px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        .f_tag_box {
+            vertical-align: top;
+            display: inline-flex;
+            margin-right: 2px;
+            align-items: center;
+            gap: 4px;
+        }
+    }
+    &_sec {
+        width: 100%;
+        &.bdB {
+            border-bottom: 1px dashed $c_line;
+            padding-bottom: 7px;
+            margin-bottom: 6px;
+        }
+        &.bdT {
+            border-top: 1px dashed $c_line;
+            padding-top: 7px;
+            margin-top: 6px;
+        } 
+    }
+    
+    
+    &_bot {
+        width: 100%;
+        margin-top: 10px;
+        line-height: 1.2;
+        font-size: 11px;
+    }
+    &_point {
+        padding: 10px 0;
+        
+    }
+}
+
+
+.mList2 {
+    border-top: 1px solid #000;
+    &_item {
+        border-bottom: 1px solid $c_line;
+    }
+}

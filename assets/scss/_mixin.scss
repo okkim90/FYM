@@ -1,0 +1,92 @@
+
+
+/*반응형 화면 크기*/
+$breakpoint-m: 767px;
+$breakpoint-t: 1024px;
+
+
+@mixin tablet {
+    @media (max-width: #{$breakpoint-t}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$breakpoint-m}) {
+        @content;
+    }
+}
+
+@mixin text-hidden-single {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.t_hidden_1 {
+    @include text-hidden-single
+}
+@mixin text-hidden($line: 1, $lineHeight: 19, $auto: null) {
+    width: 100%;
+    display: -webkit-box !important;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: calc(($lineHeight * $line) / $line);
+    max-width: 100%;
+
+    @if $auto ==auto {
+        //영역 자동
+        max-height: $lineHeight * $line;
+    }
+
+    @else {
+        //처음부터 영역잡히게
+        height: $lineHeight * $line;
+    }
+}
+
+
+@for $i from 2 through 10 {
+    .t_hidden_#{$i} {
+        $lh : 1.6em;
+        @include text-hidden($i, $lh)
+    }
+} 
+
+@for $i from 2 through 10 {
+    .t_hidden_a_#{$i} {
+        $lh : 1.6em;
+        @include text-hidden($i, $lh, auto)
+    }
+} 
+
+
+@mixin scrollY {
+    &::-webkit-scrollbar {
+        width: 7px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $c_key;
+        border-radius: 5px;
+        background-clip: padding-box;
+        width: 100%;
+        box-sizing: border-box;
+       
+       
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $c_bg_grey;
+        border: 2px solid transparent;
+    }
+}
+
+@mixin m-sizing {
+    width: 100%;
+    max-width: $m-width;
+    min-width: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+}

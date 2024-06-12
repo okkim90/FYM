@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYM</title>
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <h1 class="logo">
+                <a href=""><img src="../assets/images/logo.svg" alt=""></a>
+            </h1>
+            <nav class="nav">
+                <a href="" class="nav_btn">데이터베이스</a></li>
+                <a href="" class="nav_btn">소재라이브러리</a></li>
+            </nav>
+            <div class="srch">
+                <div class="select">
+                    <div class="select_label"></div>
+                    <ul class="select_list">
+                        <li class="select_item"></li>
+                        <li class="select_item"></li>
+                    </ul>
+                </div>
+
+                <div class="custom-select">
+                    <div class="select-box">Select an option</div>
+                    <ul class="options">
+                      <li data-value="option1">Option 1</li>
+                      <li data-value="option2">Option 2</li>
+                      <li data-value="option3">Option 3</li>
+                    </ul>
+                </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const selectBox = document.querySelector('.custom-select .select-box');
+                        const optionsList = document.querySelector('.custom-select .options');
+                      
+                        selectBox.addEventListener('click', function() {
+                          optionsList.style.display = optionsList.style.display === 'block' ? 'none' : 'block';
+                        });
+                      
+                        optionsList.addEventListener('click', function(e) {
+                          if (e.target.tagName === 'LI') {
+                            selectBox.textContent = e.target.textContent;
+                            optionsList.style.display = 'none';
+                          }
+                        });
+                      });
+                </script>
+            </div>
+        </header>
+        <div id="container">
+            <div class="h_tbl_wrap">
+                <table class="h_tbl">
+                    <caption></caption>
+                    <colgroup>
+                        <col style="width: 24%;">
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="sticky_left">매체</th>
+                            <th>카테고리</th>
+                            <th>핵심 타겟</th>
+                            <th>연령</th>
+                            <th>성별</th>
+                            <th>MAU</th>
+                            <th>별점</th>
+                            <th>업데이트</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="sticky_left">
+                                <div class="mediaSet">
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                        <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="height: 200vh;"></div>
+        </div>
+        
+    </div>
+   
+
+    <script>
+        const skeletonItem = document.querySelectorAll('.skeleton_item');
+        const hideskeleton = () => {
+            skeletonItem.forEach(e => {
+                e.classList.remove('skeleton_item')
+            });
+        };
+        window.onload = setTimeout(hideskeleton, 1600);
+    </script>
+</body>
+</html>
+

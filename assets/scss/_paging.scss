@@ -1,0 +1,65 @@
+.paging {
+    &_wrap {
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        &.mt10 {
+            margin-top: 10px;
+        }
+        &.mt15 {
+            margin-top: 15px;
+        }
+    }
+    &_btn {
+        display: block;
+        min-width: 26px;
+        height: 26px;
+        //padding: 0 4px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        line-height: 24px;
+        font-size: 12px;
+        color: #999;
+        //font-family: 'Montserrat';
+        margin: 0 2px;
+        flex-shrink: 0;
+        border: 1px solid transparent;
+       
+        &.current {
+            border: 1px solid $CBrand;
+            color: $CBrand;
+            font-weight: bold;
+            
+        }
+        background-repeat: no-repeat;
+        background-position: center center;
+        
+        &.paging_nav {
+            opacity: 0.6;
+            // &:hover {
+            //     opacity: 1;
+            // }
+        }
+        
+        &.ty_first {
+            background-image: url(../images/common/paging_first.svg);
+        }
+        &.ty_prev {
+            background-image: url(../images/common/paging_prev.svg);
+            //margin-right: 4px;
+        }
+        &.ty_next {
+            background-image: url(../images/common/paging_next.svg);
+            //margin-left: 4px;
+        }
+        &.ty_last {
+            background-image: url(../images/common/paging_last.svg);
+        }
+    }
+    &_list {
+        display: flex;
+        margin: 0 4px;
+    }
+}

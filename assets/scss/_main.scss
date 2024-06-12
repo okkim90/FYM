@@ -1,0 +1,174 @@
+
+.main_wrap {
+    // display: flex;
+    // flex-wrap: wrap;
+    // gap: 20px;
+    background-color: $c_bg_grey;
+   
+    .main_sec {
+        //flex: 1;
+        padding: 16px 16px 24px;
+        background-color: #fff;
+        
+        
+        position: relative;
+        
+       
+        & + .main_sec {
+            margin-top: 8px;
+        }
+        &:last-child {
+            padding-bottom: 36px;
+        }
+        &_tit {
+            margin-bottom: 10px;
+            display: flex;
+        }
+        
+        .h_tbl {
+            &_wrap {
+                max-height: 260px;
+            }
+            thead {
+                th {
+                    font-size: 13px;
+                }
+            }
+            tbody {
+                td {
+                    font-size: 13px;
+                    
+                }
+            }
+        }
+        .no_result_box {
+            height: 186px;
+        }
+
+        &_cont {
+            display: flex;
+            gap: 20px;
+            .main_count_list {
+                flex: 1;
+                //height: 200px;
+            }
+            .chart_box_wrap {
+                flex: 1;
+                
+                flex-shrink: 0;
+                
+                border: 1px solid $c_line;
+                border-radius: 10px;
+                overflow: hidden;
+                padding: 20px;
+                .txt_box {
+                    display: flex;
+                    justify-content: center;
+                    font-size: 18px;
+                    gap: 10px;
+                    margin-bottom: 20px;
+                    align-items: flex-end;
+                    .tit {
+                        font-weight: bold;
+                        line-height: 40px;
+                    }
+                    .count {
+                        color: $c_key;
+                        font-size: 30px;
+                        letter-spacing: -0.01em;
+                    }
+                }
+                .chart_box {
+                    height: 220px;
+                    position: relative;
+                    width: 100%;
+                }
+                .chart {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.main_count {
+    &_list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        
+    }
+    &_item {
+        //width: calc((100%/3) - (((3/2)*20px)/2));
+        flex: 1;
+        //display: flex;
+        //flex-direction: column;
+        //justify-content: center;
+        //align-items: center;
+        //text-align: center;
+        text-align: center;
+        border: 1px solid $c_line;
+        box-sizing: border-box;
+        border-radius: 10px;
+        padding: 10px 5%;
+        //min-width: 240px;
+        
+        //gap: 15px;
+        //border-right: 1px solid $c_line;
+        // &:last-child {
+        //     border-right: none;
+        //     margin-right: 0;
+        //     padding-right: 0;
+        // }
+        
+        .ico_box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            //margin: 0 auto;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba($c_key, .1);
+            margin: 0 auto;
+            flex-shrink: 0;
+            img {
+                height: 46%;
+            }
+            &.ty_greyscale {
+                filter: grayscale(1);
+            }
+        }
+        .tit {
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 6px;
+            //color: #666;
+            //margin-top: 10px;
+        }
+        .txt_box {
+            //padding-left: 15px;
+            margin-top: 6px;
+           
+            .count {
+                display: block;
+                font-size: 20px;
+                line-height: 1.2;
+                letter-spacing: -0.01em;
+                font-weight: bold;
+                font-family: 'Roboto';
+                position: relative;
+                color: $c_key;
+                .sizing_box {
+                    position: absolute;
+                    opacity: 0;
+
+                }
+            }
+        }
+    }
+}

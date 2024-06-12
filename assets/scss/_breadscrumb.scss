@@ -1,0 +1,27 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #666;
+    padding: 6px 16px ;
+    border-bottom: 1px solid $c_line;
+    //justify-content: flex-end;
+    a {
+        display: block;
+    }
+    &_item {
+        display: flex;
+        align-items: center;
+        & + & {
+            &::before {
+                content:"\f054";
+                font-family: "Font Awesome 6 Free";
+                font-weight: bold;
+                margin: 0 4px;
+                transform: translateY(1px);
+            }
+        }
+        
+    }
+}

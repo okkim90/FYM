@@ -1,0 +1,133 @@
+
+
+
+.terms_outer {
+    padding: 40px 16px 50px;
+   
+}
+.term_select_area {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+   
+    .f_select {
+        width: 180px;
+        
+    }
+}
+.terms_logo {
+    text-align: center;
+    
+    //margin: 0 auto 40px;
+    margin-bottom: 40px;
+    img {
+        width: 160px;
+    }
+    
+}
+
+.terms_wrap {
+    line-height: 1.65;
+    font-size: 12px;
+   
+    .term_tit1 {
+        font-size: 18px;  
+        margin-top: 3em; 
+        font-weight: bold;
+        text-align: center;
+        &.mt0 {
+            margin-top: 0;
+        }
+    }
+    .term_tit2 {
+        font-size: 14px;   
+        margin-top: 1.9em;
+        font-weight: bold;
+        
+    }
+    .term_desc {
+        margin-top: 0.8em;
+       
+    }
+    .ol_dep2 {
+        padding-left: 20px;
+    }
+
+    .tbl_rnd {
+        border: 1px solid #222;
+        th {
+            background-color: $c_bg_grey2;
+        }
+        th, td {
+            border: 1px solid #222;
+            text-align: center;
+            padding: 0.4em 0.6em;
+        }
+        .taL {
+            text-align: left;
+        }
+    }
+}
+
+.terms_tab {
+    margin-bottom: 30px;
+    
+    &_list {
+        display: flex;
+        justify-content: center;
+    }
+    &_item {
+        flex: 1;
+        max-width: 260px;
+        border: 1px solid #bababa;
+        border-left: none;
+        box-sizing: border-box;
+        min-height: 40px;
+        position: relative;
+        &:first-child {
+            border-left: 1px solid #bababa;
+        }
+
+        
+        &.on {
+            border-color: $CBrand;
+            z-index: 10;
+            background-color: $CBrand;
+            .terms_tab_link {
+                color: #fff;
+                font-weight: 500;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                width: 1px;
+                background-color: $CBrand;
+                right: -1px;
+                top: -1px;
+                bottom: -1px;
+            }
+        }
+        
+    }
+    &_link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 8px;
+        box-sizing: border-box;
+        height: 100%;
+        color: #222;
+        font-size: 14px;
+        line-height: 1.3;
+    }
+}
+
+.terms_tit {
+    margin-bottom: 20px;
+    text-align: center;
+    .tit {
+        font-size: 30px;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,301 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+    word-break: keep-all;
+    font-family: $font;
+    box-sizing: border-box;
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+html {
+    background-color: $c_bg;
+    height: 100%;
+}
+body {
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: $font;
+    background-color: #fff;
+    color: #222;
+    letter-spacing: -0.01em;
+    //max-width: $m-width;
+    min-width: 320px;
+    overflow: hidden scroll;
+}
+
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: normal;
+}
+
+/* 테이블 스타일 초기화 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+}
+
+td {
+    word-wrap: break-word;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+legend,
+caption {
+    visibility: hidden;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+address,
+caption,
+em,
+var {
+    font-style: normal;
+    font-weight: inherit;
+}
+
+strong {
+    font-weight: 700;
+}
+
+/* 링크 */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+pre {
+    font-family: inherit;
+    white-space: pre-wrap;
+}
+
+/* 이미지, 폼관련 요소 */
+img {
+    border: 0;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+select,
+input,
+textarea {
+    vertical-align: middle;
+    box-shadow: none;
+    border-radius: 0;
+    outline: none;
+    border: 0;
+    background: #fff;
+    color: #000;
+    font-family: $font;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+// input[type="submit"],
+// input[type="file"]
+// {
+//     cursor: pointer;
+//     -webkit-appearance: none;
+//        -moz-appearance: none;
+//             appearance: none;
+//     border-radius: 0 !important;
+// }
+// input[type="text"],
+// input[type="submit"],
+// input[type="password"],
+// input[type="search"],
+// input[type="number"],
+// input[type="reset"],
+// input[type="email"],
+// input[type="tel"],
+// input[type="search"],
+// input[type="file"],
+// input[type="email"],
+// input[type="tel"] {
+//     padding: 0 22px;
+//     height: 59px;
+//     line-height: 59px;
+//     border: 1px solid $CLine;
+//     font-size: 18px;
+//     font-weight: 400;
+// }
+
+/* Select box 스타일 초기화 */ 
+select {
+    position: relative;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-image: url(../images/common/arrow_select_box.svg);
+    background-position: calc(100% - 0.5em) center;
+    background-repeat: no-repeat;
+    background-size: 0.8em;
+}
+
+/* IE 에서 Select box 화살표 제거 */ 
+select::-ms-expand { display: none; }
+
+input[type="password"] {
+    -webkit-text-security: disc;
+    font-family: "large Verdana", "Verdana", sans-serif;
+    letter-spacing: 1px;
+    &::placeholder {
+        font-family: $font;
+        letter-spacing: 0;
+    }
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.3em;
+    height: 1.3em;
+    accent-color: $c_solidGrey;
+ 
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+    border-color: $c_key;
+    background-color: #fff;
+    outline: none;
+}
+
+
+
+::-webkit-input-placeholder {
+    font-size: inherit;
+    font-family: $font;
+    color: rgba(#000,.4);
+}
+
+*::placeholder {
+    font-family: $font;
+    font-size: inherit;
+    color: rgba(#000,.4);
+}
+
+textarea {
+    overflow: auto;
+    padding: 22px;
+    resize: none;
+    font-size: 14px;
+    border: 1px solid $CLine;
+}
+
+button {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+    cursor: pointer;
+    color: inherit;
+
+    //outline: none;
+    &:disabled {
+        cursor: default;
+    }
+}
+
+
+/* 크롬의 경우 */
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+    display: none;
+}
+
+::-moz-selection {
+    background: $c_key;
+    color: #fff;
+}
+
+::selection {
+    background: $c_key;
+    color: #fff;
+}
+
+/* skip_nav */
+#skip_nav {width: 100%; height: 0; text-align: center; overflow: hidden;}
+#skip_nav a {color: #fff; font-size: 14px; line-height: 30px; font-weight: 800; float: left;}
+#skip_nav a:focus,
+#skip_nav a:hover,
+#skip_nav a:active {position: absolute; top: 0; left: 0; width: 100%; height: 30px; text-decoration: underline; background-color: #000; overflow: visible; z-index: 9999;}
+
+
+/* blind */
+.blind { border: 0; clip: rect(0 0 0 0); clip-path: inset(50%); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; white-space: nowrap; }
+
+
+.no_drag {
+    user-select: none;
+}

@@ -1,0 +1,169 @@
+.layer_popup {
+    position: fixed;
+    
+    top: 0;
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(#000,.6);
+    padding: 16px;
+    
+    box-sizing: border-box;
+    display: none;
+    &.on {
+        display: block;
+    }
+    &_inner {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    &_cont {
+        position: relative;
+        background-color: #fff;
+        border-radius: 10px;
+        width: 100%;
+        padding: 20px;
+        padding-bottom: 30px;
+        box-sizing: border-box;
+        max-height: 100%;
+        overflow-y: auto;
+        // &.ty_mid {
+        //     width: 600px;
+        // }
+        // &.ty_small {
+        //     width: 350px;
+        // }
+        &.ty_company {
+            width: 500px;
+            overflow-y: hidden;
+            background-color: $c_bg;
+            padding-bottom: 30px;
+            padding-top: 24px;
+            .join_box_top {
+                margin-bottom: 20px;
+                .img_box img {
+                    height: 50px;
+                }
+            } 
+            .join_form_sec {
+                margin-top: 10px;
+                max-height: calc(100vh - 344px);
+                overflow-y: auto;
+                border: 1px solid $c_line;
+                padding: 20px;
+                background-color: #fff;
+                //border-radius: 10px;
+            }
+            .join_form_btns {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .sec {
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    .close_popup {
+        position: absolute;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // font-size: 30px;
+        // line-height: 30px;
+        background-image: url(../images/common/ico_close.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 30px;
+        height: 30px;
+        right: 14px;
+        top: 14px;
+        opacity: 0.6;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .cal_history_item {
+        & + .cal_history_item {
+            margin-top: 10px;
+        }
+    }
+
+    .excel_upload_box {
+        background-color: $c_bg_grey;
+        border: 1px solid $c_line;
+        position: relative;
+        height: 70px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transition: all .1s ease-in-out;
+        &:hover {
+            background-color: rgba($c_key, .1);
+            border: 1px dashed $c_key;
+        }
+        .input_file_excel {
+            position: absolute;
+            opacity: 0;
+            z-index: -9999;
+        }
+
+        &.file_on {
+            background-color: rgba($c_key, .1);
+            border: 1px dashed $c_key;
+            .excel_upload_default {
+                display: none;
+            }
+            .excel_upload_on {
+                display: block;
+            }
+        }
+        .excel_upload_default {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+            text-align: center;
+            color: #aaa;
+            font-size: 10px;
+            user-select: none;
+        }
+        .excel_upload_on {
+            display: none;
+        }
+        .file_name {
+            
+            text-align: center;
+            @include text-hidden(2, 17px, auto);
+            padding: 0 20px;
+            font-size: 12px;
+            word-break: break-all;
+        }
+        .btn_del2 {
+            
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            right: 2px;
+            top: 2px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url(../images/common/ico_del3.svg);
+        }
+    }
+
+    .img_box.ty_logo {
+        margin: 0 auto;
+    }
+}
