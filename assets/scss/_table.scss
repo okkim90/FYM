@@ -30,7 +30,7 @@
     }
 
     th {
-        background-color: $c_bg_grey2;
+        background-color: $c_bg;
         border-bottom: 1px solid $c_line;
     }
     td {
@@ -45,7 +45,7 @@
         align-items: center;
         justify-content: center;
         color: #fff;
-        background-color: $c_solidGrey;
+        background-color: $c_grey;
         border-radius: 0 0 5px 5px;
         &.on {
             i {
@@ -115,7 +115,7 @@
             
         }
         th {
-            background-color: $c_bg_grey2;
+            background-color: $c_bg;
             text-align: center;
             padding: 5px;
             height: 3em;
@@ -176,7 +176,7 @@
             
             &.bg_bg_grey2 {
                 &:hover { 
-                    background-color: $c_bg_grey2;
+                    background-color: $c_bg;
                 }
             }
             &:hover {

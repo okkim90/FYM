@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FYM</title>
     <link rel="stylesheet" href="../assets/css/common.min.css">
+    <script type="text/javascript" src="../assets/js/common.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -18,39 +19,65 @@
                 <a href="" class="nav_btn">소재라이브러리</a></li>
             </nav>
             <div class="srch">
-                <div class="select">
-                    <div class="select_label"></div>
-                    <ul class="select_list">
-                        <li class="select_item"></li>
-                        <li class="select_item"></li>
-                    </ul>
-                </div>
-
-                <div class="custom-select">
-                    <div class="select-box">Select an option</div>
+                <div class="select-box ty_small">
+                    <input type="text" class="select-input" value="매체" readonly>
                     <ul class="options">
-                      <li data-value="option1">Option 1</li>
-                      <li data-value="option2">Option 2</li>
-                      <li data-value="option3">Option 3</li>
+                        <li data-value="1">매체</li>
+                        <li data-value="2">상품</li>
                     </ul>
                 </div>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        const selectBox = document.querySelector('.custom-select .select-box');
-                        const optionsList = document.querySelector('.custom-select .options');
-                      
-                        selectBox.addEventListener('click', function() {
-                          optionsList.style.display = optionsList.style.display === 'block' ? 'none' : 'block';
-                        });
-                      
-                        optionsList.addEventListener('click', function(e) {
-                          if (e.target.tagName === 'LI') {
-                            selectBox.textContent = e.target.textContent;
-                            optionsList.style.display = 'none';
-                          }
-                        });
-                      });
-                </script>
+                <input type="text" class="srch_input" placeholder="찾고 싶은 매체/상품을 검색해보세요!">
+                <button type="submit" class="srch_btn"></button>
+                <span class="line"></span>
+                <ul class="srch_list">
+                    <li class="srch_list_item">
+                        <div class="mediaSet">
+                            <span class="mediaSet_ico "></span>
+                            <div class="mediaSet_txt">
+                                <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                            </div>
+                            <div class="mediaSet_tag">
+                                <span class="tag _yellow">뷰티</span>
+                                <span class="tag _red">Z세대</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="srch_list_item">
+                        <div class="mediaSet">
+                            <span class="mediaSet_ico "></span>
+                            <div class="mediaSet_txt">
+                                <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                            </div>
+                            <div class="mediaSet_tag">
+                                <span class="tag _yellow">뷰티</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="srch_list_item">
+                        <div class="mediaSet">
+                            <span class="mediaSet_ico "></span>
+                            <div class="mediaSet_txt">
+                                <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                            </div>
+                            <div class="mediaSet_tag">
+                                <span class="tag _grey">CPM 배너</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="srch_list_item">
+                        <div class="mediaSet">
+                            <span class="mediaSet_ico "></span>
+                            <div class="mediaSet_txt">
+                                <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                            </div>
+                            <div class="mediaSet_tag">
+                                <span class="tag _grey">CPM 배너</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </header>
         <div id="container">
@@ -99,6 +126,63 @@
                             <td>asdfasdfasdf asdfasdfa sdf</td>
                             
                         </tr>
+                        <tr>
+                            <td class="sticky_left">
+                                <div class="mediaSet">
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                        <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="sticky_left">
+                                <div class="mediaSet">
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                        <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="sticky_left">
+                                <div class="mediaSet">
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                        <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            <td>asdfasdfasdf asdfasdfa sdf</td>
+                            
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -112,7 +196,7 @@
         const skeletonItem = document.querySelectorAll('.skeleton_item');
         const hideskeleton = () => {
             skeletonItem.forEach(e => {
-                e.classList.remove('skeleton_item')
+                e.classList.add('load')
             });
         };
         window.onload = setTimeout(hideskeleton, 1600);

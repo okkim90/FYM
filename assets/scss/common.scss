@@ -1,19 +1,18 @@
+/* 폰트 */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+
 /* 공통 */
 @import "./variable";
 @import "./mixin";
-@import "./fonts";
 @import "./reset";
 
 /* layout*/
 @import "./header";
 @import "./breadscrumb";
-@import "./sidenav";
 @import "./layout";
 @import "./layer_popup";
 
-
 /* templetes */
-
 @import "./paging";
 @import "./input";
 @import "./btns";
@@ -23,5 +22,8 @@
 @import "./loading";
 @import "./media";
 @import "./skeleton";
+@import "./select_box";
+@import "./srch";
+@import "./tag";
 
 

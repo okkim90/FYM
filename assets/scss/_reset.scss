@@ -28,6 +28,7 @@ body {
     //max-width: $m-width;
     min-width: 320px;
     overflow: hidden scroll;
+    font-weight: 500;
 }
 
 
@@ -68,7 +69,7 @@ h2,
 h3,
 h4,
 h5 {
-    font-weight: normal;
+    font-weight: 500;
 }
 
 /* 테이블 스타일 초기화 */
@@ -140,6 +141,7 @@ textarea {
     background: #fff;
     color: #000;
     font-family: $font;
+    font-weight: 500;
 }
 
 input[type="submit"] {
@@ -148,34 +150,7 @@ input[type="submit"] {
        -moz-appearance: none;
             appearance: none;
 }
-// input[type="submit"],
-// input[type="file"]
-// {
-//     cursor: pointer;
-//     -webkit-appearance: none;
-//        -moz-appearance: none;
-//             appearance: none;
-//     border-radius: 0 !important;
-// }
-// input[type="text"],
-// input[type="submit"],
-// input[type="password"],
-// input[type="search"],
-// input[type="number"],
-// input[type="reset"],
-// input[type="email"],
-// input[type="tel"],
-// input[type="search"],
-// input[type="file"],
-// input[type="email"],
-// input[type="tel"] {
-//     padding: 0 22px;
-//     height: 59px;
-//     line-height: 59px;
-//     border: 1px solid $CLine;
-//     font-size: 18px;
-//     font-weight: 400;
-// }
+
 
 /* Select box 스타일 초기화 */ 
 select {
@@ -208,7 +183,7 @@ input[type="checkbox"] {
     vertical-align: middle;
     width: 1.3em;
     height: 1.3em;
-    accent-color: $c_solidGrey;
+    accent-color: $c_grey;
  
 }
 
@@ -224,7 +199,7 @@ input[type="tel"]:focus,
 input[type="email"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-    border-color: $c_key;
+    //border-color: $c_key;
     background-color: #fff;
     outline: none;
 }
@@ -234,13 +209,13 @@ textarea:focus {
 ::-webkit-input-placeholder {
     font-size: inherit;
     font-family: $font;
-    color: rgba(#000,.4);
+    color: $c_placehoder;
 }
 
 *::placeholder {
     font-family: $font;
     font-size: inherit;
-    color: rgba(#000,.4);
+    color: $c_placehoder
 }
 
 textarea {
@@ -248,7 +223,7 @@ textarea {
     padding: 22px;
     resize: none;
     font-size: 14px;
-    border: 1px solid $CLine;
+    border: 1px solid $c_line;
 }
 
 button {

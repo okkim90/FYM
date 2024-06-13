@@ -8,44 +8,66 @@ $breakpoint-pc_bm: 1800px;
 // mobile width
 $m-width : 600px;
 
-//Color
-$CBrand: #FF7A00;
-$CLine: #DDDDDD;
 
 
 
 
 /* colors */
 $colors: (
-    _key: #FF7A00,
-    _key2: #cd7a2c,
-    _key3: #ed994a,
-    _key4: #393939,
-    _key5: #aaa, 
-    _key6: #EFEFEF,
-    _line: #DDDDDD,
+    _key: #3F36F4,
+    _key2: #AFB2FD,
+    _key3: rgba(#3F36F4,.1),
+    _line: #E1E1E1,
     _bg: #F9F9F9,
-    _bg_grey: #EFEFEF,
-    _bg_grey2: #f4f4f4,
-    _blue: #0085FF,
-    _navy: #005AAD,
-    _sky: #a1b9ff,
-    _red: #FF5C5C,
-    _red2: #e51818,
-    _lblue: #63c1fc,
-    _orange: #FF7A00,
-    _green: #3b855d,
-    _green2: #48a171,
-    _yellow: #ffc107,
-    _purple: #8856f3,
-    _lightGrey: #aaa,
-    _midGrey: #777,
-    _solidGrey: #393939,
-    _grey:#999
-    //_tp : transparent
+    _title: #191919,
+    _grey: #8C8C8C,
+    
+    _grey3: #F4F4F4,
+    _grey4: #F9F9F9,
+    _disabled: #A3A3A3,
+    _desc: #555,
+    _red: #FF4E4E,
+    _red2_l: #FFF2F2,
+    _orange: #FF9900,
+    _orange_l: #FFF1DC,
+    _yellow: #FFC700,
+    _green: #17993A,
+    _green_l: #EFFBF2,
+    _blue: #408CFF,
+    _blue_l: #F2F7FF,
+    _dim: rgba(#000,.3),
+    _placehoder: #BABABA,
 );
 
 
+$tag_color: (
+    _yellow: #E89900,
+    _red: #FF3333,
+    _grey: #8C8C8C,
+);
+
+$tag_color_bg: (
+    _yellow: #FFF3DB,
+    _red:#FFECEC,
+    _grey:#f4f4f4
+);
+
+$c_key : map-get($colors, _key);
+$c_key2 : map-get($colors, _key2);
+$c_key3 : map-get($colors, _key3);
+$c_line : map-get($colors, _line);
+$c_bg : map-get($colors, _bg);
+$c_grey : map-get($colors, _grey);
+$c_grey2 : map-get($colors, _grey2);
+$c_grey3 : map-get($colors, _grey3);
+$c_grey4 : map-get($colors, _grey4);
+$c_blue : map-get($colors, _blue);
+$c_red : map-get($colors, _red);
+$c_green : map-get($colors, _green);
+$c_yellow : map-get($colors, _yellow);
+$c_title : map-get($colors, _title);
+$c_desc : map-get($colors, _desc);
+$c_placehoder : map-get($colors, _placehoder);
 $fz: (
     _normal: 12px, 
     _big: 20px, 
@@ -107,25 +129,20 @@ $fz: (
 }
 
 
-@mixin tag($bg, $bd){
-   
-    background-color: $bg;
-    border-color: $bd;
-    color: #fff;
-}
 
-@mixin tag_op($bd ,$color){
-    
-    background-color: lighten($color, 40%);
-    border-color: $bd;
-    color: $color;
+@each $key, $color in $tag_color {
+    .tag {
+        &.#{$key} {
+            color: $color
+        }
+    }
 }
-
-@mixin tag_ol($bd ,$color){
-    
-    background-color: transparent;
-    border-color: $bd;
-    color: $color;
+@each $key, $color in $tag_color_bg {
+    .tag {
+        &.#{$key} {
+            background-color: $color;
+        }
+    }
 }
 
 
@@ -140,7 +157,7 @@ $fz: (
     .bd#{$key} {
         border-color: $color;
     }
-    .f_btn  {
+    .btn  {
         &.#{$key} {
             @include btn($color, $color)
         }
@@ -152,22 +169,7 @@ $fz: (
             @include btn_op($color ,$color);
         }
     }
-
-    .f_tag {
-        &.#{$key} {
-            @include tag($color, $color)
-        }
-        &.#{$key}_ol {
-            @include tag_ol($color ,$color);
-
-        }
-        &.#{$key}_op {
-            @include tag_op($color ,$color);
-        }
-    }
-    
 }
-
 @each $key, $size in $fz {
     .fz#{$key} {
         font-size: $size;
@@ -178,28 +180,11 @@ $fz: (
 
 
 
-$c_key : map-get($colors, _key);
-$c_line : map-get($colors, _line);
-$c_bg : map-get($colors, _bg);
-$c_bg_grey : map-get($colors, _bg_grey);
-$c_bg_grey2 : map-get($colors, _bg_grey2);
-$c_blue : map-get($colors, _blue);
-$c_red : map-get($colors, _red);
-$c_sky : map-get($colors, _sky);
-$c_green : map-get($colors, _green);
-$c_yellow : map-get($colors, _yellow);
-$c_purple : map-get($colors, _purple);
-$c_lightGrey : map-get($colors, _lightGrey);
-$c_solidGrey : map-get($colors, _solidGrey);
-$c_midGrey : map-get($colors, _midGrey);
+
 
 //Font
-$font: 'Noto Sans KR', sans-serif;
-$font_tit: 'Montserrat';
-@mixin fa {
-    font-family: "Font Awesome 6 Free";
-    font-weight: bold;
-}
+$font: "Pretendard", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
 
 
 //innerBox

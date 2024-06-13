@@ -84,7 +84,7 @@
     }
 
     &.notAllowed {
-        color: $c_lightGrey;
+        color: $c_grey3;
         cursor: default;
         //opacity: 0.6;
         // &::before {
@@ -209,7 +209,7 @@
         flex-wrap: nowrap;
     }
     &.bg_box {
-        background-color: $c_bg_grey;
+        background-color: $c_bg;
         padding: 10px 15px;
         border-radius: 10px;
      }
@@ -540,8 +540,8 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    //border: 1px solid $c_midGrey;
-    background-color: $c_bg_grey;
+    //border: 1px solid $c_grey2;
+    background-color: $c_bg;
     height: 26px;
     border-radius: 6px;
     font-size: 12px;
@@ -550,7 +550,7 @@
         content: '';
         width: 8px;
         height: 8px;
-        border: 2px solid $c_midGrey;
+        border: 2px solid $c_grey2;
         box-sizing: border-box;
         border-left: none;
         border-top: none;

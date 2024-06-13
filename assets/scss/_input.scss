@@ -124,7 +124,7 @@
             
         }
         &::-webkit-scrollbar-track {
-            background-color: $c_bg_grey;
+            background-color: $c_bg;
             //border-left: 1px solid transparent;
         }
         
@@ -199,7 +199,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: $c_solidGrey;
+        background: $c_grey;
         background: linear-gradient(90deg, rgba(101,101,101,1) 0%, rgba(57,57,57,1) 100%);
         transition: all .2s ease-in-out;
         border-radius: 22px;

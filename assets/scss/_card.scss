@@ -8,7 +8,7 @@
             padding-top: calc(200%/3);
             position: relative;
             background: url(../images/common/logo_bg.png) no-repeat center center;
-            background-color: $c_bg_grey;
+            background-color: $c_bg;
             img {
                 position: absolute;
                 width: 100%;
@@ -72,7 +72,7 @@
 
 .card2 {
     &_wrap {
-        background-color: $c_bg_grey2;
+        background-color: $c_bg;
         padding: 10px 0;
         border-radius: 10px;
         border: 1px solid $c_line;
@@ -133,7 +133,7 @@
                     margin-right: 0;
                 }
                 &::after {
-                    background-color: $c_lightGrey;
+                    background-color: $c_grey3;
                     height: 12px;
                     margin-top: -5px;
                 }

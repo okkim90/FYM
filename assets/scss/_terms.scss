@@ -56,7 +56,7 @@
     .tbl_rnd {
         border: 1px solid #222;
         th {
-            background-color: $c_bg_grey2;
+            background-color: $c_bg;
         }
         th, td {
             border: 1px solid #222;
@@ -90,9 +90,9 @@
 
         
         &.on {
-            border-color: $CBrand;
+            border-color: $c_key;
             z-index: 10;
-            background-color: $CBrand;
+            background-color: $c_key;
             .terms_tab_link {
                 color: #fff;
                 font-weight: 500;
@@ -101,7 +101,7 @@
                 content: '';
                 position: absolute;
                 width: 1px;
-                background-color: $CBrand;
+                background-color: $c_key;
                 right: -1px;
                 top: -1px;
                 bottom: -1px;

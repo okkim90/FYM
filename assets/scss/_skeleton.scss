@@ -15,6 +15,14 @@
         animation: skeleton_load 1s infinite;
         
     }
+    &.load {
+        &::before {
+            visibility: hidden;
+            opacity: 0;
+            transition: all .15s ease-in-out;
+        }
+        
+    }
 }
 
 @keyframes skeleton_load {
