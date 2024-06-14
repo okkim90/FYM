@@ -90,3 +90,8 @@ $breakpoint-t: 1024px;
     left: 50%;
     transform: translateX(-50%);
 }
+
+@mixin dropShadow {
+    box-shadow: 2px 8px 20px rgba(#000,.08);
+}
+

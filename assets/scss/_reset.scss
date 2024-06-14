@@ -23,8 +23,8 @@ body {
     font-size: 12px;
     font-family: $font;
     background-color: #fff;
-    color: #222;
-    letter-spacing: -0.01em;
+    color: $c_font ;
+    //letter-spacing: -0.01em;
     //max-width: $m-width;
     min-width: 320px;
     overflow: hidden scroll;

@@ -63,20 +63,12 @@
     z-index: 10;
     
     &_wrap {
-        border: 1px solid $c_line;
-        border-top: 1px solid #000;
-        
         position: relative;
-        overflow: auto;
-        &.auto_h {
-            max-height: none;
-            border-left: none;
-            border-right: none;
-        }
+        overflow-x: auto;
     }
 
     width: 100%;
-    font-size: 12px;
+    font-size: 15px;
     //border: 1px solid $c_line;
     border-left: none;
     border-collapse: collapse;
@@ -98,7 +90,31 @@
         left: 0;
         top: 0;
         z-index: 99;
-        background-color: #fff;
+        .posR {
+            position: relative;
+            z-index: 10;
+        }
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #fff;
+        }
+        &::after {
+            content: '';
+            width: 10px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            box-shadow: 4px 0px 10px rgba(#000, .1);
+        }
+        
+        
     }
     &.no_hv {
         tr:hover {
@@ -111,18 +127,21 @@
             position: sticky;
             top: 0px;
             z-index: 99;
-            background-color: $c_line;
+            //background-color: $c_line;
             
         }
         th {
-            background-color: $c_bg;
+            background-color: #fff;
             text-align: center;
-            padding: 5px;
-            height: 3em;
+            padding: 0 16px;
+            height: 48px;
             //cursor: pointer;
-            border: 1px solid $c_line;
+            //border: 1px solid $c_line;
             border-top: none;
             //box-shadow:  0 0 1px #000;
+            font-size: 14px;
+            color: $c_grey;
+            font-weight: 500;
             &:first-child {
                 border-left: none;
             }
@@ -134,6 +153,12 @@
                 top: 0px;
                 z-index: 99;
                 
+            }
+            &.taL {
+                text-align: left;
+            }
+            &.taR {
+                text-align: right;
             }
         }
     }
@@ -194,21 +219,19 @@
             background-color: rgba(rgb(249, 246, 61), .16);
         }
         td {
-            padding: 5px;
-            border: 1px solid $c_line;
+            height: 80px;
+            padding: 10px 16px;
+            //border: 1px solid $c_line;
             text-align: center;
-            height: 3.02em;
+            background-color: #fff;
             &.wb_all {
                 word-break: break-all;
             }
             &.taL {
                 text-align: left;
             }
-            &:first-child {
-                border-left: none;
-            }
-            &:last-child {
-                border-right: none;
+            &.taR {
+                text-align: right;
             }
         }
         tr:last-child {

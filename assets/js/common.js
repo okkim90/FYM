@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+
     const selectInputs = document.querySelectorAll('.select-input');
     const optionsLists = document.querySelectorAll('.options');
     const selectBoxes = document.querySelectorAll('.select-box');
@@ -6,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     selectBoxes.forEach((selectBox, index) => {
       selectBox.addEventListener('click', function() {
         closeAllOptions();
-        optionsLists[index].classList.toggle('open');
-        selectBox.classList.toggle('open');
+        optionsLists[index].classList.toggle('on');
+        selectBox.classList.toggle('on');
       });
   
       optionsLists[index].addEventListener('click', function(event) {
@@ -30,8 +31,36 @@ document.addEventListener('DOMContentLoaded', function() {
   
     function closeAllOptions() {
       optionsLists.forEach((options, index) => {
-        options.classList.remove('open');
-        selectBoxes[index].classList.remove('open');
+        //options.classList.remove('on');
+        selectBoxes[index].classList.remove('on');
       });
     }
+    
+
+    
+    
+});
+
+function user_toggle(){
+  const user = document.querySelector('.user');
+  if(!user.classList.contains('on')){
+    user.classList.add('on');
+  }
+}
+
+document.addEventListener('click', (event)=> {
+  const excludedArea = document.querySelectorAll('.ex_close');
+  excludedArea.forEach((e)=>{
+    if (!event.target.closest('.ex_close')) {
+      e.classList.remove('on')
+    }
   });
+
+  const srchArea = document.querySelectorAll('.srch');
+  srchArea.forEach((e)=>{
+    let srchResult = e.querySelector('.srch_result');
+    if (!event.target.closest('.srch')) {
+      srchResult.classList.remove('on')
+    }
+  });
+});

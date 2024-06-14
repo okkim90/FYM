@@ -1,0 +1,14 @@
+.starSet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0 2px;
+    &_count {
+        font-size: 15px;
+    }
+    &_review {
+        color: $c_placehoder;
+        font-size: 13px;
+    }
+}

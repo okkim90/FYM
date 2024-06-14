@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FYM</title>
     <link rel="stylesheet" href="../assets/css/common.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
     <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script type="text/javascript" src="../assets/js/swiper.min.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -29,163 +31,295 @@
                 <input type="text" class="srch_input" placeholder="찾고 싶은 매체/상품을 검색해보세요!">
                 <button type="submit" class="srch_btn"></button>
                 <span class="line"></span>
-                <ul class="srch_list">
-                    <li class="srch_list_item">
-                        <div class="mediaSet">
-                            <span class="mediaSet_ico "></span>
-                            <div class="mediaSet_txt">
-                                <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                <!--[D] 'on' class 로 활성화-->
+                <div class="srch_result">
+                    <ul class="srch_list">
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _yellow">뷰티</span>
+                                    <span class="tag _red">Z세대</span>
+                                </div>
                             </div>
-                            <div class="mediaSet_tag">
-                                <span class="tag _yellow">뷰티</span>
-                                <span class="tag _red">Z세대</span>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _yellow">뷰티</span>
+                                </div>
                             </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                    <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _grey">CPM 배너</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                    <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _grey">CPM 배너</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="no_result">
+                        <img src="../assets/images/no_result.svg" alt="">
+                        <div class="desc fz_5 fc_grey">
+                            조건에 맞는 결과가 없어요 <br> 검색어를 수정해주세요
                         </div>
-                    </li>
-                    <li class="srch_list_item">
-                        <div class="mediaSet">
-                            <span class="mediaSet_ico "></span>
-                            <div class="mediaSet_txt">
-                                <div><span class="tit t_hidden_1 ">스노우</span></div> 
-                            </div>
-                            <div class="mediaSet_tag">
-                                <span class="tag _yellow">뷰티</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="srch_list_item">
-                        <div class="mediaSet">
-                            <span class="mediaSet_ico "></span>
-                            <div class="mediaSet_txt">
-                                <div><span class="tit t_hidden_1 ">스노우</span></div> 
-                                <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
-                            </div>
-                            <div class="mediaSet_tag">
-                                <span class="tag _grey">CPM 배너</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="srch_list_item">
-                        <div class="mediaSet">
-                            <span class="mediaSet_ico "></span>
-                            <div class="mediaSet_txt">
-                                <div><span class="tit t_hidden_1 ">스노우</span></div> 
-                                <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
-                            </div>
-                            <div class="mediaSet_tag">
-                                <span class="tag _grey">CPM 배너</span>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+                <!-- [D][개발시 삭제] UI 확인용 스크립트 -->
+                <script>
+                    const srch_btn = document.querySelector('.srch_btn');
+                    const srch_result = document.querySelector('.srch_result');
+                    srch_btn.addEventListener('click', (event)=>{
+                        srch_result.classList.add('on');
+                    });
+
+                </script>
+                <!--// [D][개발시 삭제] UI 확인용 스크립트 -->
+            </div>
+            <div class="user ex_close">
+                <button type="button" class="user_ico" onclick="user_toggle()"></button>
+                <div class="user_cont ">
+                    <div class="user_info d_flex fw_w ai_c _gapX8 _gapY4">
+                        <div class="user_name fz_4 fwB">김하나</div>
+                        <div class="user_status tag _key">구독중</div>
+                        <div class="user_mail w100 fz_3 fc_grey">hana@fym.im</div>
+                    </div>
+                    <ul class="user_menu">
+                        <li><a href="" class="user_menu_btn hv">마이페이지</a></li>
+                        <li><a href="" class="user_menu_btn hv">매체 등록/수정 요청</a></li>
+                        <li><a href="" class="user_menu_btn hv">로그아웃</a></li>
+                    </ul>
+                </div>
             </div>
         </header>
         <div id="container">
-            <div class="h_tbl_wrap">
-                <table class="h_tbl">
-                    <caption></caption>
-                    <colgroup>
-                        <col style="width: 24%;">
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                        <col>
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th class="sticky_left">매체</th>
-                            <th>카테고리</th>
-                            <th>핵심 타겟</th>
-                            <th>연령</th>
-                            <th>성별</th>
-                            <th>MAU</th>
-                            <th>별점</th>
-                            <th>업데이트</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="sticky_left">
-                                <div class="mediaSet">
-                                    <span class="mediaSet_ico skeleton_item"></span>
-                                    <div class="mediaSet_txt">
-                                        <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
-                                        <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+            <div class="main_banner_wrap skeleton_item">
+                <div class="main_banner ">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide main_banner_item">
+                            <a href="" class="main_banner_link">
+                                <div class="bg" style="background-image: url(../assets/images/860-500x350.jpg)"></div>
+                                <div class="main_banner_cont">
+                                    <div class="img_box">
+                                        <img src="../assets/images/860-500x350.jpg" alt="">
+                                    </div>
+                                    <div class="txt_box">
+                                        <h3 class="main_banner_sub">서브타이틀 서브타이틀 서브타이틀 서브타이틀 </h3>
+                                        <h2 class="main_banner_tit">타이틀1 타이틀1 타이틀1 타이틀1</h2>
+                                        <h2 class="main_banner_tit">타이틀2 타이틀2 타이틀2 타이틀2</h2>
                                     </div>
                                 </div>
-                            </td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            
-                        </tr>
-                        <tr>
-                            <td class="sticky_left">
-                                <div class="mediaSet">
-                                    <span class="mediaSet_ico skeleton_item"></span>
-                                    <div class="mediaSet_txt">
-                                        <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
-                                        <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide main_banner_item">
+                            <a href="" class="main_banner_link">
+                                <div class="bg" style="background-image: url(../assets/images/136-500x350.jpg)"></div>
+                                <div class="main_banner_cont">
+                                    <div class="img_box">
+                                        <img src="../assets/images/136-500x350.jpg" alt="">
+                                    </div>
+                                    <div class="txt_box">
+                                        <h2 class="main_banner_tit">타이틀1 타이틀1 타이틀1 타이틀1</h2>
+                                        <h2 class="main_banner_tit">타이틀2 타이틀2 타이틀2 타이틀2</h2>
                                     </div>
                                 </div>
-                            </td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            
-                        </tr>
-                        <tr>
-                            <td class="sticky_left">
-                                <div class="mediaSet">
-                                    <span class="mediaSet_ico skeleton_item"></span>
-                                    <div class="mediaSet_txt">
-                                        <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
-                                        <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide main_banner_item">
+                            <a href="" class="main_banner_link">
+                                <div class="bg" style="background-image: url(../assets/images/232-500x350.jpg)"></div>
+                                <div class="main_banner_cont">
+                                    <div class="img_box">
+                                        <img src="../assets/images/232-500x350.jpg" alt="">
+                                    </div>
+                                    <div class="txt_box">
+                                        <h2 class="main_banner_tit">타이틀1 타이틀1 타이틀1 타이틀1</h2>
+                                        <h2 class="main_banner_tit">타이틀2 타이틀2 타이틀2 타이틀2</h2>
                                     </div>
                                 </div>
-                            </td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            
-                        </tr>
-                        <tr>
-                            <td class="sticky_left">
-                                <div class="mediaSet">
-                                    <span class="mediaSet_ico skeleton_item"></span>
-                                    <div class="mediaSet_txt">
-                                        <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
-                                        <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            <td>asdfasdfasdf asdfasdfa sdf</td>
-                            
-                        </tr>
-                    </tbody>
-                </table>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="main_banner_nav banner_prev"></button>
+                    <button class="main_banner_nav banner_next"></button>
+                </div>
+                <script>
+                    const main_banner = new Swiper('.main_banner',{
+                        loop: true,
+                        autoplay: {
+                            delay: 4000,
+                            disableOnInteraction: false,
+                        },
+                        navigation: {
+                            nextEl: ".banner_next",
+                            prevEl: ".banner_prev",
+                        },
+                    });
+                </script>
             </div>
+
+
+            <section class="bd_box bd_radius24">
+                <div class="tit_set_1">
+                    <h2 class="tit_1">Database</h2>
+                    <ul class="tit_tab">
+                        <li><button>매장 찾기</button></li>
+                        <li><button>상품 찾기</button></li>
+                    </ul>
+                </div>
+                <div class="h_tbl_wrap">
+                    <table class="h_tbl tl_fixed" style="min-width: 1760px;">
+                        <caption></caption> 
+                        <colgroup>
+                            <col style="min-width: 430px; width:24%">
+                            <col>
+                            <col style="width:15%">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="sticky_left taL"><span class="posR">매체</span></th>
+                                <th>카테고리</th>
+                                <th>핵심 타겟</th>
+                                <th>연령</th>
+                                <th>성별</th>
+                                <th class="taR">MAU</th>
+                                <th>별점</th>
+                                <th class="taR">업데이트</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sticky_left">
+                                    <div class="mediaSet" >
+                                        <span class="mediaSet_ico skeleton_item"></span>
+                                        <div class="mediaSet_txt">
+                                            <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                            <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _grey ty_small">SNS/커뮤니티</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _yellow ty_small">뷰티</span>
+                                        <span class="tag _red ty_small">대학생활</span>
+                                    </div>
+                                </td>
+                                <td>18-24</td>
+                                <td>여성 비중 높음</td>
+                                <td class="taR">207,000K</td>
+                                <td>
+                                    <div class="starSet">
+                                        <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
+                                        <span class="starSet_count">5.0</span>
+                                        <span class="starSet_review">(13개)</span>
+                                    </div>
+                                </td>
+                                <td class="taR">2024.06.13</td>
+                            </tr>
+                            <tr>
+                                <td class="sticky_left">
+                                    <div class="mediaSet" >
+                                        <span class="mediaSet_ico skeleton_item"></span>
+                                        <div class="mediaSet_txt">
+                                            <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                            <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _grey ty_small">SNS/커뮤니티</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _yellow ty_small">뷰티</span>
+                                        <span class="tag _red ty_small">대학생활</span>
+                                    </div>
+                                </td>
+                                <td>18-24</td>
+                                <td>여성 비중 높음</td>
+                                <td class="taR">207,000K</td>
+                                <td>
+                                    <div class="starSet">
+                                        <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
+                                        <span class="starSet_count">5.0</span>
+                                        <span class="starSet_review">(13개)</span>
+                                    </div>
+                                </td>
+                                <td class="taR">2024.06.13</td>
+                            </tr>
+                            <tr>
+                                <td class="sticky_left">
+                                    <div class="mediaSet" >
+                                        <span class="mediaSet_ico skeleton_item"></span>
+                                        <div class="mediaSet_txt">
+                                            <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                            <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _grey ty_small">SNS/커뮤니티</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _yellow ty_small">뷰티</span>
+                                        <span class="tag _red ty_small">대학생활</span>
+                                    </div>
+                                </td>
+                                <td>18-24</td>
+                                <td>여성 비중 높음</td>
+                                <td class="taR">207,000K</td>
+                                <td>
+                                    <div class="starSet">
+                                        <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
+                                        <span class="starSet_count">5.0</span>
+                                        <span class="starSet_review">(13개)</span>
+                                    </div>
+                                </td>
+                                <td class="taR">2024.06.13</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
             <div style="height: 200vh;"></div>
         </div>
         
@@ -201,6 +335,7 @@
         };
         window.onload = setTimeout(hideskeleton, 1600);
     </script>
+    
 </body>
 </html>
 

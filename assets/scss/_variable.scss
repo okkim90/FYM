@@ -20,6 +20,7 @@ $colors: (
     _line: #E1E1E1,
     _bg: #F9F9F9,
     _title: #191919,
+    _font: #191919,
     _grey: #8C8C8C,
     
     _grey3: #F4F4F4,
@@ -44,12 +45,14 @@ $tag_color: (
     _yellow: #E89900,
     _red: #FF3333,
     _grey: #8C8C8C,
+    _key: #3F36F4,
 );
 
 $tag_color_bg: (
     _yellow: #FFF3DB,
     _red:#FFECEC,
-    _grey:#f4f4f4
+    _grey:#f4f4f4,
+    _key: #ECEBFE
 );
 
 $c_key : map-get($colors, _key);
@@ -66,16 +69,27 @@ $c_red : map-get($colors, _red);
 $c_green : map-get($colors, _green);
 $c_yellow : map-get($colors, _yellow);
 $c_title : map-get($colors, _title);
+$c_font : map-get($colors, _font);
 $c_desc : map-get($colors, _desc);
 $c_placehoder : map-get($colors, _placehoder);
 $fz: (
-    _normal: 12px, 
-    _big: 20px, 
-    _mid: 16px, 
-    _mid2: 14px,
-    _small: 11px, 
-    _xsmall: 10px, 
+    _1: 12px, 
+    _2: 13px, 
+    _3: 14px, 
+    _4: 15px,
+    _5: 16px, 
+    _6: 18px, 
+    _7: 20px, 
+    _8: 24px
 );
+$fz_1 : map-get($fz, _1);
+$fz_2 : map-get($fz, _2);
+$fz_3 : map-get($fz, _3);
+$fz_4 : map-get($fz, _4);
+$fz_5 : map-get($fz, _5);
+$fz_6 : map-get($fz, _6);
+$fz_7 : map-get($fz, _7);
+$fz_8 : map-get($fz, _8);
 
 
 @mixin btn($bg, $bd){
@@ -231,7 +245,7 @@ $inner: 1280px;
     }
 }
 
-@for $i from 1 through 20 {
+@for $i from 1 through 30 {
     $z : 5*$i;
     .mt#{$i} {
         margin-top: #{$i}px;
@@ -427,4 +441,14 @@ $inner: 1280px;
 }
 .lh1 {
     line-height: 1;
+}
+.hv {
+    &:hover {
+        background-color: $c_bg;
+    }
+}
+
+.bd_box {
+    border: 1px solid $c_line;
+    padding: 24px 32px;
 }
