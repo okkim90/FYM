@@ -21,11 +21,11 @@
                 <a href="" class="nav_btn">소재라이브러리</a></li>
             </nav>
             <div class="srch">
-                <div class="select-box ty_small">
+                <div class="select-box select-one ty_small">
                     <input type="text" class="select-input" value="매체" readonly>
                     <ul class="options">
-                        <li data-value="1">매체</li>
-                        <li data-value="2">상품</li>
+                        <li data-value="1" class="option">매체</li>
+                        <li data-value="2" class="option">상품</li>
                     </ul>
                 </div>
                 <input type="text" class="srch_input" placeholder="찾고 싶은 매체/상품을 검색해보세요!">
@@ -41,8 +41,8 @@
                                     <div><span class="tit t_hidden_1 ">스노우</span></div> 
                                 </div>
                                 <div class="mediaSet_tag">
-                                    <span class="tag _yellow">뷰티</span>
-                                    <span class="tag _red">Z세대</span>
+                                    <span class="tag _beauty">뷰티</span>
+                                    <span class="tag _university">Z세대</span>
                                 </div>
                             </div>
                         </li>
@@ -53,19 +53,7 @@
                                     <div><span class="tit t_hidden_1 ">스노우</span></div> 
                                 </div>
                                 <div class="mediaSet_tag">
-                                    <span class="tag _yellow">뷰티</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="srch_list_item">
-                            <div class="mediaSet">
-                                <span class="mediaSet_ico "></span>
-                                <div class="mediaSet_txt">
-                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
-                                    <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
-                                </div>
-                                <div class="mediaSet_tag">
-                                    <span class="tag _grey">CPM 배너</span>
+                                    <span class="tag _beauty">뷰티</span>
                                 </div>
                             </div>
                         </li>
@@ -77,7 +65,19 @@
                                     <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
                                 </div>
                                 <div class="mediaSet_tag">
-                                    <span class="tag _grey">CPM 배너</span>
+                                    <span class="tag _sns">CPM 배너</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                    <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _sns">CPM 배너</span>
                                 </div>
                             </div>
                         </li>
@@ -105,7 +105,7 @@
                 <div class="user_cont ">
                     <div class="user_info d_flex fw_w ai_c _gapX8 _gapY4">
                         <div class="user_name fz_4 fwB">김하나</div>
-                        <div class="user_status tag _key">구독중</div>
+                        <div class="user_status tag _subscribe">구독중</div>
                         <div class="user_mail w100 fz_3 fc_grey">hana@fym.im</div>
                     </div>
                     <ul class="user_menu">
@@ -181,15 +181,310 @@
                     });
                 </script>
             </div>
-
-
-            <section class="bd_box bd_radius24">
-                <div class="tit_set_1">
+            <section class="sec">
+                <div class="main_rank">  
+                    <div class="col_item bd_box2 bd_radius24">
+                        <div class="tit_set_2 d_flex">
+                            <h2 class="tit_2">매체소개서 다운로드</h2>
+                            <div class="tooltip self_c ml3">
+                                <i class="tooltip_ico"></i>
+                                <span class="tooltip_cont taC">기준일로부터 일주일동안 <br> 매체소개서가 많이 다운된 순서대로 노출돼요</span>
+                            </div>
+                            <span class="fz_1 fc_placehoder ml_auto self_top">2024.06.12 기준</span>
+                        </div>
+                        <ol class="rank_list">
+                            <li class="rank_item">
+                                <div class="mediaSet" >
+                                    <span class="mediaSet_num skeleton_item">1</span>
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit ty2 t_hidden_1 skeleton_item">스노우</span></div> 
+                                    </div>
+                                    <div class="mediaSet_tag">
+                                        <span class="tag _beauty skeleton_item">뷰티</span>
+                                        <span class="tag _worker skeleton_item">직장인</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="rank_item">
+                                <div class="mediaSet" >
+                                    <span class="mediaSet_num skeleton_item">2</span>
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit ty2 t_hidden_1 skeleton_item">스노우</span></div> 
+                                    </div>
+                                    <div class="mediaSet_tag">
+                                        <span class="tag _fashion skeleton_item">패션</span>
+                                        <span class="tag _sports skeleton_item">스포츠</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="rank_item">
+                                <div class="mediaSet" >
+                                    <span class="mediaSet_num skeleton_item">3</span>
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit ty2 t_hidden_1 skeleton_item">스노우</span></div> 
+                                    </div>
+                                    <div class="mediaSet_tag">
+                                        <span class="tag _health skeleton_item">헬스케어</span>
+                                        <span class="tag _development skeleton_item">자기계발</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="rank_item">
+                                <div class="mediaSet" >
+                                    <span class="mediaSet_num skeleton_item">4</span>
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit ty2 t_hidden_1 skeleton_item">스노우</span></div> 
+                                    </div>
+                                    <div class="mediaSet_tag">
+                                        <span class="tag _university skeleton_item">대학생활</span>
+                                        <span class="tag _restaurant skeleton_item">외식</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col_item bd_box2 bd_radius24">
+                        <div class="tit_set_2 d_flex">
+                            <h2 class="tit_2">매체 관심</h2>
+                            <span class="fz_1 fc_placehoder ml_auto self_top">2024.06.12 기준</span>
+                        </div>
+                        <ol class="rank_list">
+                            <li class="rank_item">
+                                <div class="mediaSet" >
+                                    <span class="mediaSet_num skeleton_item">1</span>
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit ty2 t_hidden_1 skeleton_item">스노우</span></div> 
+                                    </div>
+                                    <div class="mediaSet_tag">
+                                        <span class="tag _worker skeleton_item">직장인</span>
+                                        <span class="tag _development skeleton_item">자기계발</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="rank_item">
+                                <div class="mediaSet" >
+                                    <span class="mediaSet_num skeleton_item">2</span>
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit ty2 t_hidden_1 skeleton_item">스노우</span></div> 
+                                    </div>
+                                    <div class="mediaSet_tag">
+                                        <span class="tag _health skeleton_item">헬스케어</span>
+                                        <span class="tag _travel skeleton_item">여행</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="rank_item">
+                                <div class="mediaSet" >
+                                    <span class="mediaSet_num skeleton_item">3</span>
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit ty2 t_hidden_1 skeleton_item">스노우</span></div> 
+                                    </div>
+                                    <div class="mediaSet_tag">
+                                        <span class="tag _sports skeleton_item">스포츠</span>
+                                        <span class="tag _restaurant skeleton_item">외식</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="rank_item">
+                                <div class="mediaSet" >
+                                    <span class="mediaSet_num skeleton_item">4</span>
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit ty2 t_hidden_1 skeleton_item">스노우</span></div> 
+                                    </div>
+                                    <div class="mediaSet_tag">
+                                        <span class="tag _mobility skeleton_item">모빌리티</span>
+                                        <span class="tag _development skeleton_item">자기계발</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col_item bd_box2 bd_radius24">
+                        <div class="tit_set_2 d_flex ">
+                            <h2 class="tit_2">상품 관심</h2>
+                            <span class="fz_1 fc_placehoder ml_auto self_top">2024.06.12 기준</span>
+                        </div>
+                        <ol class="rank_list">
+                            <li class="rank_item">
+                                <div class="mediaSet" >
+                                    <span class="mediaSet_num skeleton_item">1</span>
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit ty2 t_hidden_1 skeleton_item">스노우</span></div> 
+                                        <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, sint.</span></div> 
+                                    </div>
+                                    <div class="mediaSet_tag">
+                                        <span class="tag _sns skeleton_item">CPM 배너</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="rank_item">
+                                <div class="mediaSet" >
+                                    <span class="mediaSet_num skeleton_item">2</span>
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit ty2 t_hidden_1 skeleton_item">스노우</span></div> 
+                                        <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, sint.</span></div> 
+                                    </div>
+                                    <div class="mediaSet_tag">
+                                        <span class="tag _sns skeleton_item">CPM 배너</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="rank_item">
+                                <div class="mediaSet" >
+                                    <span class="mediaSet_num skeleton_item">3</span>
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit ty2 t_hidden_1 skeleton_item">스노우</span></div> 
+                                        <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, sint.</span></div> 
+                                    </div>
+                                    <div class="mediaSet_tag">
+                                        <span class="tag _sns skeleton_item">CPM 배너</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="rank_item">
+                                <div class="mediaSet" >
+                                    <span class="mediaSet_num skeleton_item">4</span>
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit ty2 t_hidden_1 skeleton_item">스노우</span></div> 
+                                        <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, sint.</span></div> 
+                                    </div>
+                                    <div class="mediaSet_tag">
+                                        <span class="tag _sns skeleton_item">CPM 배너</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col_item bd_box2 bd_radius24">
+                        <div class="tit_set_2 d_flex">
+                            <h2 class="tit_2">리뷰 등록수</h2>
+                            <span class="fz_1 fc_placehoder ml_auto self_top">2024.06.12 기준</span>
+                        </div>
+                        <ol class="rank_list">
+                            <li class="rank_item">
+                                <div class="mediaSet" >
+                                    <span class="mediaSet_num skeleton_item">1</span>
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit ty2 t_hidden_1 skeleton_item">스노우</span></div> 
+                                    </div>
+                                    <div class="mediaSet_tag">
+                                        <span class="tag _worker skeleton_item">직장인</span>
+                                        <span class="tag _development skeleton_item">자기계발</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="rank_item">
+                                <div class="mediaSet" >
+                                    <span class="mediaSet_num skeleton_item">2</span>
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit ty2 t_hidden_1 skeleton_item">스노우</span></div> 
+                                    </div>
+                                    <div class="mediaSet_tag">
+                                        <span class="tag _health skeleton_item">헬스케어</span>
+                                        <span class="tag _travel skeleton_item">여행</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="rank_item">
+                                <div class="mediaSet" >
+                                    <span class="mediaSet_num skeleton_item">3</span>
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit ty2 t_hidden_1 skeleton_item">스노우</span></div> 
+                                    </div>
+                                    <div class="mediaSet_tag">
+                                        <span class="tag _sports skeleton_item">스포츠</span>
+                                        <span class="tag _restaurant skeleton_item">외식</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="rank_item">
+                                <div class="mediaSet" >
+                                    <span class="mediaSet_num skeleton_item">4</span>
+                                    <span class="mediaSet_ico skeleton_item"></span>
+                                    <div class="mediaSet_txt">
+                                        <div><span class="tit ty2 t_hidden_1 skeleton_item">스노우</span></div> 
+                                    </div>
+                                    <div class="mediaSet_tag">
+                                        <span class="tag _mobility skeleton_item">모빌리티</span>
+                                        <span class="tag _development skeleton_item">자기계발</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+            <section class="sec bd_box bd_radius24">
+                <div class="tit_set_1 has_tab">
                     <h2 class="tit_1">Database</h2>
-                    <ul class="tit_tab">
-                        <li><button>매장 찾기</button></li>
-                        <li><button>상품 찾기</button></li>
-                    </ul>
+                    <div class="tit_tab">
+                        <button type="button" class="tit_tab_btn on">매장 찾기</button>
+                        <button type="button" class="tit_tab_btn">상품 찾기</button>
+                    </div>
+                </div>
+                <div class="tabs d_flex fw_w">
+                    <button type="button" class="btn_tab on">디지털</button>
+                    <button type="button" class="btn_tab">컨텐츠</button>
+                </div>
+                <div class="sorting_area">
+                    <div class="select-box select-one ty_big w_200">
+                        <input type="text" class="select-input" value="매체" readonly>
+                        <ul class="options">
+                            <li data-value="1" class="option">건강/헬스</li>
+                            <li data-value="2" class="option">금융</li>
+                            <li data-value="3" class="option">뷰티</li>
+                            <li data-value="4" class="option">의류</li>
+                            <li data-value="5" class="option">SNS</li>
+                        </ul>
+                    </div>
+                    <div class="select-box select-multi ty_big w_200">
+                        <input type="text" class="select-input" value="0개 선택" readonly>
+                        <ul class="options">
+                            <li>
+                                <label class="f_chk">
+                                    <input type="checkbox">
+                                    <div class="f_chk_ico"></div>
+                                    <div class="f_chk_txt">옵션</div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="f_chk">
+                                    <input type="checkbox">
+                                    <div class="f_chk_ico"></div>
+                                    <div class="f_chk_txt">옵션</div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="f_chk">
+                                    <input type="checkbox">
+                                    <div class="f_chk_ico"></div>
+                                    <div class="f_chk_txt">옵션</div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="f_chk">
+                                    <input type="checkbox">
+                                    <div class="f_chk_ico"></div>
+                                    <div class="f_chk_txt">옵션</div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="h_tbl_wrap">
                     <table class="h_tbl tl_fixed" style="min-width: 1760px;">
@@ -321,6 +616,39 @@
                 </div>
             </section>
             <div style="height: 200vh;"></div>
+        </div>
+        
+        <div class="pa30 d_flex _gap20">
+            <label class="f_chk">
+                <input type="checkbox">
+                <div class="f_chk_ico"></div>
+                <div class="f_chk_txt">옵션</div>
+            </label>
+            <label class="f_chk">
+                <input type="checkbox">
+                <div class="f_chk_ico"></div>
+                <div class="f_chk_txt">옵션</div>
+            </label>
+            <label class="f_chk">
+                <input type="checkbox">
+                <div class="f_chk_ico"></div>
+                <div class="f_chk_txt">옵션</div>
+            </label>
+            <label class="f_radio">
+                <input type="radio" id="" name="radio">
+                <div class="f_radio_ico"></div>
+                <div class="f_radio_txt">옵션</div>
+            </label>
+            <label class="f_radio">
+                <input type="radio" id="" name="radio">
+                <div class="f_radio_ico"></div>
+                <div class="f_radio_txt">옵션</div>
+            </label>
+            <label class="f_radio">
+                <input type="radio" id="" name="radio">
+                <div class="f_radio_ico"></div>
+                <div class="f_radio_txt">옵션</div>
+            </label>
         </div>
         
     </div>

@@ -1,27 +1,51 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    const selectInputs = document.querySelectorAll('.select-input');
-    const optionsLists = document.querySelectorAll('.options');
+    const optionsLists = document.querySelectorAll('.select-box .options');
     const selectBoxes = document.querySelectorAll('.select-box');
+    
   
     selectBoxes.forEach((selectBox, index) => {
       selectBox.addEventListener('click', function() {
         closeAllOptions();
-        optionsLists[index].classList.toggle('on');
+        selectBox.querySelector('.options').classList.toggle('on');
         selectBox.classList.toggle('on');
       });
   
-      optionsLists[index].addEventListener('click', function(event) {
-        event.stopPropagation();
-        if (event.target.tagName === 'LI') {
-          const value = event.target.getAttribute('data-value');
-          selectInputs[index].value = event.target.textContent;
-          // You can do something with the selected value here
-          console.log(value);
-          closeAllOptions();
-        }
-      });
+
+      let option = selectBox.querySelectorAll('.option');
+      let options = selectBox.querySelector('.options');
+      let option_multi = selectBox.querySelectorAll('.f_chk');
+      let selectInput = selectBox.querySelector('.select-input');
+
+      
+      if(option){
+        console.log(selectBox)
+        option.forEach(e=>{
+          e.addEventListener('click',event=>{
+            event.stopPropagation();
+            selectInput.value = e.textContent;
+            closeAllOptions(); 
+          })
+        });
+      }
+      if(option_multi){
+       
+        option_multi.forEach(e=>{
+          e.addEventListener('click',event=>{
+            event.stopPropagation();
+            chkCount = options.querySelectorAll('.f_chk input[type=checkbox]:checked').length
+            selectInput.value = chkCount + '개 선택'
+             
+          })
+        });
+      }
+     
+      
+
+      
     });
+
+
   
     document.addEventListener('click', function(event) {
       if (!event.target.closest('.select-box')) {

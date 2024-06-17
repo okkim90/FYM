@@ -75,3 +75,28 @@
         
     }
 }
+
+.main_rank {
+    @include flex_col(4 ,32px, 32px);
+    @media (max-width: 1420px) {
+        @include flex_col(2 ,32px, 32px);
+    }
+    @include mobile {
+        display: block;
+        .col_item {
+            width: 100%;
+            & + .col_item {
+                margin-top: 32px;
+            }
+        }
+    }
+}
+
+.rank_list {
+    .rank_item {
+        .mediaSet {
+            padding: 12px 0;
+        }
+    }
+    
+}

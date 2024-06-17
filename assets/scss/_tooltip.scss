@@ -1,0 +1,46 @@
+.tooltip {
+    position: relative;
+    z-index: 100;
+    &:hover {
+        .tooltip_cont {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    &_ico {
+        display: block;
+        width: 18px;
+        height: 18px;
+        background-image: url(../images/ico_help.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        //background-size: cover;
+        cursor: help;
+    }
+    &_cont {
+        opacity: 0;
+        visibility: hidden;
+        white-space: nowrap;
+        padding: 6px 12px;
+        border-radius: 8px;
+        background-color: rgba(#000,.6);
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
+        margin-top: 12px;
+        transition: all .1s ease-in-out;
+        font-size: 13px;
+        &::before {
+            content: '';
+            position: absolute;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom: 10px solid rgba(#000,.6);
+            bottom: 100%;
+            left: 50%;
+            margin-left: -8px;
+        }
+    }
+}

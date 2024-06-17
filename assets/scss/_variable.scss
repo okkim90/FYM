@@ -42,17 +42,38 @@ $colors: (
 
 
 $tag_color: (
-    _yellow: #E89900,
-    _red: #FF3333,
-    _grey: #8C8C8C,
-    _key: #3F36F4,
+    _sns: #8C8C8C,
+    _subscribe: #3F36F4,
+    _economy : #124EA7,
+    _travel : #FF6E2F,
+    _university : #FF3333,
+    _restaurant : #FB56EB,
+    _mobility : #44A5FF,
+    _development : #12A79E,
+    _beauty : #E89900,
+    _worker : #9128E4,
+    _business : #19A712,
+    _fashion : #FF2D78,
+    _sports : #82AF00,
+    _health : #00BE85,
+
 );
 
 $tag_color_bg: (
-    _yellow: #FFF3DB,
-    _red:#FFECEC,
-    _grey:#f4f4f4,
-    _key: #ECEBFE
+    _sns:#f4f4f4,
+    _subscribe: #ECEBFE,
+    _economy : #E2F4F6,
+    _travel : #FFF1EB,
+    _university : #FFECEC,
+    _restaurant : #FFE9FD,
+    _mobility : #E4F2FF,
+    _development : #EBFBFA,
+    _beauty : #FFF3DB,
+    _worker : #F6EAFF,
+    _business : #E3F6E2,
+    _fashion : #FFE8F0,
+    _sports : #F4FFD6,
+    _health : #E9FFF9,
 );
 
 $c_key : map-get($colors, _key);
@@ -72,6 +93,7 @@ $c_title : map-get($colors, _title);
 $c_font : map-get($colors, _font);
 $c_desc : map-get($colors, _desc);
 $c_placehoder : map-get($colors, _placehoder);
+$c_disabled : map-get($colors, _disabled);
 $fz: (
     _1: 12px, 
     _2: 13px, 
@@ -321,6 +343,14 @@ $inner: 1280px;
 }
 @for $i from 1 through 10 {
     @include list_col($i ,12px, 20px);
+}
+@mixin flex_col($col ,$gapX, $gapY){
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gapY $gapX;
+    .col_item {
+        width: calc((100% / $col) - ((($col - 1)/$col)*$gapX));
+    }
 } 
 
 
@@ -451,4 +481,8 @@ $inner: 1280px;
 .bd_box {
     border: 1px solid $c_line;
     padding: 24px 32px;
+}
+.bd_box2 {
+    border: 1px solid $c_line;
+    padding: 16px 24px;
 }
