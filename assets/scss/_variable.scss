@@ -15,17 +15,19 @@ $m-width : 600px;
 /* colors */
 $colors: (
     _key: #3F36F4,
+    _key_dark : #0B02B8,
     _key2: #AFB2FD,
-    _key3: rgba(#3F36F4,.1),
+    _key3: #EAEBFE,
     _line: #E1E1E1,
     _bg: #F9F9F9,
     _title: #191919,
     _font: #191919,
     _grey: #8C8C8C,
-    
+    _dakrGrey: #555,
     _grey3: #F4F4F4,
     _grey4: #F9F9F9,
     _disabled: #A3A3A3,
+    _disabled_bg: #e2e2e2,
     _desc: #555,
     _red: #FF4E4E,
     _red2_l: #FFF2F2,
@@ -77,6 +79,7 @@ $tag_color_bg: (
 );
 
 $c_key : map-get($colors, _key);
+$c_key_dark : map-get($colors, _key_dark);
 $c_key2 : map-get($colors, _key2);
 $c_key3 : map-get($colors, _key3);
 $c_line : map-get($colors, _line);
@@ -94,6 +97,7 @@ $c_font : map-get($colors, _font);
 $c_desc : map-get($colors, _desc);
 $c_placehoder : map-get($colors, _placehoder);
 $c_disabled : map-get($colors, _disabled);
+$c_disabled_bg : map-get($colors, _disabled_bg);
 $fz: (
     _1: 12px, 
     _2: 13px, 
@@ -114,55 +118,6 @@ $fz_7 : map-get($fz, _7);
 $fz_8 : map-get($fz, _8);
 
 
-@mixin btn($bg, $bd){
-    transition: all .1s ease-in-out;
-    background-color: $bg;
-    border-color: $bd;
-    color: #fff;
-    // &:hover {
-    //     background-color: darken( $bg, 3%);
-    //     border-color: darken($bd, 3%);
-    //     box-shadow: 0 2px 3px rgba(#000, 0.2);
-    // }
-    // &:active {
-    //     box-shadow: inset 0 0 4px rgba(#000, 0.2);
-    //     transform: scale(0.98);
-    // }
-}
-
-@mixin btn_op($bd ,$color){
-    transition: all .1s ease-in-out;
-    background-color: rgba($color, .15);
-    border-color: $bd;
-    color: $color;
-    // &:hover {
-    //     background-color: rgba($color, .2); 
-    //     //color: #fff;
-    // }
-    // &:active {
-    //     box-shadow: inset 0 0 4px rgba(#000, 0.2);
-    //     transform: scale(0.98);
-    // }
-}
-
-@mixin btn_ol($bd ,$color){
-    transition: all .1s ease-in-out;
-    background-color: #fff;
-    border-color: $bd;
-    color: $color;
-    // &:hover {
-    //     background-color: $color;
-    //     color: #fff;
-    // }_bg
-    &.on {
-        background-color: $color;
-        color: #fff;
-    }
-    // &:active {
-    //     box-shadow: inset 0 0 4px rgba(#000, 0.2);
-    //     transform: scale(0.98);
-    // }
-}
 
 
 
@@ -182,6 +137,8 @@ $fz_8 : map-get($fz, _8);
 }
 
 
+
+
 // colors
 @each $key, $color in $colors {
     .fc#{$key} {
@@ -193,24 +150,11 @@ $fz_8 : map-get($fz, _8);
     .bd#{$key} {
         border-color: $color;
     }
-    .btn  {
-        &.#{$key} {
-            @include btn($color, $color)
-        }
-        &.#{$key}_ol {
-            @include btn_ol($color ,$color);
-
-        }
-        &.#{$key}_op {
-            @include btn_op($color ,$color);
-        }
-    }
 }
 @each $key, $size in $fz {
     .fz#{$key} {
         font-size: $size;
     }
-    
 }
 
 
@@ -454,14 +398,14 @@ $inner: 1280px;
     user-select: none;
 }
 
-.disabled {
-    pointer-events: none;
-    cursor: not-allowed;
-    opacity: 0.7;
-    filter: alpha(opacity=7);
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
+// .disabled {
+//     pointer-events: none;
+//     cursor: not-allowed;
+//     opacity: 0.7;
+//     filter: alpha(opacity=7);
+//     -webkit-box-shadow: none;
+//     box-shadow: none;
+// }
 
 .w100 {
     width: 100%;

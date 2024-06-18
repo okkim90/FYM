@@ -1,68 +1,63 @@
 document.addEventListener('DOMContentLoaded', function() {
-
-    const optionsLists = document.querySelectorAll('.select-box .options');
+    //const optionsLists = document.querySelectorAll('.select-box .options');
     const selectBoxes = document.querySelectorAll('.select-box');
-    
-  
-    selectBoxes.forEach((selectBox, index) => {
-      selectBox.addEventListener('click', function() {
-        closeAllOptions();
-        selectBox.querySelector('.options').classList.toggle('on');
-        selectBox.classList.toggle('on');
+    const selectOption = document.querySelectorAll('.select-box .option');
+    const selectOptionMulti = document.querySelectorAll('.select-box .f_chk');
+    selectBoxes.forEach(e => {
+      e.addEventListener('click', function() {
+        
+        if(e.classList.contains('on')){
+          closeAllOptions();
+        }else{
+          //e.querySelector('.options').classList.toggle('on');
+          closeAllOptions();
+          e.classList.toggle('on');
+        }
       });
-  
-
-      let option = selectBox.querySelectorAll('.option');
-      let options = selectBox.querySelector('.options');
-      let option_multi = selectBox.querySelectorAll('.f_chk');
-      let selectInput = selectBox.querySelector('.select-input');
-
-      
-      if(option){
-        console.log(selectBox)
-        option.forEach(e=>{
-          e.addEventListener('click',event=>{
-            event.stopPropagation();
-            selectInput.value = e.textContent;
-            closeAllOptions(); 
-          })
-        });
-      }
-      if(option_multi){
-       
-        option_multi.forEach(e=>{
-          e.addEventListener('click',event=>{
-            event.stopPropagation();
-            chkCount = options.querySelectorAll('.f_chk input[type=checkbox]:checked').length
-            selectInput.value = chkCount + '개 선택'
-             
-          })
-        });
-      }
-     
-      
-
-      
     });
-
-
-  
+    selectOption.forEach(e=>{
+      e.addEventListener('click',(event)=>{
+        event.stopPropagation();
+        let selectBox = e.closest('.select-box');
+        let selectInput = selectBox.querySelector('.select-input');
+        selectInput.value = e.textContent;
+        closeAllOptions();
+      });
+    });
+    selectOptionMulti.forEach(e=>{
+      e.addEventListener('click',(event)=>{
+        let selectBox = e.closest('.select-box');
+        let selectInput = selectBox.querySelector('.select-input');
+        let chkCount = selectBox.querySelectorAll('.f_chk input[type=checkbox]:checked').length
+        selectInput.value = chkCount + '개 선택'
+      });
+    });
     document.addEventListener('click', function(event) {
       if (!event.target.closest('.select-box')) {
         closeAllOptions();
       }
     });
-  
     function closeAllOptions() {
-      optionsLists.forEach((options, index) => {
-        //options.classList.remove('on');
-        selectBoxes[index].classList.remove('on');
+      selectBoxes.forEach(e => {
+        e.classList.remove('on');
       });
     }
-    
 
+
+    const h_tbl_wrap = document.querySelectorAll('.h_tbl_wrap');
     
-    
+    ['load', 'resize'].forEach(function(event) {
+      window.addEventListener(event, ()=>{
+        h_tbl_wrap.forEach(e=>{
+          if(e.querySelector('.h_tbl').offsetWidth > e.offsetWidth){
+            e.classList.add('scrolling');
+          }else{
+            e.classList.remove('scrolling');
+          }
+        });
+      });
+    });
+
 });
 
 function user_toggle(){
@@ -88,3 +83,10 @@ document.addEventListener('click', (event)=> {
     }
   });
 });
+
+
+function reset(target){
+  let this_form  = target.closest('form');
+  this_form.reset();
+}
+

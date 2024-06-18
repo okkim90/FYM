@@ -21,7 +21,7 @@
                 <a href="" class="nav_btn">소재라이브러리</a></li>
             </nav>
             <div class="srch">
-                <div class="select-box select-one ty_small">
+                <div class="select-box ty_small">
                     <input type="text" class="select-input" value="매체" readonly>
                     <ul class="options">
                         <li data-value="1" class="option">매체</li>
@@ -170,6 +170,7 @@
                 <script>
                     const main_banner = new Swiper('.main_banner',{
                         loop: true,
+                        //autoHeight: true,
                         autoplay: {
                             delay: 4000,
                             disableOnInteraction: false,
@@ -437,13 +438,13 @@
                         <button type="button" class="tit_tab_btn">상품 찾기</button>
                     </div>
                 </div>
-                <div class="tabs d_flex fw_w">
+                <div class="tabs d_flex fw_w ">
                     <button type="button" class="btn_tab on">디지털</button>
                     <button type="button" class="btn_tab">컨텐츠</button>
                 </div>
-                <div class="sorting_area">
-                    <div class="select-box select-one ty_big w_200">
-                        <input type="text" class="select-input" value="매체" readonly>
+                <form class="sorting_area d_flex fw_w _gap16 mt16">
+                    <div class="select-box ty_big w_200">
+                        <input type="text" class="select-input" value="" placeholder="카테고리" readonly>
                         <ul class="options">
                             <li data-value="1" class="option">건강/헬스</li>
                             <li data-value="2" class="option">금융</li>
@@ -452,208 +453,491 @@
                             <li data-value="5" class="option">SNS</li>
                         </ul>
                     </div>
-                    <div class="select-box select-multi ty_big w_200">
-                        <input type="text" class="select-input" value="0개 선택" readonly>
+                    <div class="select-box ty_big w_200">
+                        <input type="text" class="select-input" value="" placeholder="핵심 타겟" readonly>
                         <ul class="options">
                             <li>
                                 <label class="f_chk">
                                     <input type="checkbox">
                                     <div class="f_chk_ico"></div>
-                                    <div class="f_chk_txt">옵션</div>
+                                    <div class="f_chk_txt">금융</div>
                                 </label>
                             </li>
                             <li>
                                 <label class="f_chk">
                                     <input type="checkbox">
                                     <div class="f_chk_ico"></div>
-                                    <div class="f_chk_txt">옵션</div>
+                                    <div class="f_chk_txt">뷰티</div>
                                 </label>
                             </li>
                             <li>
                                 <label class="f_chk">
                                     <input type="checkbox">
                                     <div class="f_chk_ico"></div>
-                                    <div class="f_chk_txt">옵션</div>
+                                    <div class="f_chk_txt">직장인</div>
                                 </label>
                             </li>
                             <li>
                                 <label class="f_chk">
                                     <input type="checkbox">
                                     <div class="f_chk_ico"></div>
-                                    <div class="f_chk_txt">옵션</div>
+                                    <div class="f_chk_txt">주부</div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="f_chk">
+                                    <input type="checkbox">
+                                    <div class="f_chk_ico"></div>
+                                    <div class="f_chk_txt">Z세대</div>
                                 </label>
                             </li>
                         </ul>
                     </div>
+                    <div class="select-box ty_big w_200">
+                        <input type="text" class="select-input" value="" placeholder="연령" readonly>
+                        <ul class="options">
+                            <li data-value="1" class="option">10대</li>
+                            <li data-value="2" class="option">20대</li>
+                            <li data-value="3" class="option">30대</li>
+                            <li data-value="4" class="option">40대</li>
+                            <li data-value="5" class="option">50대</li>
+                        </ul>
+                    </div>
+                    <div class="select-box ty_big w_200">
+                        <input type="text" class="select-input" value="" placeholder="성별" readonly>
+                        <ul class="options">
+                            <li data-value="1" class="option">남성</li>
+                            <li data-value="2" class="option">여성</li>   
+                        </ul>
+                    </div>
+                    <button type="button" class="f_btn ty_big _noBg" onclick="reset(this)">Clear</button>
+                    <div class="sorting_area_right ml_auto d_flex _gap8 self_bot">
+                        <!--[D] on class로 활성화-->
+                        <button type="button" class="f_btn ty_small _grey_ol on">조회수</button>
+                        <button type="button" class="f_btn ty_small _grey_ol">매체소개서 다운순</button>
+                    </div>
+                </form>
+                <div class="mt24">
+                    <div class="h_tbl_wrap">
+                        <table class="h_tbl tl_fixed main_fixed_tbl">
+                            <caption></caption> 
+                            <colgroup>
+                                <col class="fixed_col">
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="sticky_left taL"><span class="posR">매체</span></th>
+                                    <th>카테고리</th>
+                                    <th>핵심 타겟</th>
+                                    <th>연령</th>
+                                    <th>성별</th>
+                                    <th class="taR">
+                                        <button type="button" class="col_sort">MAU</button>  
+                                    </th>
+                                    <th>
+                                        <button type="button" class="col_sort">별점</button>
+                                    </th>
+                                    <th class="taR">
+                                        <!--[D] on class로 활성화-->
+                                        <button type="button" class="col_sort on">업데이트</button>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="sticky_left">
+                                        <div class="mediaSet" >
+                                            <span class="mediaSet_ico skeleton_item"></span>
+                                            <div class="mediaSet_txt">
+                                                <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                                <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _sns ty_small skeleton_item">SNS/커뮤니티</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _mobility skeleton_item">모빌리티</span>
+                                        <span class="tag _development skeleton_item">자기계발</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="skeleton_item">18-24</span> </td>
+                                    <td><span class="skeleton_item">여성 비중 높음</span></td>
+                                    <td class="taR"><span class="skeleton_item">207,000K</span></td>
+                                    <td>
+                                        <div class="starSet skeleton_item">
+                                            <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
+                                            <span class="starSet_count">5.0</span>
+                                            <span class="starSet_review">(13개)</span>
+                                        </div>
+                                    </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">2024.06.13</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky_left">
+                                        <div class="mediaSet" >
+                                            <span class="mediaSet_ico skeleton_item"></span>
+                                            <div class="mediaSet_txt">
+                                                <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                                <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _sns ty_small skeleton_item">SNS/커뮤니티</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _mobility skeleton_item">모빌리티</span>
+                                        <span class="tag _development skeleton_item">자기계발</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="skeleton_item">18-24</span> </td>
+                                    <td><span class="skeleton_item">여성 비중 높음</span></td>
+                                    <td class="taR"><span class="skeleton_item">207,000K</span></td>
+                                    <td>
+                                        <div class="starSet skeleton_item">
+                                            <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
+                                            <span class="starSet_count">5.0</span>
+                                            <span class="starSet_review">(13개)</span>
+                                        </div>
+                                    </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">2024.06.13</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky_left">
+                                        <div class="mediaSet" >
+                                            <span class="mediaSet_ico skeleton_item"></span>
+                                            <div class="mediaSet_txt">
+                                                <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                                <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _sns ty_small skeleton_item">SNS/커뮤니티</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _mobility skeleton_item">모빌리티</span>
+                                        <span class="tag _development skeleton_item">자기계발</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="skeleton_item">18-24</span> </td>
+                                    <td><span class="skeleton_item">여성 비중 높음</span></td>
+                                    <td class="taR"><span class="skeleton_item">207,000K</span></td>
+                                    <td>
+                                        <div class="starSet skeleton_item">
+                                            <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
+                                            <span class="starSet_count">5.0</span>
+                                            <span class="starSet_review">(13개)</span>
+                                        </div>
+                                    </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">2024.06.13</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky_left">
+                                        <div class="mediaSet" >
+                                            <span class="mediaSet_ico skeleton_item"></span>
+                                            <div class="mediaSet_txt">
+                                                <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                                <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _sns ty_small skeleton_item">SNS/커뮤니티</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _mobility skeleton_item">모빌리티</span>
+                                        <span class="tag _development skeleton_item">자기계발</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="skeleton_item">18-24</span> </td>
+                                    <td><span class="skeleton_item">여성 비중 높음</span></td>
+                                    <td class="taR"><span class="skeleton_item">207,000K</span></td>
+                                    <td>
+                                        <div class="starSet skeleton_item">
+                                            <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
+                                            <span class="starSet_count">5.0</span>
+                                            <span class="starSet_review">(13개)</span>
+                                        </div>
+                                    </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">2024.06.13</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky_left">
+                                        <div class="mediaSet" >
+                                            <span class="mediaSet_ico skeleton_item"></span>
+                                            <div class="mediaSet_txt">
+                                                <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                                <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _sns ty_small skeleton_item">SNS/커뮤니티</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _mobility skeleton_item">모빌리티</span>
+                                        <span class="tag _development skeleton_item">자기계발</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="skeleton_item">18-24</span> </td>
+                                    <td><span class="skeleton_item">여성 비중 높음</span></td>
+                                    <td class="taR"><span class="skeleton_item">207,000K</span></td>
+                                    <td>
+                                        <div class="starSet skeleton_item">
+                                            <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
+                                            <span class="starSet_count">5.0</span>
+                                            <span class="starSet_review">(13개)</span>
+                                        </div>
+                                    </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">2024.06.13</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky_left">
+                                        <div class="mediaSet" >
+                                            <span class="mediaSet_ico skeleton_item"></span>
+                                            <div class="mediaSet_txt">
+                                                <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                                <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _sns ty_small skeleton_item">SNS/커뮤니티</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _mobility skeleton_item">모빌리티</span>
+                                        <span class="tag _development skeleton_item">자기계발</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="skeleton_item">18-24</span> </td>
+                                    <td><span class="skeleton_item">여성 비중 높음</span></td>
+                                    <td class="taR"><span class="skeleton_item">207,000K</span></td>
+                                    <td>
+                                        <div class="starSet skeleton_item">
+                                            <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
+                                            <span class="starSet_count">5.0</span>
+                                            <span class="starSet_review">(13개)</span>
+                                        </div>
+                                    </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">2024.06.13</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky_left">
+                                        <div class="mediaSet" >
+                                            <span class="mediaSet_ico skeleton_item"></span>
+                                            <div class="mediaSet_txt">
+                                                <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                                <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _sns ty_small skeleton_item">SNS/커뮤니티</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _mobility skeleton_item">모빌리티</span>
+                                        <span class="tag _development skeleton_item">자기계발</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="skeleton_item">18-24</span> </td>
+                                    <td><span class="skeleton_item">여성 비중 높음</span></td>
+                                    <td class="taR"><span class="skeleton_item">207,000K</span></td>
+                                    <td>
+                                        <div class="starSet skeleton_item">
+                                            <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
+                                            <span class="starSet_count">5.0</span>
+                                            <span class="starSet_review">(13개)</span>
+                                        </div>
+                                    </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">2024.06.13</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky_left">
+                                        <div class="mediaSet" >
+                                            <span class="mediaSet_ico skeleton_item"></span>
+                                            <div class="mediaSet_txt">
+                                                <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                                <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _sns ty_small skeleton_item">SNS/커뮤니티</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _mobility skeleton_item">모빌리티</span>
+                                        <span class="tag _development skeleton_item">자기계발</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="skeleton_item">18-24</span> </td>
+                                    <td><span class="skeleton_item">여성 비중 높음</span></td>
+                                    <td class="taR"><span class="skeleton_item">207,000K</span></td>
+                                    <td>
+                                        <div class="starSet skeleton_item">
+                                            <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
+                                            <span class="starSet_count">5.0</span>
+                                            <span class="starSet_review">(13개)</span>
+                                        </div>
+                                    </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">2024.06.13</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky_left">
+                                        <div class="mediaSet" >
+                                            <span class="mediaSet_ico skeleton_item"></span>
+                                            <div class="mediaSet_txt">
+                                                <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                                <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _sns ty_small skeleton_item">SNS/커뮤니티</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _mobility skeleton_item">모빌리티</span>
+                                        <span class="tag _development skeleton_item">자기계발</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="skeleton_item">18-24</span> </td>
+                                    <td><span class="skeleton_item">여성 비중 높음</span></td>
+                                    <td class="taR"><span class="skeleton_item">207,000K</span></td>
+                                    <td>
+                                        <div class="starSet skeleton_item">
+                                            <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
+                                            <span class="starSet_count">5.0</span>
+                                            <span class="starSet_review">(13개)</span>
+                                        </div>
+                                    </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">2024.06.13</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="paging_wrap">
+                        <button type="button" class="paging_btn ty_first paging_nav"></button>
+                        <button type="button" class="paging_btn ty_prev paging_nav"></button>
+                        <div class="paging_list">
+                            <button type="button" class="paging_btn current">1</button>
+                            <button type="button" class="paging_btn">2</button>
+                            <button type="button" class="paging_btn">3</button>
+                            <button type="button" class="paging_btn">4</button>
+                            <button type="button" class="paging_btn">5</button>                          
+                        </div>
+                        <button type="button" class="paging_btn ty_next paging_nav"></button>
+                        <button type="button" class="paging_btn ty_last paging_nav"></button>
+                    </div>
                 </div>
-                <div class="h_tbl_wrap">
-                    <table class="h_tbl tl_fixed" style="min-width: 1760px;">
-                        <caption></caption> 
-                        <colgroup>
-                            <col style="min-width: 430px; width:24%">
-                            <col>
-                            <col style="width:15%">
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                            <col>
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th class="sticky_left taL"><span class="posR">매체</span></th>
-                                <th>카테고리</th>
-                                <th>핵심 타겟</th>
-                                <th>연령</th>
-                                <th>성별</th>
-                                <th class="taR">MAU</th>
-                                <th>별점</th>
-                                <th class="taR">업데이트</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="sticky_left">
-                                    <div class="mediaSet" >
-                                        <span class="mediaSet_ico skeleton_item"></span>
-                                        <div class="mediaSet_txt">
-                                            <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
-                                            <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d_flex _gap8 fw_w jc_c">
-                                        <span class="tag _grey ty_small">SNS/커뮤니티</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d_flex _gap8 fw_w jc_c">
-                                        <span class="tag _yellow ty_small">뷰티</span>
-                                        <span class="tag _red ty_small">대학생활</span>
-                                    </div>
-                                </td>
-                                <td>18-24</td>
-                                <td>여성 비중 높음</td>
-                                <td class="taR">207,000K</td>
-                                <td>
-                                    <div class="starSet">
-                                        <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
-                                        <span class="starSet_count">5.0</span>
-                                        <span class="starSet_review">(13개)</span>
-                                    </div>
-                                </td>
-                                <td class="taR">2024.06.13</td>
-                            </tr>
-                            <tr>
-                                <td class="sticky_left">
-                                    <div class="mediaSet" >
-                                        <span class="mediaSet_ico skeleton_item"></span>
-                                        <div class="mediaSet_txt">
-                                            <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
-                                            <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d_flex _gap8 fw_w jc_c">
-                                        <span class="tag _grey ty_small">SNS/커뮤니티</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d_flex _gap8 fw_w jc_c">
-                                        <span class="tag _yellow ty_small">뷰티</span>
-                                        <span class="tag _red ty_small">대학생활</span>
-                                    </div>
-                                </td>
-                                <td>18-24</td>
-                                <td>여성 비중 높음</td>
-                                <td class="taR">207,000K</td>
-                                <td>
-                                    <div class="starSet">
-                                        <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
-                                        <span class="starSet_count">5.0</span>
-                                        <span class="starSet_review">(13개)</span>
-                                    </div>
-                                </td>
-                                <td class="taR">2024.06.13</td>
-                            </tr>
-                            <tr>
-                                <td class="sticky_left">
-                                    <div class="mediaSet" >
-                                        <span class="mediaSet_ico skeleton_item"></span>
-                                        <div class="mediaSet_txt">
-                                            <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
-                                            <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d_flex _gap8 fw_w jc_c">
-                                        <span class="tag _grey ty_small">SNS/커뮤니티</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d_flex _gap8 fw_w jc_c">
-                                        <span class="tag _yellow ty_small">뷰티</span>
-                                        <span class="tag _red ty_small">대학생활</span>
-                                    </div>
-                                </td>
-                                <td>18-24</td>
-                                <td>여성 비중 높음</td>
-                                <td class="taR">207,000K</td>
-                                <td>
-                                    <div class="starSet">
-                                        <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
-                                        <span class="starSet_count">5.0</span>
-                                        <span class="starSet_review">(13개)</span>
-                                    </div>
-                                </td>
-                                <td class="taR">2024.06.13</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                 <!--[D] 조건에 맞는 검색결과 없을 때-->
+                <div class="mt24">
+                    <div class="result_box taC">
+                        <div class="result_box_ico">
+                            <img src="../assets/images/no_result.svg" alt="">
+                        </div>
+                        <div class="result_box_txt">
+                            <p class="fz_5 fc_dakrGrey">
+                                조건에 맞는 결과가 없어요 <br> 필터를 수정해주세요
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <div style="height: 200vh;"></div>
+             <!--[D] 찾는 매체 없을 때-->
+            <section class="sec">
+                <div class="result_box taC">
+                    <div class="result_box_ico">
+                        <img src="../assets/images/srch_ico.svg" alt="">
+                    </div>
+                    <div class="result_box_txt">
+                        <p class="fz_6 fwB">찾는 매체가 없나요?</p>
+                        <p class="fz_5 fc_dakrGrey">fym에서 보고싶은 매체가 있다면 요청해주세요!</p>
+                    </div>
+                    <a href="" class="result_box_btn f_btn ty_big _ol w_480">매체 요청하기</a>
+                </div>
+            </section>
         </div>
-        
-        <div class="pa30 d_flex _gap20">
-            <label class="f_chk">
-                <input type="checkbox">
-                <div class="f_chk_ico"></div>
-                <div class="f_chk_txt">옵션</div>
-            </label>
-            <label class="f_chk">
-                <input type="checkbox">
-                <div class="f_chk_ico"></div>
-                <div class="f_chk_txt">옵션</div>
-            </label>
-            <label class="f_chk">
-                <input type="checkbox">
-                <div class="f_chk_ico"></div>
-                <div class="f_chk_txt">옵션</div>
-            </label>
-            <label class="f_radio">
-                <input type="radio" id="" name="radio">
-                <div class="f_radio_ico"></div>
-                <div class="f_radio_txt">옵션</div>
-            </label>
-            <label class="f_radio">
-                <input type="radio" id="" name="radio">
-                <div class="f_radio_ico"></div>
-                <div class="f_radio_txt">옵션</div>
-            </label>
-            <label class="f_radio">
-                <input type="radio" id="" name="radio">
-                <div class="f_radio_ico"></div>
-                <div class="f_radio_txt">옵션</div>
-            </label>
-        </div>
-        
+        <footer class="footer">
+            <div class="footer_cont">
+                <img src="../assets/images/footer_tit.svg" class="footer_tit" alt="">
+                <div class="footer_info">
+                    <div class="footer_info_set">
+                        <span class="footer_info_item">디지털네이티브스 주식회사</span>
+                    </div>
+                    <div class="footer_info_set">
+                        <span class="footer_info_item">대표 김동규</span>
+                        <span class="footer_info_item">서울시 강남구 선릉로 551 5층</span>
+                    </div>
+                    <div class="footer_info_set">
+                        <span class="footer_info_item">사업자등록번호 628-81-02391</span>
+                        <span class="footer_info_item">통신판매업 신고번호 2021-서울강남-06131</span>
+                    </div>
+                </div>
+                <div class="footer_info">
+                    <div class="footer_info_set">
+                        <span class="footer_info_item"><a href="" class="fwB">서비스 이용 약관</a></span>
+                        <span class="footer_info_item"><a href="" class="fwB">개인정보처리방침</a></span>
+                    </div>
+                </div>
+            </div>
+            <img src="../assets/images/logo_footer.svg" alt="" class="footer_logo">
+        </footer>
     </div>
-   
-
+    <!--[D] 스켈레톤 로딩 ui 확인용-->
     <script>
         const skeletonItem = document.querySelectorAll('.skeleton_item');
         const hideskeleton = () => {

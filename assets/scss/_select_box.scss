@@ -16,6 +16,18 @@
         background-size: cover;
         flex-shrink: 0;
     }
+    .options {
+        display: none;
+    }
+    &.on {
+        z-index: 100;
+        .options {
+            display: block;
+        }
+        &::after {
+            transform: rotate(180deg);
+        }
+    }
     
     .select-input {
         width: 100%;
@@ -36,10 +48,7 @@
         border-radius: 8px;
         padding: 0 12px;
         
-        &::after {
-            right: 12px;
-        }
-
+        
         .options {
             position: absolute;
             top: calc(100% + 8px);
@@ -49,7 +58,7 @@
             padding: 8px;
             box-sizing: border-box;
             box-shadow: 2px 8px 20px rgba(#000,0.08) ;
-            display: none;
+            
             border-radius: 8px;
             li {
                 padding: 0 8px;
@@ -61,14 +70,6 @@
                 }
             }
         }
-        &.on {
-            .options {
-                display: block;
-            }
-            &::after {
-                transform: rotate(180deg);
-            }
-        }
     }
     &.ty_big {
         height: 56px;   
@@ -77,9 +78,7 @@
         .select-input {
             font-size: 14px;
         }
-        &::after {
-            right: 20px;
-        }
+      
         .options {
             position: absolute;
             top: calc(100% + 8px);
@@ -89,9 +88,10 @@
             
             box-sizing: border-box;
             box-shadow: 2px 8px 20px rgba(#000,0.08) ;
-            display: none;
+            
             border-radius: 16px;
             li {
+                font-size: 14px;
                 &.option {
                     padding: 0 20px;
                 }
@@ -106,18 +106,14 @@
                 }
             }
         }
-        &.on {
-            .options {
-                display: block;
-            }
-            &::after {
-                transform: rotate(180deg);
-            }
-        }
+        
         .f_chk {
             display: flex;
             width: 100%;
             padding: 0 20px;
+            &_txt {
+                font-size: 14px;
+            }
         }
     }
     

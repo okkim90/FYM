@@ -65,6 +65,13 @@
     &_wrap {
         position: relative;
         overflow-x: auto;
+        &.scrolling {
+            .sticky_left {
+                &::after, &::before {
+                    display: block;
+                }
+            }
+        }
     }
 
     width: 100%;
@@ -85,6 +92,8 @@
     &.tl_fixed {
         table-layout: fixed;
     }
+
+    
     .sticky_left {
         position: sticky;
         left: 0;
@@ -94,6 +103,7 @@
             position: relative;
             z-index: 10;
         }
+        
         &::before {
             content: '';
             width: 100%;
@@ -102,6 +112,7 @@
             left: 0;
             top: 0;
             background-color: #fff;
+            display: none;
         }
         &::after {
             content: '';
@@ -112,10 +123,12 @@
             top: 0;
             z-index: -1;
             box-shadow: 4px 0px 10px rgba(#000, .1);
+            display: none;
         }
-        
-        
     }
+
+    
+
     &.no_hv {
         tr:hover {
             cursor: default;
@@ -159,6 +172,27 @@
             }
             &.taR {
                 text-align: right;
+            }
+        }
+        .col_sort {
+            display: inline-flex;
+            gap: 0 2px;
+            align-items: center;
+            padding: 0 10px;
+            height: 33px;
+            line-height: 33px;
+            border-radius: 8px;
+            &::after {
+                content: '';
+                width: 15px;
+                height: 15px;
+                background-image: url(../images/select_arrow.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            &.on {
+                background-color: $c_grey3;
             }
         }
     }
@@ -242,39 +276,6 @@
         }
     }
 
-    .col_sort {
-        display: inline-flex;
-        margin-left: 6px;
-        flex-direction: column;
-        vertical-align: middle;
-        
-        .btn_sort {
-            display: block;
-            &.ty_up {
-                border-bottom: 5px solid #999;
-                border-left: 4px solid transparent;
-                border-right: 4px solid transparent;
-                &:hover {
-                    border-bottom-color: #000;
-                }
-                &.on {
-                    border-bottom-color: #000;
-                }
-            }
-            &.ty_down {
-                margin-top: 4px;
-                border-top: 5px solid #999;
-                border-left: 4px solid transparent;
-                border-right: 4px solid transparent;
-                &:hover {
-                    border-top-color: #000;
-                }
-                &.on {
-                    border-top-color: #000;
-                }
-            }
-        }
-    }
 }
 
 .tbl_area {
