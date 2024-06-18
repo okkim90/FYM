@@ -936,6 +936,26 @@
             </div>
             <img src="../assets/images/logo_footer.svg" alt="" class="footer_logo">
         </footer>
+
+        <!--[D] 모바일 이용불가 안내 팝업-->
+        <div class="modal mobile_alert">
+            <div class="modal_inner">
+                <div class="modal_cont ty_small">
+                    <div class="taC">
+                        <div class="modal_ico mb20">
+                            <img src="../assets/images/ico_alert.svg" alt="">
+                        </div>
+                        <div class="modal_txt">
+                            <p class="modal_tit fc_font fz_6">fym은 PC에서 이용할 수 있어요</p>
+                            <p class="modal_desc fc_greyDark fz_5">모바일에서는 상세 매체 정보, 소재 라이브러리 등 fym의 모든 기능을 상세히 이용할 수 없어요</p>
+                        </div>
+                        <div class="modal_bot">
+                            <button class="f_btn ty_big _blue w100" onclick="close_modal(this)">확인</button>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!--[D] 스켈레톤 로딩 ui 확인용-->
     <script>
@@ -948,6 +968,8 @@
         window.onload = setTimeout(hideskeleton, 1600);
     </script>
     
+
+
 </body>
 </html>
 

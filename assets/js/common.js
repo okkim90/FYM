@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     const h_tbl_wrap = document.querySelectorAll('.h_tbl_wrap');
-    
+    const mobile_alert = document.querySelector('.mobile_alert');
     ['load', 'resize'].forEach(function(event) {
       window.addEventListener(event, ()=>{
         h_tbl_wrap.forEach(e=>{
@@ -55,6 +55,11 @@ document.addEventListener('DOMContentLoaded', function() {
             e.classList.remove('scrolling');
           }
         });
+        if(window.innerWidth < 1023){
+          mobile_alert.classList.add('on')
+        }else{
+          mobile_alert.classList.remove('on')
+        }
       });
     });
 
@@ -90,3 +95,8 @@ function reset(target){
   this_form.reset();
 }
 
+
+function close_modal(target){
+  const modal = target.closest('.modal');
+  modal.classList.remove('on');
+}

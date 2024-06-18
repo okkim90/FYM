@@ -13,6 +13,9 @@
     align-items: center;
     padding: 0 32px;
     //border-bottom: 1px solid $c_line;
+    @include mobile {
+        height: 80px;
+    }
     .logo {
         flex-shrink: 0;
         a {
