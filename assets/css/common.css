@@ -59,6 +59,10 @@
   color: #00BE85;
 }
 
+.tag._update {
+  color: #FF4E4E;
+}
+
 .tag._sns {
   background-color: #f4f4f4;
 }
@@ -113,6 +117,10 @@
 
 .tag._health {
   background-color: #E9FFF9;
+}
+
+.tag._update {
+  background-color: #FFF2F2;
 }
 
 .fc_key {
@@ -7151,11 +7159,17 @@ input::-webkit-search-results-decoration {
 .tag {
   display: inline-block;
   padding: 0 8px;
-  line-height: 31px;
+  line-height: 30px;
   border-radius: 8px;
   font-size: 14px;
   font-weight: 500;
   white-space: nowrap;
+}
+.tag.ty_small {
+  line-height: 16px;
+  border-radius: 4px;
+  padding: 0 4px;
+  font-size: 10px;
 }
 
 .no_result {
