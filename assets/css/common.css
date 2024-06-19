@@ -5864,11 +5864,9 @@ input::-webkit-search-results-decoration {
 }
 .header .user_info {
   padding: 12px;
-}
-.header .user_menu {
-  margin-top: 8px;
-  padding-top: 8px;
-  border-top: 1px solid #E1E1E1;
+  margin-bottom: 8px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E1E1E1;
 }
 .header .user_menu_btn {
   display: block;
@@ -6015,6 +6013,7 @@ input::-webkit-search-results-decoration {
   box-sizing: border-box;
   max-height: 100%;
   overflow-y: auto;
+  box-shadow: 3px 8px 20px rgba(0, 0, 0, 0.05);
 }
 .modal_cont.ty_small {
   width: 450px;
@@ -6040,11 +6039,12 @@ input::-webkit-search-results-decoration {
 .modal .close_modal:hover {
   opacity: 1;
 }
+.modal_txt {
+  line-height: 1.75;
+}
 .modal_tit {
   margin-bottom: 5px;
-}
-.modal_bot {
-  margin-top: 40px;
+  font-weight: 600;
 }
 
 /* templetes */

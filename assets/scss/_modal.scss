@@ -39,6 +39,7 @@
         &.ty_small {
             width: 450px;
         }
+        box-shadow: 3px 8px 20px rgba(#000,.05);
 
         @at-root .mobile_alert & {
             height: 100%;
@@ -67,11 +68,12 @@
         }
     }
    
-    
+    &_txt {
+        line-height: 1.75;
+    }
     &_tit {
         margin-bottom: 5px;
+        font-weight: 600;
     }
-    &_bot {
-        margin-top: 40px;
-    }
+    
 }

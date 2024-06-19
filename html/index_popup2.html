@@ -940,7 +940,7 @@
         </footer>
 
         <!--[D] 모바일 이용불가 안내 팝업-->
-        <div class="modal mobile_alert" onclick=" close_modal(target)">
+        <div class="modal mobile_alert" onclick=" close_modal(this)">
             <div class="modal_inner">
                 <div class="modal_cont ty_small">
                     <div class="taC">
@@ -953,6 +953,23 @@
                         </div>
                         <div class="modal_bot mt40">
                             <button class="f_btn ty_big _blue w100" onclick="close_modal(this)">확인</button>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--[D] 회원가입 유도 팝업1-->
+        <div class="modal on" onclick=" close_modal(this)">
+            <div class="modal_inner">
+                <div class="modal_cont ty_small">
+                    <div class="taC">
+                        <div class="modal_txt">
+                            <p class="modal_tit fc_font fz_6">매체 상세 정보가 궁금하신가요?</p>
+                            <p class="modal_desc fc_dakrGrey fz_5">1분만에 회원가입 하고 매체 필터, 상세 상품 정보 등 <br> fym에서 모두 이용해보세요!</p>
+                        </div>
+                        <div class="modal_bot d_flex _gap15 mt30">
+                            <button class="f_btn ty_big _ol flex1">로그인</button>
+                            <button class="f_btn ty_big _blue flex1">회원가입</button>
                         </div>   
                     </div>
                 </div>
