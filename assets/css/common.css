@@ -5528,7 +5528,7 @@ body {
   background-color: #fff;
   color: #191919;
   min-width: 320px;
-  overflow: hidden scroll;
+  overflow: hidden auto;
   font-weight: 500;
 }
 
@@ -5980,7 +5980,17 @@ input::-webkit-search-results-decoration {
 
 #container {
   padding: 0 32px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
+}
+#container.ty_f {
+  padding: 60px 16px;
+  width: 100%;
+  max-width: 432px;
+  margin: 0 auto;
+  min-height: calc(100dvh - 90px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 @media (max-width: 767px) {
   #container {
