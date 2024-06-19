@@ -6292,6 +6292,9 @@ input::-webkit-search-results-decoration {
 .btn_tab.on {
   background-color: #EAEBFE;
 }
+.btn_tab:hover {
+  background-color: #F9F9F9;
+}
 
 .f_btn {
   text-align: center;
@@ -7432,7 +7435,7 @@ input::-webkit-search-results-decoration {
 }
 .tit_tab_btn {
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   color: #A3A3A3;
   position: relative;
   height: 50px;
