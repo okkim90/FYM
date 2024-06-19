@@ -3,6 +3,18 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
 /* 공통 */
 /* colors */
+.tag._key {
+  color: #3F36F4;
+}
+
+.tag._red {
+  color: #FF4E4E;
+}
+
+.tag._grey {
+  color: #8C8C8C;
+}
+
 .tag._sns {
   color: #8C8C8C;
 }
@@ -61,6 +73,18 @@
 
 .tag._update {
   color: #FF4E4E;
+}
+
+.tag._key {
+  background-color: #ECEBFE;
+}
+
+.tag._red {
+  background-color: #FFF2F2;
+}
+
+.tag._grey {
+  background-color: #f4f4f4;
 }
 
 .tag._sns {
@@ -5956,6 +5980,7 @@ input::-webkit-search-results-decoration {
 
 #container {
   padding: 0 32px;
+  padding-bottom: 80px;
 }
 @media (max-width: 767px) {
   #container {

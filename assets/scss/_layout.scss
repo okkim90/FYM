@@ -1,5 +1,6 @@
 #container {
     padding: 0 32px;
+    padding-bottom: 80px;
     @include mobile {
         padding: 0 16px;
     }
