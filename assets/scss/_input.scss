@@ -60,6 +60,19 @@
         font-size: 14px;
         font-weight: 500;
     }
+    &_link {
+        width: 20px;
+        height: 20px;
+        margin-left: auto;
+        flex-shrink: 0;
+        background-image: url(../images/ico_link.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 4px;
+        &:hover {
+            background-color: $c_grey3;
+        }
+    }
 }
 
 .f_radio {
@@ -134,20 +147,134 @@
         font-size: 14px;
         font-weight: 500;
     }
+
+    &_btn {
+        .btn_cont {
+            height: 56px;
+            border: 1px solid $c_line;
+            font-size: 14px;
+            line-height: 54px;
+            text-align: center;
+            //padding: 0 20px;
+            color: $c_grey;
+            border-radius: 12px;
+            transition: all .1s ease-in-out;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        input {
+            border: 0; 
+            clip: rect(0 0 0 0); 
+            clip-path: inset(50%); 
+            width: 1px; 
+            height: 1px; 
+            margin: -1px; 
+            overflow: hidden; 
+            padding: 0; 
+            position: absolute; 
+            white-space: nowrap; 
+            &:checked ~ .btn_cont {
+                background-color: $c_key;
+                border-color: $c_key;
+                color: #fff;
+            }
+        }
+        &:hover {
+            .btn_cont {
+                background-color: $c_key3;
+            }
+        }
+    }
 }
 
 
-.search_set {
-    display: flex;
-    .f_input {
-        
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-        border-right: none;
+.f_set {
+    & + & {
+        margin-top: 30px;
     }
-    .f_btn {
-        border-left: none;
-        border-top-left-radius: 0 !important;
-        border-bottom-left-radius: 0 !important;
+    &_top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        .label {
+            font-size: 13px;
+            font-weight: 700;
+            color: $c_grey;
+        }
+        .sub {
+            font-size: 12px;
+            font-weight: 500;
+            color: $c_placehoder;
+        }
+    }
+    &_input {
+        position: relative;
+        & + & {
+            margin-top: 10px;
+        }
+    }
+    &_msg {
+        font-size: 13px;
+        margin-top: 8px;
+        //color: $c_grey;
+    }
+}
+.f_input {
+    width: 100%;
+    height: 56px;
+    box-shadow: 0 0 0 1px $c_line inset;
+    font-size: 14px;
+    padding: 0 20px;
+    border-radius: 12px;
+    transition: box-shadow .1s ease-in-out;
+    &_box {
+        position: relative;
+    }
+    &_left {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0 14px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &.pr {
+        padding-right: 100px;
+    }
+    &:read-only {
+        background-color: $c_bg;
+        color: $c_disabled;
+        &:focus {
+            box-shadow: 0 0 0 1px $c_line inset;
+        }
+    }
+    &:focus {
+        //border-width: 2px;
+        box-shadow: 0 0 0 2px $c_key2 inset;
+    }
+    &.pass { 
+        box-shadow: 0 0 0 2px $c_key2 inset;
+        &:focus {
+            box-shadow: 0 0 0 2px $c_key2 inset;
+        }
+    }
+    &.error {
+        box-shadow: 0 0 0 2px $c_red inset;
+        &:focus {
+            box-shadow: 0 0 0 2px $c_red inset;
+        }
+    }
+}
+
+.chk_set {
+    &_list {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid $c_line;
+    }
+    .f_chk {
+        height: 43px;
+        width: 100%;
     }
 }

@@ -113,7 +113,8 @@ $fz: (
     _5: 16px, 
     _6: 18px, 
     _7: 20px, 
-    _8: 24px
+    _8: 24px,
+    _9: 36px
 );
 $fz_1 : map-get($fz, _1);
 $fz_2 : map-get($fz, _2);
@@ -123,6 +124,7 @@ $fz_5 : map-get($fz, _5);
 $fz_6 : map-get($fz, _6);
 $fz_7 : map-get($fz, _7);
 $fz_8 : map-get($fz, _8);
+$fz_9 : map-get($fz, _9);
 
 
 

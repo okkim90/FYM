@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYM</title>
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script type="text/javascript" src="../assets/js/swiper.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <h1 class="logo">
+                <a href=""><img src="../assets/images/logo.svg" alt=""></a>
+            </h1>
+            <nav class="nav">
+                <a href="" class="nav_btn">데이터베이스</a></li>
+                <a href="" class="nav_btn">소재라이브러리</a></li>
+            </nav>
+            <div class="srch">
+                <div class="select-box ty_small">
+                    <input type="text" class="select-input" value="매체" readonly>
+                    <ul class="options">
+                        <li data-value="1" class="option">매체</li>
+                        <li data-value="2" class="option">상품</li>
+                    </ul>
+                </div>
+                <input type="text" class="srch_input" placeholder="찾고 싶은 매체/상품을 검색해보세요!">
+                <button type="submit" class="srch_btn"></button>
+                <span class="line"></span>
+                <!--[D] 'on' class 로 활성화-->
+                <div class="srch_result">
+                    <ul class="srch_list">
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _beauty">뷰티</span>
+                                    <span class="tag _university">Z세대</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _beauty">뷰티</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                    <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _sns">CPM 배너</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                    <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _sns">CPM 배너</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="no_result">
+                        <img src="../assets/images/no_result.svg" alt="">
+                        <div class="desc fz_5 fc_grey">
+                            조건에 맞는 결과가 없어요 <br> 검색어를 수정해주세요
+                        </div>
+                    </div>
+                </div>
+                <!-- [D][개발시 삭제] UI 확인용 스크립트 -->
+                <script>
+                    const srch_btn = document.querySelector('.srch_btn');
+                    const srch_result = document.querySelector('.srch_result');
+                    srch_btn.addEventListener('click', (event)=>{
+                        srch_result.classList.add('on');
+                    });
+
+                </script>
+                <!--// [D][개발시 삭제] UI 확인용 스크립트 -->
+            </div>
+            <div class="header_btns d_flex _gap8 ml_auto">
+                <a href="" class="f_btn _ol ty_small">로그인</a>
+                <a href="" type="button" class="f_btn _blue ty_small">회원가입</a>
+            </div>
+        </header>
+        <div id="container" class="ty_f">
+            <div class="form_wrap">
+                <div class="sub_tit_set">
+                    <h2 class="sub_tit">회원가입</h2>
+                    <div class="sub_tit_desc">계정 생성을 위해 필요한 정보를 입력해주세요</div>
+                </div>
+                <form action="">
+                    <!--[D] 일반 이메일가입 -->
+                    <div class="f_set">
+                        <div class="f_set_top">
+                            <label for="" class="label">이메일</label>
+                        </div>
+                        <div class="f_set_input">
+                            <div class="f_input_box">
+                                <input type="email" class="f_input pr" placeholder="이메일을 입력해주세요" >
+                                <div class="f_input_left">
+                                    <button type="button" class="f_btn ty_xsmall _blue disabled" disabled>이메일 인증</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f_set_input">
+                            <div class="f_input_box">
+                                <input type="email" class="f_input pr" placeholder="이메일을 입력해주세요" value="asdfasdfas@gmail.com" >
+                                <div class="f_input_left">
+                                    <button type="button" class="f_btn ty_xsmall _blue">이메일 인증</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f_set_input">
+                            <div class="f_input_box">
+                                <input type="email" class="f_input pr" placeholder="이메일을 입력해주세요" value="asdfasdfas@gmail.com" >
+                                <div class="f_input_left">
+                                    <button type="button" class="f_btn ty_xsmall _blue">재전송</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f_set_input">
+                            <div class="f_input_box">
+                                <input type="email" class="f_input pr" placeholder="이메일을 입력해주세요" value="asdfasdfas@gmail.com" readonly>
+                                <div class="f_input_left">
+                                    <button type="button" class="f_btn ty_xsmall _blue disabled" disabled>인증완료</button>
+                                </div>
+                            </div>
+                            <p class="f_set_msg fc_grey">인증이 완료되었습니다</p>
+                        </div>
+                        <div class="f_set_input">
+                            <div class="f_input_box">
+                                <input type="text" class="f_input pr" placeholder="이메일로 발송된 인증번호를 입력해주세요" value="" >
+                                <div class="f_input_left">
+                                    <span class="fz_3 fc_placehoder">5:00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="f_set_input">
+                            <div class="f_input_box">
+                                <input type="text" class="f_input pr" placeholder="이메일로 발송된 인증번호를 입력해주세요" value="1234125" >
+                                <div class="f_input_left">
+                                    <button type="button" class="f_btn ty_xsmall _blue">확인</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--[D] 카카오 가입 -->
+                    <div class="f_set">
+                        <div class="f_set_top">
+                            <label for="" class="label">이메일</label>
+                        </div>
+                        <div class="f_set_input">
+                            <div class="f_input_box">
+                                <input type="email" class="f_input" readonly value="hana@kakao.com">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="f_set">
+                        <div class="f_set_top">
+                            <label for="" class="label">이름</label>
+                        </div>
+                        <div class="f_set_input">
+                            <div class="f_input_box">
+                                <input type="text" class="f_input" placeholder="이름을 입력해주세요">
+                            </div> 
+                        </div>
+                        <div class="f_set_input">
+                            <div class="f_input_box">
+                                <input type="text" class="f_input error" placeholder="이름을 입력해주세요">
+                            </div> 
+                            <p class="f_set_msg fc_red">한글 또는 영문자만 입력 가능합니다</p>
+                        </div>
+                    </div>
+                    <div class="f_set">
+                        <div class="f_set_top">
+                            <label for="" class="label">비밀번호</label>
+                        </div>
+                        <div class="f_set_input">
+                            <div class="f_input_box">
+                                <input type="password" class="f_input" placeholder="영문/숫자 조합 8-20자리를 입력해주세요">
+                            </div>
+                        </div>
+                        <div class="f_set_input">
+                            <div class="f_input_box">
+                                <input type="password" class="f_input" placeholder="비밀번호를 확인해주세요">
+                            </div>
+                        </div>
+                        <div class="f_set_input">
+                            <div class="f_input_box">
+                                <input type="password" class="f_input error" placeholder="영문/숫자 조합 8-20자리를 입력해주세요" value="123123123">
+                            </div>
+                            <p class="f_set_msg fc_red">올바른 비밀번호가 아닙니다 메세지~~~</p>
+                        </div>
+                        <div class="f_set_input">
+                            <div class="f_input_box">
+                                <input type="password" class="f_input error" placeholder="비밀번호를 확인해주세요" value="123123">
+                            </div>
+                            <p class="f_set_msg fc_red">비밀번호를 확인해주세요</p>
+                        </div>
+                    </div>
+                    <div class="f_set">
+                        <div class="f_set_top">
+                            <label for="" class="label">회사 유형</label>
+                        </div>
+                        <div class="d_flex _gap10">
+                            <label class="f_radio_btn flex1">
+                                <input type="radio" name="c_type">
+                                <div class="btn_cont">브랜드/인하우스</div>
+                            </label>
+                            <label class="f_radio_btn flex1">
+                                <input type="radio" name="c_type">
+                                <div class="btn_cont">대행사/렙사</div>
+                            </label>
+                            <label class="f_radio_btn flex1">
+                                <input type="radio" name="c_type">
+                                <div class="btn_cont">매체사</div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="f_set">
+                        <div class="f_set_top">
+                            <label for="" class="label">회사명</label>
+                        </div>
+                        <div class="f_set_input">
+                            <div class="f_input_box">
+                                <input type="text" class="f_input" placeholder="회사 이름을 입력해주세요">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f_set">
+                        <div class="chk_set">
+                            <div class="chk_set_all">
+                                <label class="f_chk">
+                                    <input type="checkbox">
+                                    <div class="f_chk_ico"></div>
+                                    <div class="f_chk_txt">모두 동의합니다</div>
+                                </label>
+                            </div>
+                            <ul class="chk_set_list">
+                                <li>
+                                    <label class="f_chk">
+                                        <input type="checkbox">
+                                        <div class="f_chk_ico"></div>
+                                        <div class="f_chk_txt">[필수] 서비스 이용 약관 동의</div>
+                                        <a href="./index.html" target="_blank" class="f_chk_link"></a>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="f_chk">
+                                        <input type="checkbox">
+                                        <div class="f_chk_ico"></div>
+                                        <div class="f_chk_txt">[필수] 개인 정보 수집 및 이용 동의</div>
+                                        <a href="./index.html" target="_blank" class="f_chk_link"></a>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="f_chk">
+                                        <input type="checkbox">
+                                        <div class="f_chk_ico"></div>
+                                        <div class="f_chk_txt">[선택] fym 업데이트, 할인 소식 수신 동의</div>
+                                        <a href="./index.html" target="_blank" class="f_chk_link"></a>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="f_set">
+                        <button type="submit" class="f_btn ty_big _blue w100 disabled" disabled>fym 시작하기</button>
+                        <button type="submit" class="f_btn ty_big _blue w100">fym 시작하기</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+        <!--[D] 모바일 이용불가 안내 팝업-->
+        <div class="modal mobile_alert" onclick=" close_modal(this)">
+            <div class="modal_inner">
+                <div class="modal_cont ty_small">
+                    <div class="taC">
+                        <div class="modal_ico mb20">
+                            <img src="../assets/images/ico_alert.svg" alt="">
+                        </div>
+                        <div class="modal_txt">
+                            <p class="modal_tit fc_font fz_6">fym은 PC에서 이용할 수 있어요</p>
+                            <p class="modal_desc fc_dakrGrey fz_5">모바일에서는 상세 매체 정보, 소재 라이브러리 등 fym의 모든 기능을 상세히 이용할 수 없어요</p>
+                        </div>
+                        <div class="modal_bot mt40">
+                            <button class="f_btn ty_big _blue w100" onclick="close_modal(this)">확인</button>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
