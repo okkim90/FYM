@@ -108,3 +108,8 @@ function close_modal(target){
   modal.classList.remove('on');
 }
 
+function close_toast(target){
+  const toast = target.closest('.toast');
+  toast.classList.remove('on');
+}
+

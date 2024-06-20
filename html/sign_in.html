@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYM</title>
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script type="text/javascript" src="../assets/js/swiper.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <h1 class="logo">
+                <a href=""><img src="../assets/images/logo.svg" alt=""></a>
+            </h1>
+            <nav class="nav">
+                <a href="" class="nav_btn">데이터베이스</a></li>
+                <a href="" class="nav_btn">소재라이브러리</a></li>
+            </nav>
+            <div class="srch">
+                <div class="select-box ty_small">
+                    <input type="text" class="select-input" value="매체" readonly>
+                    <ul class="options">
+                        <li data-value="1" class="option">매체</li>
+                        <li data-value="2" class="option">상품</li>
+                    </ul>
+                </div>
+                <input type="text" class="srch_input" placeholder="찾고 싶은 매체/상품을 검색해보세요!">
+                <button type="submit" class="srch_btn"></button>
+                <span class="line"></span>
+                <!--[D] 'on' class 로 활성화-->
+                <div class="srch_result">
+                    <ul class="srch_list">
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _beauty">뷰티</span>
+                                    <span class="tag _university">Z세대</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _beauty">뷰티</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                    <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _sns">CPM 배너</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                    <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _sns">CPM 배너</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="no_result">
+                        <img src="../assets/images/no_result.svg" alt="">
+                        <div class="desc fz_5 fc_grey">
+                            조건에 맞는 결과가 없어요 <br> 검색어를 수정해주세요
+                        </div>
+                    </div>
+                </div>
+                <!-- [D][개발시 삭제] UI 확인용 스크립트 -->
+                <script>
+                    const srch_btn = document.querySelector('.srch_btn');
+                    const srch_result = document.querySelector('.srch_result');
+                    srch_btn.addEventListener('click', (event)=>{
+                        srch_result.classList.add('on');
+                    });
+
+                </script>
+                <!--// [D][개발시 삭제] UI 확인용 스크립트 -->
+            </div>
+            <div class="header_btns d_flex _gap8 ml_auto">
+                <a href="" class="f_btn _ol ty_small">로그인</a>
+                <a href="" type="button" class="f_btn _blue ty_small">회원가입</a>
+            </div>
+        </header>
+        <div id="container" class="ty_f">
+            <div class="form_wrap sign_in">
+                <div class="taC">
+                    <img src="../assets/images/logo.svg" class="h_50" alt="">
+                </div>
+                <form action="" class="f_set mt40">
+                    <div>
+                        <div class="f_input_box">
+                            <input type="text" class="f_input" placeholder="이메일을 입력해주세요">
+                        </div>
+                        <!--[D] 이메일 주소 error-->
+                        <div class="f_input_box">
+                            <input type="text" class="f_input error" placeholder="이메일을 입력해주세요">
+                            <p class="f_set_msg fc_red">이메일 주소를 확인해주세요</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt15">
+                        <div class="f_input_box">
+                            <input type="password" class="f_input" placeholder="비밀번호를 입력해주세요">
+                        </div>
+                    </div>
+                    <div class="mt30">
+                        <!--[D] 로그인 버튼 비활성화-->
+                        <button type="submit" class="f_btn ty_big w100 _blue disabled" disabled>로그인</button>
+
+                        <!--[D] 로그인 버튼 활성화-->
+                        <button type="submit" class="f_btn ty_big w100 _blue">로그인</button>
+                    </div>
+                    <div class="taR mt10">
+                        <a href="" class="f_btn ty_small _grey_noBg">비밀번호를 잊으셨나요?</a>
+                    </div>
+                </form>
+                <div class="sign_in_sep"><span>or</span></div>
+                <div class="d_flex ty_col _gapY16 mt30">
+                    <button type="button"><img src="../assets/images/kakao_signin.png" alt=""></button>
+                </div>
+
+                <div class="d_flex jc_c _gapX10 ai_c mt100">
+                    <p class="fc_grey fz_3">계정이 없으신가요?</p>
+                    <a href="./sign_up.html" class="f_btn ty_small _blue_noBg ty_link">가입하기</a>
+                </div>
+            </div>
+        </div>
+        <!--[D] 모바일 이용불가 안내 팝업-->
+        <div class="modal mobile_alert" onclick=" close_modal(this)">
+            <div class="modal_inner">
+                <div class="modal_cont ty_small">
+                    <div class="taC">
+                        <div class="modal_ico mb20">
+                            <img src="../assets/images/ico_alert.svg" alt="">
+                        </div>
+                        <div class="modal_txt">
+                            <p class="modal_tit fc_font fz_6">fym은 PC에서 이용할 수 있어요</p>
+                            <p class="modal_desc fc_dakrGrey fz_5">모바일에서는 상세 매체 정보, 소재 라이브러리 등 fym의 모든 기능을 상세히 이용할 수 없어요</p>
+                        </div>
+                        <div class="modal_bot mt40">
+                            <button class="f_btn ty_big _blue w100" onclick="close_modal(this)">확인</button>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

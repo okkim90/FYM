@@ -43,3 +43,31 @@
         }
     }
 }
+
+.sign_in {
+    &_sep {
+        text-align: center;
+        position: relative;
+        margin: 48px 0 32px;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: $c_line;
+            left: 0;
+            top: 50%;
+        }
+        span {
+            display: inline-block;
+            position: relative;
+            background-color: #fff;
+            z-index: 1;
+            vertical-align: top;
+            font-size: 15px;
+            color: $c_grey;
+            padding: 0 10px;
+            line-height: 25px;
+        }
+    }
+}
