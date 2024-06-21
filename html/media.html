@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYM</title>
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script type="text/javascript" src="../assets/js/swiper.min.js"></script>
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+    <link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/51/css/core/tooltip.css">
+    <link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/51/css/util/util.css">
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <h1 class="logo">
+                <a href=""><img src="../assets/images/logo.svg" alt=""></a>
+            </h1>
+            <nav class="nav">
+                <a href="" class="nav_btn">데이터베이스</a></li>
+                <a href="" class="nav_btn">소재라이브러리</a></li>
+            </nav>
+            <div class="srch">
+                <div class="select-box ty_small">
+                    <input type="text" class="select-input" value="매체" readonly>
+                    <ul class="options">
+                        <li data-value="1" class="option">매체</li>
+                        <li data-value="2" class="option">상품</li>
+                    </ul>
+                </div>
+                <input type="text" class="srch_input" placeholder="찾고 싶은 매체/상품을 검색해보세요!">
+                <button type="submit" class="srch_btn"></button>
+                <span class="line"></span>
+                <!--[D] 'on' class 로 활성화-->
+                <div class="srch_result">
+                    <ul class="srch_list">
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _beauty">뷰티</span>
+                                    <span class="tag _university">Z세대</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _beauty">뷰티</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                    <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _sns">CPM 배너</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                    <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _sns">CPM 배너</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="no_result">
+                        <img src="../assets/images/no_result.svg" alt="">
+                        <div class="desc fz_5 fc_grey">
+                            조건에 맞는 결과가 없어요 <br> 검색어를 수정해주세요
+                        </div>
+                    </div>
+                </div>
+                <!-- [D][개발시 삭제] UI 확인용 스크립트 -->
+                <script>
+                    const srch_btn = document.querySelector('.srch_btn');
+                    const srch_result = document.querySelector('.srch_result');
+                    srch_btn.addEventListener('click', (event)=>{
+                        srch_result.classList.add('on');
+                    });
+
+                </script>
+                <!--// [D][개발시 삭제] UI 확인용 스크립트 -->
+            </div>
+            <div class="user ex_close">
+                <button type="button" class="user_ico" onclick="user_toggle()"></button>
+                <div class="user_cont ">
+                    <div class="user_info d_flex fw_w ai_c _gapX8 _gapY4">
+                        <div class="user_name fz_4 fwB">김하나</div>
+                        <div class="user_status tag _subscribe">구독중</div>
+                        <div class="user_mail w100 fz_3 fc_grey">hana@fym.im</div>
+                    </div>
+                    <ul class="user_menu">
+                        <li><a href="" class="user_menu_btn hv">로그인</a></li>
+                        <li><a href="" class="user_menu_btn hv">회원가입</a></li>
+                        <li><a href="" class="user_menu_btn hv">마이페이지</a></li>
+                        <li><a href="" class="user_menu_btn hv">매체 등록/수정 요청</a></li>
+                        <li><a href="" class="user_menu_btn hv">로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="container">
+            <div class="media_wrap">
+                <section class="media_top">
+                    <div class="mediaSet ty_big" >
+                        <span class="mediaSet_ico skeleton_item"></span>
+                        <div class="mediaSet_txt">
+                            <div class="d_flex ai_c">
+                                <span class="tit t_hidden_1 skeleton_item">스스노우스노우스노노우스노우노우</span> 
+                                <span class="tag _update skeleton_item shrink0 ml8">Update!</span>
+                            </div> 
+                            <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                        </div>
+                    </div>
+                    <div class="d_flex _gap16 mr_auto skeleton_item">
+                        <button type="button" class="f_btn ty_big _blue ">매체소개서 다운</button>
+                        <button type="button" class="f_btn ty_big _ol ">문의하기</button>
+                    </div>
+                    <div class="d_flex _gap16 media_top_info ">
+                        <div class="info_item skeleton_item">
+                            <span class="tit">총 조회수</span>
+                            <strong class="count">2,132회</strong>
+                        </div>
+                        <div class="info_item skeleton_item">
+                            <span class="tit">최근 7일 조회수</span>
+                            <strong class="count">2,132회</strong>
+                        </div>
+                    </div>
+                </section>
+                <section class="media_tab">
+                    <div class=" tit_tab ty_big">
+                        <button type="button" class="tit_tab_btn on">매체 정보</button>
+                        <button type="button" class="tit_tab_btn">프로모션</button>
+                        <button type="button" class="tit_tab_btn">상품</button>
+                        <button type="button" class="tit_tab_btn">프리미엄 리뷰</button>
+                        <button type="button" class="tit_tab_btn">성공사례</button>
+                    </div>
+                </section>
+                
+                <section class="media_sec media_info">
+                    <div class="tit_set_2 d_flex">
+                        <h2 class="tit_1">기본 정보</h2>
+                    </div>
+                    <div class="media_info_cont bd_box bd_radius24">
+                        <dl class="info_item">
+                            <dt>서비스 카테고리</dt>
+                            <dd><span class="tag _sns skeleton_item">SNS/커뮤니티</span></dd>
+                        </dl>
+                        <dl class="info_item">
+                            <dt>핵심 타겟</dt>
+                            <dd><span class="tag _beauty skeleton_item">뷰티</span></dd>
+                        </dl>
+                        <dl class="info_item">
+                            <dt>MAU</dt>
+                            <dd>207,000K</dd>
+                        </dl>
+                        <dl class="info_item">
+                            <dt>리뷰 별점</dt>
+                            <dd>
+                                <div class="starSet skeleton_item">
+                                    <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
+                                    <span class="starSet_count">5.0</span>
+                                    <span class="starSet_review">(13개)</span>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="info_item bd_top">
+                            <dt>컨택 포인트</dt>
+                            <dd>ads@snow.com</dd>
+                        </dl>
+                        <dl class="info_item">
+                            <dt>업데이트</dt>
+                            <dd>2024.06.13</dd>
+                        </dl>
+                    </div>
+                </section>
+                <section class="media_sec media_graph">
+                    <div class="tit_set_2 d_flex">
+                        <h2 class="tit_1">데모그래픽</h2>
+                    </div>
+                    <div class="media_graph_cont  bd_box bd_radius24">
+                        <div class="chart ty_pie" id="piechart"></div>
+                        <div class="chart ty_col" id="columnchart"></div>
+                        
+                        <script>                   
+                            google.charts.load('current', {
+                                callback: function () {
+                                    drawChart();
+                                    window.addEventListener('resize',()=>{
+                                        drawChart();
+                                    })
+                                },
+                                packages:['corechart']
+                            });
+
+
+                            
+                            google.charts.setOnLoadCallback(drawChart);    
+                            function drawChart() {
+                                var pieData = new google.visualization.DataTable();
+                                pieData.addColumn('string');
+                                pieData.addColumn('number');   
+                                pieData.addRows([
+                                    ['남성', 123],
+                                    ['여성', 245 ]
+                                ]);
+                                var pieOptions = {
+                                    //legend: 'none',
+                                    responsive: true,
+                                    //is3D: true,
+                                    pieHole: 0.3,
+                                    legend: {alignment: 'center' },
+                                    animation:{
+                                        duration: 1000,
+                                       // easing: 'out',
+                                        startup: true
+                                    },
+                                    chartArea: {right:10,left:10,top:10,bottom:10},
+                                    colors: [ '#AFB2FD', '#3F36F4']
+                                };
+                                var piechart = new google.visualization.PieChart(document.getElementById('piechart'));
+                                piechart.draw(pieData, pieOptions);
+                                
+
+
+
+                               
+                                var columnData = new google.visualization.arrayToDataTable([
+                                    ['Age', '퍼센트(%)'],
+                                    ["18-24", 70],
+                                    ["25-34", 21],
+                                    ["35-44", 4],
+                                    ["45-54", 3],
+                                    ['55-64', 1],
+                                    ['65+', 1]
+                                ]);
+
+                                var columnOptions = {
+                                    legend: 'none',
+                                    responsive: true,
+                                    vAxis: {
+                                        viewWindow: {
+                                            min: 0,
+                                            max: 100
+                                        }
+                                    },
+                                    animation:{
+                                        duration: 1000,
+                                        easing: 'out',
+                                        startup: true
+                                    },
+                                    chartArea: {right:10,left:30,top:10,bottom:20},
+                                    colors: ['#AFB2FD'],
+                                    bar: { groupWidth: "80%" }
+
+                                };
+                                var columnchart = new google.visualization.ColumnChart(document.getElementById('columnchart'));
+                                columnchart.draw(columnData, columnOptions);
+
+
+
+                                
+                            }
+                        </script>
+                    </div>
+                </section>
+                <div style="height: 200vh;"></div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer_cont">
+                <img src="../assets/images/footer_tit.svg" class="footer_tit" alt="">
+                <div class="footer_info">
+                    <div class="footer_info_set">
+                        <span class="footer_info_item">디지털네이티브스 주식회사</span>
+                    </div>
+                    <div class="footer_info_set">
+                        <span class="footer_info_item">대표 김동규</span>
+                        <span class="footer_info_item">서울시 강남구 선릉로 551 5층</span>
+                    </div>
+                    <div class="footer_info_set">
+                        <span class="footer_info_item">사업자등록번호 628-81-02391</span>
+                        <span class="footer_info_item">통신판매업 신고번호 2021-서울강남-06131</span>
+                    </div>
+                </div>
+                <div class="footer_info">
+                    <div class="footer_info_set">
+                        <span class="footer_info_item"><a href="" class="fwB">서비스 이용 약관</a></span>
+                        <span class="footer_info_item"><a href="" class="fwB">개인정보처리방침</a></span>
+                    </div>
+                </div>
+            </div>
+            <img src="../assets/images/logo_footer.svg" alt="" class="footer_logo">
+        </footer>
+
+        <!--[D] 모바일 이용불가 안내 팝업-->
+        <div class="modal mobile_alert" onclick=" close_modal(this)">
+            <div class="modal_inner">
+                <div class="modal_cont ty_small">
+                    <div class="taC">
+                        <div class="modal_ico mb20">
+                            <img src="../assets/images/ico_alert.svg" alt="">
+                        </div>
+                        <div class="modal_txt">
+                            <p class="modal_tit fc_font fz_6">fym은 PC에서 이용할 수 있어요</p>
+                            <p class="modal_desc fc_dakrGrey fz_5">모바일에서는 상세 매체 정보, 소재 라이브러리 등 fym의 모든 기능을 상세히 이용할 수 없어요</p>
+                        </div>
+                        <div class="modal_bot mt40">
+                            <button class="f_btn ty_big _blue w100" onclick="close_modal(this)">확인</button>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--[D] 스켈레톤 로딩 ui 확인용-->
+    <script>
+        const skeletonItem = document.querySelectorAll('.skeleton_item');
+        const hideskeleton = () => {
+            skeletonItem.forEach(e => {
+                e.classList.add('load')
+            });
+        };
+        window.onload = setTimeout(hideskeleton, 1600);
+    </script>
+</body>
+</html>
+

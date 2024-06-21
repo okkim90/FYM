@@ -19,6 +19,9 @@
 
 .sec {
     margin-top: 48px;
+    &.mt0 {
+        margin-top: 0 !important;
+    }
 }
 
 .result_box {

@@ -6,9 +6,8 @@
                 border-bottom: 1px solid $c_line;
                 display: flex;
                 align-items: center;
-                .tit_tab {
-                    margin-left: 16px;
-                }
+                gap: 16px;
+            
             }
         }
         &_2 {
@@ -43,6 +42,26 @@
                     left: 0;
                     bottom: 0;
                 }
+            }
+        }
+        &.ty_big {
+            margin-bottom: 32px;
+            gap: 24px;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: $c_line;
+                bottom: 0;
+                left: 0;
+            }
+            .tit_tab_btn {
+                font-size: 18px;
+                height: 62px;
+                position: relative;
+                z-index: 1;
             }
         }
     }
