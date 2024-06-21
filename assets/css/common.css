@@ -6366,6 +6366,9 @@ input::-webkit-search-results-decoration {
 .f_set_input + .f_set_input {
   margin-top: 10px;
 }
+.f_set_input.mt15 {
+  margin-top: 15px;
+}
 .f_set_msg {
   font-size: 13px;
   margin-top: 8px;
@@ -6561,7 +6564,14 @@ input::-webkit-search-results-decoration {
   font-size: 14px;
   font-weight: 500;
 }
-.f_btn.ty_small.ty_link::after {
+.f_btn.ty_xsmall {
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.f_btn.ty_link::after {
   content: "";
   width: 16px;
   height: 16px;
@@ -6571,12 +6581,20 @@ input::-webkit-search-results-decoration {
   margin-left: 2px;
   background-size: cover;
 }
-.f_btn.ty_xsmall {
-  height: 28px;
-  padding: 0 10px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: 500;
+.f_btn.ty_next {
+  position: relative;
+}
+.f_btn.ty_next::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/btn_next.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  margin-top: -9px;
 }
 
 .v_tbl {
@@ -7631,11 +7649,14 @@ input::-webkit-search-results-decoration {
 .sub_tit {
   font-size: 36px;
   font-weight: 700;
+  line-height: 1.5;
 }
 .sub_tit_desc {
   font-size: 16px;
   margin-top: 3px;
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #555;
 }
 .sub_tit_set {
   margin-bottom: 50px;

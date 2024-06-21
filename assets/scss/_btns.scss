@@ -132,18 +132,7 @@
         border-radius: 8px;
         font-size: 14px;
         font-weight: 500;
-        &.ty_link {
-            &::after {
-                content: '';
-                width: 16px;
-                height: 16px;
-                background-image: url(../images/btn_arrow.svg);
-                background-repeat: no-repeat;
-                background-position: center center;
-                margin-left: 2px;
-                background-size: cover;
-            }
-        }
+        
     }
     &.ty_xsmall {
         height: 28px;
@@ -153,5 +142,32 @@
         font-size: 12px;
         font-weight: 500;
         
+    }
+    &.ty_link {
+        &::after {
+            content: '';
+            width: 16px;
+            height: 16px;
+            background-image: url(../images/btn_arrow.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin-left: 2px;
+            background-size: cover;
+        }
+    }
+    &.ty_next {
+        position: relative;
+        &::after {
+            content: '';
+            width: 18px;
+            height: 18px;
+            background-image: url(../images/btn_next.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            margin-top: -9px;
+        }
     }
 }

@@ -51,10 +51,13 @@
 .sub_tit {
     font-size: 36px;
     font-weight: 700;
+    line-height: 1.5;
     &_desc {
         font-size: 16px;
         margin-top: 3px;
-        font-weight: 500;
+        font-weight: 400;
+        line-height: 1.6;
+        color: $c_darkGrey;
     }
     &_set {
         margin-bottom: 50px;
