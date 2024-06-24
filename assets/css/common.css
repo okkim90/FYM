@@ -7,6 +7,10 @@
   color: #3F36F4;
 }
 
+.tag._green {
+  color: #17993A;
+}
+
 .tag._red {
   color: #FF4E4E;
 }
@@ -77,6 +81,10 @@
 
 .tag._key {
   background-color: #ECEBFE;
+}
+
+.tag._green {
+  background-color: #EFFBF2;
 }
 
 .tag._red {
@@ -7714,6 +7722,29 @@ input::-webkit-search-results-decoration {
   font-size: 13px;
 }
 
+.star_rating {
+  display: inline-flex;
+  gap: 0 4px;
+}
+.star_rating_item {
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/star_bg.svg);
+  position: relative;
+  overflow: hidden;
+}
+.star_rating_inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(../images/star.svg);
+  height: 100%;
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+}
+
 .tit_set_1 {
   margin-bottom: 24px;
 }
@@ -7839,6 +7870,14 @@ input::-webkit-search-results-decoration {
   bottom: 100%;
   left: 50%;
   margin-left: -8px;
+}
+.tooltip.ty_left .tooltip_cont {
+  left: -20px;
+  transform: none;
+}
+.tooltip.ty_left .tooltip_cont::before {
+  left: 22px;
+  margin-left: 0;
 }
 
 .toast {

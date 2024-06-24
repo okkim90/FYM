@@ -12,3 +12,29 @@
         font-size: 13px;
     }
 }
+
+.star_rating {
+    display: inline-flex;
+    gap: 0 4px;
+    &_item {
+        width: 18px;
+        height: 18px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../images/star_bg.svg);
+        position: relative;
+        overflow: hidden;
+    }
+    &_inner {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url(../images/star.svg);
+        height: 100%;
+        //width: 100%;
+        background-size: 18px 18px;
+        //background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+}

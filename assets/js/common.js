@@ -68,7 +68,23 @@ document.addEventListener('DOMContentLoaded', function() {
       e.addEventListener('click',e=>{
         e.stopPropagation();
       })
-    })
+    });
+
+
+
+    /* 5점별점 표시 */
+    const star_rating = document.querySelectorAll('.star_rating');
+    star_rating.forEach(e=>{
+
+      let rating1 = parseInt(e.dataset.rating);
+      let rating2 = Number((e.dataset.rating % 1).toFixed(2)) ; 
+      let item = e.querySelectorAll('.star_rating_inner');
+      for(let i = 0; i < rating1; i++) {
+        item[i].style.width = '100%'
+      }
+      item[rating1].style.width = 100*rating2 + '%'
+    });
+
 
 });
 

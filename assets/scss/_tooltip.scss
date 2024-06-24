@@ -1,6 +1,7 @@
 .tooltip {
     position: relative;
     z-index: 100;
+    
     &:hover {
         .tooltip_cont {
             visibility: visible;
@@ -41,6 +42,17 @@
             bottom: 100%;
             left: 50%;
             margin-left: -8px;
+        }
+
+    }
+    &.ty_left {
+        .tooltip_cont {
+            left: -20px;
+            transform: none;
+            &::before {
+                left: 22px;
+                margin-left: 0;
+            }
         }
     }
 }
