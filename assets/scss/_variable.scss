@@ -23,7 +23,7 @@ $colors: (
     _title: #191919,
     _font: #191919,
     _grey: #8C8C8C,
-    _dakrGrey: #555,
+    _darkGrey: #555,
     _grey3: #F4F4F4,
     _grey4: #F9F9F9,
     _disabled: #A3A3A3,
@@ -406,6 +406,14 @@ $inner: 1280px;
 .fwM {
     font-weight: 500;
 }
+
+@for $i from 1 through 9 {
+    .fw_#{$i} {
+        font-weight: #{$i}00;
+    } 
+} 
+
+
 .no_select {
     user-select: none;
 }

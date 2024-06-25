@@ -14,6 +14,7 @@
     }
     @include mobile {
         padding: 0 16px;
+        padding-bottom: 60px;
     }
 }
 
@@ -71,6 +72,34 @@
             color: $c_grey;
             padding: 0 10px;
             line-height: 25px;
+        }
+    }
+}
+
+.bar_list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: -16px;
+    gap: 10px 0;
+    .bar_item {
+        padding: 0 16px;
+        position: relative;
+        &:last-child {
+            padding-right: 0;
+            &::after {
+                display: none;
+            }
+        }
+        &::after {
+            content: '';
+            width: 1px;
+            height: 16px;
+            background-color: $c_line;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -8px;
         }
     }
 }

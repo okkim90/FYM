@@ -37,6 +37,7 @@
             vertical-align: top;
             font-size: 15px;
             line-height: 1.5;
+            font-weight: 700;
             &.ty2 {
                 font-size: 13px;
             }
@@ -67,6 +68,16 @@
 }
 
 .media {
+
+    &_scroll_trigger {
+        position: absolute;
+        &1 {
+            top: -152px;
+        }
+        &2, &3, &4 {
+            top: -120px;
+        }
+    }
     &_top {
         display: flex;
         align-items: center;
@@ -86,6 +97,7 @@
                 .tit {
                     font-size: $fz_5;
                     color: $c_darkGrey;
+                    font-weight: 500;
                 }
                 .count {
                     font-size: $fz_6;
@@ -93,31 +105,35 @@
             }
         }
     }
-    &_wrap {
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 64px;
-        .sec {
-            margin-top: 80px;
-        }
-
-    }
+  
     &_tab {
         position: sticky;
         left: 0;
         top: 90px;
         width: 100%;
         background-color: #fff;
-        z-index: 99;
+        z-index: 999;
+        .tit_tab.ty_big {
+            margin-bottom: 0;
+        }
+        @include mobile {
+            top: 80px;
+        }
     }
     &_sec {
-        margin-top: 80px;
+        padding-top: 80px;
+        position: relative;
+        &_wrap {
+            position: relative;
+            display: flex;
+            gap: 0 64px;
+        }
     }
     &_info {
         width: 27%;
-        margin-top: 0;
         display: flex;
         flex-direction: column;
+        padding-top: 32px;
         &_cont {
             flex: 1;
         }
@@ -135,6 +151,7 @@
             }
             dt {
                 color: $c_grey;
+                font-weight: 700;
             }
             dd {
                 display: flex;
@@ -146,9 +163,9 @@
     
     &_graph {
         width: calc(73% - 64px);
-        margin-top: 0;
         display: flex;
         flex-direction: column;
+        padding-top: 32px;
         &_cont {
             flex: 1;
         }
@@ -167,4 +184,74 @@
         }
         
     }
+}
+
+.review_list {
+    .review_item {
+        padding: 24px 0;
+        border-top: 1px solid $c_line;
+        & + .review_item {
+            margin-top: 16px;
+        }
+        
+    }
+}
+
+.review_score {
+    display: inline-flex;
+    align-items: center;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: $c_bg;
+    @include tablet {
+        display: block;
+    }
+    .star_rating_box {
+        padding-right: 32px;
+        margin-right: 32px;
+        position: relative;
+        &::after {
+            content: '';
+            width: 1px;
+            height: 16px;
+            background-color: $c_line;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -8px;
+        }
+        @include tablet {
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            padding-right: 0;
+            margin-right: 0;
+            &::after {
+                display: none;
+            }
+            border-bottom: 1px solid $c_line;
+        }
+    }
+    &_detail {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        
+        .detail_item {
+            width: 180px;
+            @include mobile {
+                width: 100%;
+            }
+            .tit {
+                display: block;
+                font-size: $fz_4;
+                color: $c_grey;
+                font-weight: 400;
+                line-height: 25px;
+            }
+            .star_rating {
+                margin-top: 4px;
+            }
+        }
+    }
+
 }

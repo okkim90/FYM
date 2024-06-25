@@ -82,7 +82,9 @@ document.addEventListener('DOMContentLoaded', function() {
       for(let i = 0; i < rating1; i++) {
         item[i].style.width = '100%'
       }
-      item[rating1].style.width = 100*rating2 + '%'
+      if(rating2 > 0 ){
+        item[rating1].style.width = 100*rating2 + '%'
+      }
     });
 
 

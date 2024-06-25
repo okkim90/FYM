@@ -126,6 +126,7 @@
         <div id="container">
             <div class="media_wrap">
                 <section class="media_top">
+                    
                     <div class="mediaSet ty_big" >
                         <span class="mediaSet_ico skeleton_item"></span>
                         <div class="mediaSet_txt">
@@ -153,142 +154,148 @@
                 </section>
                 <section class="media_tab">
                     <div class=" tit_tab ty_big">
-                        <button type="button" class="tit_tab_btn on">매체 정보</button>
-                        <button type="button" class="tit_tab_btn">프로모션</button>
-                        <button type="button" class="tit_tab_btn">상품</button>
-                        <button type="button" class="tit_tab_btn">프리미엄 리뷰</button>
-                        <button type="button" class="tit_tab_btn">성공사례</button>
+                        <button type="button" class="tit_tab_btn tit_tab_btn1 on" onclick="scrollToSec('media_scroll_trigger1')">매체 정보</button>
+                        <button type="button" class="tit_tab_btn tit_tab_btn2" onclick="scrollToSec('media_scroll_trigger2')">프로모션</button>
+                        <button type="button" class="tit_tab_btn tit_tab_btn3" onclick="scrollToSec('media_scroll_trigger3')">상품</button>
+                        <button type="button" class="tit_tab_btn tit_tab_btn4" onclick="scrollToSec('media_scroll_trigger4')">프리미엄 리뷰</button>
+                        <button type="button" class="tit_tab_btn tit_tab_btn5" onclick="scrollToSec('media_scroll_trigger5')">성공사례</button>
                     </div>
                 </section>
                 
-                <section class="media_sec media_info">
-                    <div class="tit_set_2 d_flex">
-                        <h2 class="tit_1">기본 정보</h2>
-                    </div>
-                    <div class="media_info_cont bd_box bd_radius24">
-                        <dl class="info_item">
-                            <dt class="skeleton_item">서비스 카테고리</dt>
-                            <dd><span class="tag _sns skeleton_item">SNS/커뮤니티</span></dd>
-                        </dl>
-                        <dl class="info_item">
-                            <dt class="skeleton_item">핵심 타겟</dt>
-                            <dd><span class="tag _beauty skeleton_item">뷰티</span></dd>
-                        </dl>
-                        <dl class="info_item">
-                            <dt class="skeleton_item">MAU</dt>
-                            <dd class="skeleton_item">207,000K</dd>
-                        </dl>
-                        <dl class="info_item">
-                            <dt class="skeleton_item">리뷰 별점</dt>
-                            <dd class="skeleton_item">
-                                <div class="starSet skeleton_item">
-                                    <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
-                                    <span class="starSet_count">5.0</span>
-                                    <span class="starSet_review">(13개)</span>
-                                </div>
-                            </dd>
-                        </dl>
-                        <dl class="info_item bd_top">
-                            <dt class="skeleton_item">컨택 포인트</dt>
-                            <dd class="skeleton_item">ads@snow.com</dd>
-                        </dl>
-                        <dl class="info_item">
-                            <dt class="skeleton_item">업데이트</dt>
-                            <dd class="skeleton_item">2024.06.13</dd>
-                        </dl>
-                    </div>
-                </section>
-                <section class="media_sec media_graph">
-                    <div class="tit_set_2 d_flex">
-                        <h2 class="tit_1">데모그래픽</h2>
-                    </div>
-                    <div class="media_graph_cont  bd_box bd_radius24">
-                        <div class="chart ty_pie skeleton_item" id="piechart"></div>
-                        <div class="chart ty_col skeleton_item" id="columnchart"></div>
-                        
-                        <script>                   
-                            google.charts.load('current', {
-                                callback: function () {
-                                    drawChart();
-                                    window.addEventListener('resize',()=>{
-                                        drawChart();
-                                    })
-                                },
-                                packages:['corechart']
-                            });
-
-
+                <section class="media_sec_wrap spy_sec" data-idx="1">
+                    <span class="media_scroll_trigger media_scroll_trigger1"></span>
+                    <section class="media_sec media_info">
+                        <div class="tit_set_2 d_flex">
+                            <h2 class="tit_1">기본 정보</h2>
+                        </div>
+                        <div class="media_info_cont bd_box bd_radius24">
+                            <dl class="info_item">
+                                <dt class="skeleton_item">서비스 카테고리</dt>
+                                <dd><span class="tag _sns skeleton_item">SNS/커뮤니티</span></dd>
+                            </dl>
+                            <dl class="info_item">
+                                <dt class="skeleton_item">핵심 타겟</dt>
+                                <dd><span class="tag _beauty skeleton_item">뷰티</span></dd>
+                            </dl>
+                            <dl class="info_item">
+                                <dt class="skeleton_item">MAU</dt>
+                                <dd class="skeleton_item">207,000K</dd>
+                            </dl>
+                            <dl class="info_item">
+                                <dt class="skeleton_item">리뷰 별점</dt>
+                                <dd class="skeleton_item">
+                                    <div class="starSet skeleton_item">
+                                        <img src="../assets/images/ico_star.svg" class="starSet_ico" alt="">
+                                        <span class="starSet_count">5.0</span>
+                                        <span class="starSet_review">(13개)</span>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl class="info_item bd_top">
+                                <dt class="skeleton_item">컨택 포인트</dt>
+                                <dd class="skeleton_item">ads@snow.com</dd>
+                            </dl>
+                            <dl class="info_item">
+                                <dt class="skeleton_item">업데이트</dt>
+                                <dd class="skeleton_item">2024.06.13</dd>
+                            </dl>
+                        </div>
+                    </section>
+                    <section class="media_sec media_graph">
+                        <div class="tit_set_2 d_flex">
+                            <h2 class="tit_1">데모그래픽</h2>
+                        </div>
+                        <div class="media_graph_cont  bd_box bd_radius24">
+                            <div class="chart ty_pie skeleton_item" id="piechart"></div>
+                            <div class="chart ty_col skeleton_item" id="columnchart"></div>
                             
-                            google.charts.setOnLoadCallback(drawChart);    
-                            function drawChart() {
-                                var pieData = new google.visualization.DataTable();
-                                pieData.addColumn('string');
-                                pieData.addColumn('number');   
-                                pieData.addRows([
-                                    ['남성', 123],
-                                    ['여성', 245 ]
-                                ]);
-                                var pieOptions = {
-                                    //legend: 'none',
-                                    responsive: true,
-                                    //is3D: true,
-                                    pieHole: 0.3,
-                                    legend: {alignment: 'center' },
-                                    animation:{
-                                        duration: 1000,
-                                       // easing: 'out',
-                                        startup: true
+                            <script>                   
+                                google.charts.load('current', {
+                                    callback: function () {
+                                        drawChart();
+                                        window.addEventListener('resize',()=>{
+                                            drawChart();
+                                        })
                                     },
-                                    chartArea: {right:10,left:10,top:10,bottom:10},
-                                    colors: [ '#AFB2FD', '#3F36F4']
-                                };
-                                var piechart = new google.visualization.PieChart(document.getElementById('piechart'));
-                                piechart.draw(pieData, pieOptions);
+                                    packages:['corechart']
+                                });
+    
+    
                                 
-
-
-
-                               
-                                var columnData = new google.visualization.arrayToDataTable([
-                                    ['Age', '퍼센트(%)'],
-                                    ["18-24", 70],
-                                    ["25-34", 21],
-                                    ["35-44", 4],
-                                    ["45-54", 3],
-                                    ['55-64', 1],
-                                    ['65+', 1]
-                                ]);
-
-                                var columnOptions = {
-                                    legend: 'none',
-                                    responsive: true,
-                                    vAxis: {
-                                        viewWindow: {
-                                            min: 0,
-                                            max: 100
-                                        }
-                                    },
-                                    animation:{
-                                        duration: 1000,
-                                        easing: 'out',
-                                        startup: true
-                                    },
-                                    chartArea: {right:10,left:30,top:10,bottom:20},
-                                    colors: ['#AFB2FD'],
-                                    bar: { groupWidth: "80%" }
-
-                                };
-                                var columnchart = new google.visualization.ColumnChart(document.getElementById('columnchart'));
-                                columnchart.draw(columnData, columnOptions);
-
-
-
-                                
-                            }
-                        </script>
-                    </div>
+                                google.charts.setOnLoadCallback(drawChart);    
+                                function drawChart() {
+                                    var pieData = new google.visualization.DataTable();
+                                    pieData.addColumn('string');
+                                    pieData.addColumn('number');   
+                                    pieData.addRows([
+                                        ['남성', 123],
+                                        ['여성', 245 ]
+                                    ]);
+                                    var pieOptions = {
+                                        //legend: 'none',
+                                        responsive: true,
+                                        //is3D: true,
+                                        pieHole: 0.3,
+                                        legend: {alignment: 'center' },
+                                        animation:{
+                                            duration: 1000,
+                                           // easing: 'out',
+                                            startup: true
+                                        },
+                                        chartArea: {right:10,left:10,top:10,bottom:10},
+                                        colors: [ '#AFB2FD', '#3F36F4']
+                                    };
+                                    var piechart = new google.visualization.PieChart(document.getElementById('piechart'));
+                                    piechart.draw(pieData, pieOptions);
+                                    
+    
+    
+    
+                                   
+                                    var columnData = new google.visualization.arrayToDataTable([
+                                        ['Age', '퍼센트(%)'],
+                                        ["18-24", 70],
+                                        ["25-34", 21],
+                                        ["35-44", 4],
+                                        ["45-54", 3],
+                                        ['55-64', 1],
+                                        ['65+', 1]
+                                    ]);
+    
+                                    var columnOptions = {
+                                        legend: 'none',
+                                        responsive: true,
+                                        vAxis: {
+                                            viewWindow: {
+                                                min: 0,
+                                                max: 100
+                                            }
+                                        },
+                                        animation:{
+                                            duration: 1000,
+                                            easing: 'out',
+                                            startup: true
+                                        },
+                                        chartArea: {right:10,left:30,top:10,bottom:20},
+                                        colors: ['#AFB2FD'],
+                                        bar: { groupWidth: "80%" }
+    
+                                    };
+                                    var columnchart = new google.visualization.ColumnChart(document.getElementById('columnchart'));
+                                    columnchart.draw(columnData, columnOptions);
+    
+    
+    
+                                    
+                                }
+                            </script>
+                        </div>
+                    </section>
                 </section>
-                <section class="media_sec media_promotion w100">
+                
+                
+                <section class="media_sec media_promotion spy_sec" data-idx="2">
+                    <span class="media_scroll_trigger media_scroll_trigger2"></span>
                     <div class="tit_set_2 d_flex">
                         <h2 class="tit_1">프로모션</h2>
                     </div>
@@ -302,7 +309,8 @@
                         </div>
                     </div>
                 </section>
-                <section class="media_sec media_promotion w100">
+                <section class="media_sec media_products spy_sec" data-idx="3">
+                    <span class="media_scroll_trigger media_scroll_trigger3"></span>
                     <div class="tit_set_2 d_flex">
                         <h2 class="tit_1">상품</h2>
                     </div>
@@ -543,30 +551,286 @@
                         </div>
                     </div>
                 </section>
-                <section class="media_sec media_review w100">
+                <section class="media_sec media_review spy_sec" data-idx="4">
+                    <span class="media_scroll_trigger media_scroll_trigger4"></span>
                     <div class="tit_set_2 d_flex">
-                        <h2 class="tit_1">프로모션</h2>
-                        <div class="tooltip ty_left self_c ml3">
+                        <h2 class="tit_1">프리미엄 리뷰</h2>
+                        <div class="tooltip self_c ml3">
                             <i class="tooltip_ico"></i>
-                            <span class="tooltip_cont taC">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, provident?</span>
+                            <span class="tooltip_cont taC">fym 프리미엄 리뷰는 <br> 실제 집행 사실이 검증된 리뷰에요</span>
                         </div>
                     </div>
                     <div class="bd_box bd_radius24">
-                        <div class="d_flex ai_c _gapX4">
-                            <div class="star_rating" data-rating="4.6">
-                                <span class="star_rating_item"><span class="star_rating_inner"></span></span>
-                                <span class="star_rating_item"><span class="star_rating_inner"></span></span>
-                                <span class="star_rating_item"><span class="star_rating_inner"></span></span>
-                                <span class="star_rating_item"><span class="star_rating_inner"></span></span>
-                                <span class="star_rating_item"><span class="star_rating_inner"></span></span>
+                        <div class="media_review_top d_flex ai_c">
+                            <div class="star_rating_box d_flex ai_c _gapX4">
+                                <div class="star_rating skeleton_item" data-rating="4.5">
+                                    <span class="star_rating_item"><span class="star_rating_inner"></span></span>
+                                    <span class="star_rating_item"><span class="star_rating_inner"></span></span>
+                                    <span class="star_rating_item"><span class="star_rating_inner"></span></span>
+                                    <span class="star_rating_item"><span class="star_rating_inner"></span></span>
+                                    <span class="star_rating_item"><span class="star_rating_inner"></span></span>
+                                </div>
+                                <strong class="star_rating_score fz_6 skeleton_item">4.5점</strong> 
+                                <span class="fz_6 fc_grey skeleton_item">(23개)</span>
                             </div>
-                            <strong class="fz_6">4.7점</strong> 
-                            <span class="fz_6 fc_grey">(23개)</span>
+                            <button type="button" class="f_btn ty_small _ol btn_write ml24">리뷰 작성하기</button>
+                        </div>
+                        <ul class="review_list mt24">
+                            <li class="review_item">
+                                <ul class="bar_list">
+                                    <li class="bar_item"><span class="tag _key skeleton_item">식품/음료</span></li>
+                                    <li class="bar_item"><span class="fz_4 fw_6 skeleton_item">메인 상단 배너</span></li>
+                                    <li class="bar_item"><span class="fz_4 fw_4 fc_grey skeleton_item">집행일 2024.05.20</span></li>   
+                                </ul>
+                                <div class="review_score mt16">
+                                    <div class="star_rating_box  d_flex ai_c _gapX8">
+                                        <div class="star_rating ty_small skeleton_item" data-rating="3.4">
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                        </div>
+                                        <strong class="star_rating_score fz_4 skeleton_item">3.4점</strong> 
+                                    </div>
+                                    <div class="review_score_detail">
+                                        <div class="detail_item">
+                                            <strong class="tit skeleton_item">광고 예산 대비 성과 만족도</strong>
+                                            <div class="star_rating ty_small skeleton_item" data-rating="2">
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            </div>
+                                        </div>
+                                        <div class="detail_item">
+                                            <strong class="tit skeleton_item">성과 리포트 정확도 및 신뢰도</strong>
+                                            <div class="star_rating ty_small skeleton_item" data-rating="5">
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            </div>
+                                        </div>
+                                        <div class="detail_item">
+                                            <strong class="tit skeleton_item">담당자 응대 만족도</strong>
+                                            <div class="star_rating ty_small skeleton_item" data-rating="3">
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review_sec mt16 d_flex ai_c">
+                                    <strong class="fz_4 fc_darkGrey fw_6 skeleton_item">재집행 의사</strong>
+                                    <span class="tag _red ml19 skeleton_item">NO</span>
+                                </div>
+                                <div class="review_sec mt16 d_flex ai_c ">
+                                    <p class="fz_4 fc_darkGrey fw_5 skeleton_item">노출은 많이 되지만 전환은 거의 되지 않았다고 볼 수 있음</p>
+                                </div>
+                            </li>
+                            <li class="review_item">
+                                <ul class="bar_list">
+                                    <li class="bar_item"><span class="tag _key skeleton_item">인테리어/가구</span></li>
+                                    <li class="bar_item"><span class="fz_4 fw_6 skeleton_item">메인 상단 배너</span></li>
+                                    <li class="bar_item"><span class="fz_4 fw_4 fc_grey skeleton_item">집행일 2024.05.20</span></li>   
+                                </ul>
+                                <div class="review_score mt16">
+                                    <div class="star_rating_box  d_flex ai_c _gapX8">
+                                        <div class="star_rating ty_small skeleton_item" data-rating="5">
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                        </div>
+                                        <strong class="star_rating_score fz_4 skeleton_item">5점</strong> 
+                                    </div>
+                                    <div class="review_score_detail">
+                                        <div class="detail_item">
+                                            <strong class="tit skeleton_item">광고 예산 대비 성과 만족도</strong>
+                                            <div class="star_rating ty_small skeleton_item" data-rating="5">
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            </div>
+                                        </div>
+                                        <div class="detail_item">
+                                            <strong class="tit skeleton_item">성과 리포트 정확도 및 신뢰도</strong>
+                                            <div class="star_rating ty_small skeleton_item" data-rating="5">
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            </div>
+                                        </div>
+                                        <div class="detail_item">
+                                            <strong class="tit skeleton_item">담당자 응대 만족도</strong>
+                                            <div class="star_rating ty_small skeleton_item" data-rating="5">
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review_sec mt16 d_flex ai_c">
+                                    <strong class="fz_4 fc_darkGrey fw_6 skeleton_item">재집행 의사</strong>
+                                    <span class="tag _green ml19 skeleton_item">YES</span>
+                                </div>
+                                <div class="review_sec mt16 d_flex ai_c ">
+                                    <p class="fz_4 fc_darkGrey fw_5 skeleton_item">노출은 많이 되지만 전환은 거의 되지 않았다고 볼 수 있음</p>
+                                </div>
+                            </li>
+                            <li class="review_item">
+                                <ul class="bar_list">
+                                    <li class="bar_item"><span class="tag _key skeleton_item">식품/음료</span></li>
+                                    <li class="bar_item"><span class="fz_4 fw_6 skeleton_item">메인 상단 배너</span></li>
+                                    <li class="bar_item"><span class="fz_4 fw_4 fc_grey skeleton_item">집행일 2024.05.20</span></li>   
+                                </ul>
+                                <div class="review_score mt16">
+                                    <div class="star_rating_box  d_flex ai_c _gapX8">
+                                        <div class="star_rating ty_small skeleton_item" data-rating="3.6">
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                        </div>
+                                        <strong class="star_rating_score fz_4 skeleton_item">3.6점</strong> 
+                                    </div>
+                                    <div class="review_score_detail">
+                                        <div class="detail_item">
+                                            <strong class="tit skeleton_item">광고 예산 대비 성과 만족도</strong>
+                                            <div class="star_rating ty_small skeleton_item" data-rating="2">
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            </div>
+                                        </div>
+                                        <div class="detail_item">
+                                            <strong class="tit skeleton_item">성과 리포트 정확도 및 신뢰도</strong>
+                                            <div class="star_rating ty_small skeleton_item" data-rating="5">
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            </div>
+                                        </div>
+                                        <div class="detail_item">
+                                            <strong class="tit skeleton_item">담당자 응대 만족도</strong>
+                                            <div class="star_rating ty_small skeleton_item" data-rating="3">
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review_sec mt16 d_flex ai_c">
+                                    <strong class="fz_4 fc_darkGrey fw_6 skeleton_item">재집행 의사</strong>
+                                    <span class="tag _red ml19 skeleton_item">NO</span>
+                                </div>
+                                <div class="review_sec mt16 d_flex ai_c ">
+                                    <p class="fz_4 fc_darkGrey fw_5 skeleton_item">노출은 많이 되지만 전환은 거의 되지 않았다고 볼 수 있음</p>
+                                </div>
+                            </li>
+                            <li class="review_item">
+                                <ul class="bar_list">
+                                    <li class="bar_item"><span class="tag _key skeleton_item">인테리어/가구</span></li>
+                                    <li class="bar_item"><span class="fz_4 fw_6 skeleton_item">메인 상단 배너</span></li>
+                                    <li class="bar_item"><span class="fz_4 fw_4 fc_grey skeleton_item">집행일 2024.05.20</span></li>   
+                                </ul>
+                                <div class="review_score mt16">
+                                    <div class="star_rating_box  d_flex ai_c _gapX8">
+                                        <div class="star_rating ty_small skeleton_item" data-rating="4.5">
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                        </div>
+                                        <strong class="star_rating_score fz_4 skeleton_item">4.5점</strong> 
+                                    </div>
+                                    <div class="review_score_detail">
+                                        <div class="detail_item">
+                                            <strong class="tit skeleton_item">광고 예산 대비 성과 만족도</strong>
+                                            <div class="star_rating ty_small skeleton_item" data-rating="3">
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            </div>
+                                        </div>
+                                        <div class="detail_item">
+                                            <strong class="tit skeleton_item">성과 리포트 정확도 및 신뢰도</strong>
+                                            <div class="star_rating ty_small skeleton_item" data-rating="4">
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            </div>
+                                        </div>
+                                        <div class="detail_item">
+                                            <strong class="tit skeleton_item">담당자 응대 만족도</strong>
+                                            <div class="star_rating ty_small skeleton_item" data-rating="5">
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                                <span class="star_rating_item"><span class="star_rating_inner ty_black"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review_sec mt16 d_flex ai_c">
+                                    <strong class="fz_4 fc_darkGrey fw_6 skeleton_item">재집행 의사</strong>
+                                    <span class="tag _green ml19 skeleton_item">YES</span>
+                                </div>
+                                <div class="review_sec mt16 d_flex ai_c ">
+                                    <p class="fz_4 fc_darkGrey fw_5 skeleton_item">노출은 많이 되지만 전환은 거의 되지 않았다고 볼 수 있음</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="paging_wrap">
+                            <button type="button" class="paging_btn ty_first paging_nav"></button>
+                            <button type="button" class="paging_btn ty_prev paging_nav"></button>
+                            <div class="paging_list">
+                                <button type="button" class="paging_btn current">1</button>
+                                <button type="button" class="paging_btn">2</button>
+                                <button type="button" class="paging_btn">3</button>
+                                <button type="button" class="paging_btn">4</button>
+                                <button type="button" class="paging_btn">5</button>                          
+                            </div>
+                            <button type="button" class="paging_btn ty_next paging_nav"></button>
+                            <button type="button" class="paging_btn ty_last paging_nav"></button>
                         </div>
                     </div>
-                    
-                    
-                    
+                </section>
+                <section class="media_sec media_example spy_sec" data-idx="5">
+                    <span class="media_scroll_trigger media_scroll_trigger5"></span>
+                    <div class="bd_box bd_radius24">
+                        <div class="tit_set_2">
+                            <h2 class="tit_1">성공사례</h2>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
@@ -616,6 +880,39 @@
             </div>
         </div>
     </div>
+    <script>
+        function scrollToSec(target){
+            let scrollToSec = document.querySelector('.'+target+'');
+            let scrollTop = window.pageYOffset;
+            let secTop = scrollToSec.getBoundingClientRect().y + scrollTop;
+            window.scroll({ top: secTop, behavior: 'instant' });
+        }
+
+        let wh = window.outerHeight;
+        const isInViewport = (target) => {
+            let top = target.getBoundingClientRect().top - wh;
+            let bot = target.getBoundingClientRect().top + target.offsetHeight;
+            //console.log(top, bot)
+            return (top + (wh/10) < 0 )  && (bot - (wh/10) > 0) ;
+        };
+        const tit_tab_btn = document.querySelectorAll('.tit_tab_btn');
+        const spy_sec = document.querySelectorAll('.spy_sec');
+        ['DOMContentLoaded', 'resize', 'scroll'].forEach(event => window.addEventListener(event, ()=>{
+            wh = window.outerHeight;
+            spy_sec.forEach(e=>{
+                if(isInViewport(e)){
+                    let idx = e.dataset.idx;
+                    console.log(idx)
+                }
+            })
+            
+            //if(isInViewport(e)){
+            //    e.classList.add('gogo');
+            //}
+        }));
+        
+    </script>
+
     <!--[D] 스켈레톤 로딩 ui 확인용-->
     <script>
         const skeletonItem = document.querySelectorAll('.skeleton_item');

@@ -263,15 +263,15 @@
   border-color: #8C8C8C;
 }
 
-.fc_dakrGrey {
+.fc_darkGrey {
   color: #555;
 }
 
-.bg_dakrGrey {
+.bg_darkGrey {
   background-color: #555;
 }
 
-.bd_dakrGrey {
+.bd_darkGrey {
   border-color: #555;
 }
 
@@ -5258,6 +5258,42 @@
   font-weight: 500;
 }
 
+.fw_1 {
+  font-weight: 100;
+}
+
+.fw_2 {
+  font-weight: 200;
+}
+
+.fw_3 {
+  font-weight: 300;
+}
+
+.fw_4 {
+  font-weight: 400;
+}
+
+.fw_5 {
+  font-weight: 500;
+}
+
+.fw_6 {
+  font-weight: 600;
+}
+
+.fw_7 {
+  font-weight: 700;
+}
+
+.fw_8 {
+  font-weight: 800;
+}
+
+.fw_9 {
+  font-weight: 900;
+}
+
 .no_select {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -5541,7 +5577,7 @@ body {
   color: #191919;
   min-width: 320px;
   overflow: hidden auto;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 article,
@@ -5996,6 +6032,7 @@ input::-webkit-search-results-decoration {
 @media (max-width: 767px) {
   #container {
     padding: 0 16px;
+    padding-bottom: 60px;
   }
 }
 
@@ -6051,6 +6088,34 @@ input::-webkit-search-results-decoration {
   color: #8C8C8C;
   padding: 0 10px;
   line-height: 25px;
+}
+
+.bar_list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: -16px;
+  gap: 10px 0;
+}
+.bar_list .bar_item {
+  padding: 0 16px;
+  position: relative;
+}
+.bar_list .bar_item:last-child {
+  padding-right: 0;
+}
+.bar_list .bar_item:last-child::after {
+  display: none;
+}
+.bar_list .bar_item::after {
+  content: "";
+  width: 1px;
+  height: 16px;
+  background-color: #E1E1E1;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -8px;
 }
 
 .modal {
@@ -6607,6 +6672,16 @@ input::-webkit-search-results-decoration {
   top: 50%;
   margin-top: -9px;
 }
+.f_btn.btn_write::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(../images/ico_write.svg);
+  margin-right: 2px;
+}
 
 .v_tbl {
   width: 100%;
@@ -7154,6 +7229,7 @@ input::-webkit-search-results-decoration {
   vertical-align: top;
   font-size: 15px;
   line-height: 1.5;
+  font-weight: 700;
 }
 .mediaSet_txt .tit.ty2 {
   font-size: 13px;
@@ -7182,6 +7258,15 @@ input::-webkit-search-results-decoration {
   gap: 0 8px;
 }
 
+.media_scroll_trigger {
+  position: absolute;
+}
+.media_scroll_trigger1 {
+  top: -152px;
+}
+.media_scroll_trigger2, .media_scroll_trigger3, .media_scroll_trigger4 {
+  top: -120px;
+}
 .media_top {
   display: flex;
   align-items: center;
@@ -7201,19 +7286,10 @@ input::-webkit-search-results-decoration {
 }
 .media_top_info .info_item .tit {
   font-size: 16px;
-  color: #555;
+  font-weight: 500;
 }
 .media_top_info .info_item .count {
   font-size: 18px;
-}
-.media_wrap {
-  display: flex;
-  flex-wrap: wrap;
-  -moz-column-gap: 64px;
-       column-gap: 64px;
-}
-.media_wrap .sec {
-  margin-top: 80px;
 }
 .media_tab {
   position: sticky;
@@ -7221,16 +7297,30 @@ input::-webkit-search-results-decoration {
   top: 90px;
   width: 100%;
   background-color: #fff;
-  z-index: 99;
+  z-index: 999;
+}
+.media_tab .tit_tab.ty_big {
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .media_tab {
+    top: 80px;
+  }
 }
 .media_sec {
-  margin-top: 80px;
+  padding-top: 80px;
+  position: relative;
+}
+.media_sec_wrap {
+  position: relative;
+  display: flex;
+  gap: 0 64px;
 }
 .media_info {
   width: 27%;
-  margin-top: 0;
   display: flex;
   flex-direction: column;
+  padding-top: 32px;
 }
 .media_info_cont {
   flex: 1;
@@ -7250,6 +7340,7 @@ input::-webkit-search-results-decoration {
 }
 .media_info .info_item dt {
   color: #8C8C8C;
+  font-weight: 700;
 }
 .media_info .info_item dd {
   display: flex;
@@ -7258,9 +7349,9 @@ input::-webkit-search-results-decoration {
 }
 .media_graph {
   width: calc(73% - 64px);
-  margin-top: 0;
   display: flex;
   flex-direction: column;
+  padding-top: 32px;
 }
 .media_graph_cont {
   flex: 1;
@@ -7277,6 +7368,77 @@ input::-webkit-search-results-decoration {
 }
 .media_graph_cont .chart.ty_col {
   width: 60%;
+}
+
+.review_list .review_item {
+  padding: 24px 0;
+  border-top: 1px solid #E1E1E1;
+}
+.review_list .review_item + .review_item {
+  margin-top: 16px;
+}
+
+.review_score {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #F9F9F9;
+}
+@media (max-width: 1023px) {
+  .review_score {
+    display: block;
+  }
+}
+.review_score .star_rating_box {
+  padding-right: 32px;
+  margin-right: 32px;
+  position: relative;
+}
+.review_score .star_rating_box::after {
+  content: "";
+  width: 1px;
+  height: 16px;
+  background-color: #E1E1E1;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -8px;
+}
+@media (max-width: 1023px) {
+  .review_score .star_rating_box {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    padding-right: 0;
+    margin-right: 0;
+    border-bottom: 1px solid #E1E1E1;
+  }
+  .review_score .star_rating_box::after {
+    display: none;
+  }
+}
+.review_score_detail {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.review_score_detail .detail_item {
+  width: 180px;
+}
+@media (max-width: 767px) {
+  .review_score_detail .detail_item {
+    width: 100%;
+  }
+}
+.review_score_detail .detail_item .tit {
+  display: block;
+  font-size: 15px;
+  color: #8C8C8C;
+  font-weight: 400;
+  line-height: 25px;
+}
+.review_score_detail .detail_item .star_rating {
+  margin-top: 4px;
 }
 
 .skeleton_item {
@@ -7507,6 +7669,7 @@ input::-webkit-search-results-decoration {
   font-size: 14px;
   font-weight: 500;
   white-space: nowrap;
+  vertical-align: top;
 }
 .tag.ty_small {
   line-height: 16px;
@@ -7744,6 +7907,17 @@ input::-webkit-search-results-decoration {
   background-size: 18px 18px;
   background-repeat: no-repeat;
 }
+.star_rating_inner.ty_black {
+  background-image: url(../images/star_black.svg);
+  background-size: 12px 12px;
+}
+.star_rating.ty_small {
+  gap: 0 1px;
+}
+.star_rating.ty_small .star_rating_item {
+  width: 12px;
+  height: 12px;
+}
 
 .tit_set_1 {
   margin-bottom: 24px;
@@ -7819,7 +7993,6 @@ input::-webkit-search-results-decoration {
   margin-top: 3px;
   font-weight: 400;
   line-height: 1.6;
-  color: #555;
 }
 .sub_tit_set {
   margin-bottom: 50px;

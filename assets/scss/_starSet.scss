@@ -35,6 +35,17 @@
         background-size: 18px 18px;
         //background-size: cover;
         background-repeat: no-repeat;
+        &.ty_black {
+            background-image: url(../images/star_black.svg);
+            background-size: 12px 12px;
+        }
     }
-    
+    &.ty_small {
+        gap: 0 1px;
+        .star_rating_item {
+            width: 12px;
+            height: 12px;
+        }
+
+    }
 }
