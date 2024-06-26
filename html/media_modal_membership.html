@@ -557,6 +557,9 @@
                         </div>
                     </div>
                     <div class="bd_box bd_radius24 posR">
+                        <!--[D] 블러 레이어 -->
+                        <div class="blur_layer" onmouseover="open_modal('modal_membership')"></div>
+                        <!--// [D] 블러 레이어 -->
                         <div class="media_review_top d_flex ai_c">
                             <div class="star_rating_box d_flex ai_c _gapX4">
                                 <div class="star_rating skeleton_item" data-rating="4.5">
@@ -859,6 +862,29 @@
             </div>
             <img src="../assets/images/logo_footer.svg" alt="" class="footer_logo">
         </footer>
+
+        <!--[D] 멤버쉽 유도 팝업-->
+        <div class="modal modal_membership on" onclick=" close_modal(this)">
+            <div class="modal_inner">
+                <div class="modal_cont ty_small">
+                    <div class="taC">
+                        <div class="modal_txt">
+                            <p class="modal_tit fc_font fz_6">프리미엄 리뷰가  궁금하다면!</p>
+                            <p class="modal_desc fc_dakrGrey fz_5">
+                                fym 멤버십을 구독하면 <br>
+                                소재 라이브러리부터 프리미엄 리뷰까지 <br>
+                                모두 이용할 수 있어요!
+                            </p>
+                        </div>
+                        <div class="modal_bot mt30">
+                            <a href="" class="f_btn ty_big _blue w100">fym 멤버십 구독하기</a>
+                            <a href="" class="f_btn ty_big _ol w100 mt8">매체 리뷰 남기고 fym 멤버십 무료 구독하기</a>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!--[D] 모바일 이용불가 안내 팝업-->
         <div class="modal mobile_alert" onclick=" close_modal(this)">
             <div class="modal_inner">

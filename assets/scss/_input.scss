@@ -281,3 +281,22 @@
         width: 100%;
     }
 }
+
+.f_ta {
+    width: 100%;
+    padding: 15px 20px;
+    line-height: 1.6;
+    border: none;
+    color: $c_font;
+    &.ty_default_value {
+        color: $c_disabled;
+        &:focus {
+            color: $c_font;
+        }
+    }
+    &_box {
+        border-radius: 15px;
+        border: 1px solid $c_line;
+        overflow: hidden;
+    }
+}

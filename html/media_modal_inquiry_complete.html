@@ -859,6 +859,20 @@
             </div>
             <img src="../assets/images/logo_footer.svg" alt="" class="footer_logo">
         </footer>
+        <!--[D] 광고 문의하기 팝업-->
+        <div class="modal media_inquiry on" onclick=" close_modal(this)">
+            <div class="modal_inner">
+                <div class="modal_cont ty_small">
+                    <div class="d_flex h_260 ai_c jc_c taC ty_col">  
+                        <img src="../assets/images/complete.svg" alt="">
+                        <p class="fz_6 fw_600 mt20">문의 내용을 보냈어요!</p>
+                    </div>
+                    <div class="modal_bot d_flex _gap15 mt24">
+                        <button type="button" class="f_btn ty_big _blue flex1" onclick="close_modal(this)">확인</button><!--[D] 'disabled' 제거 시 활성화 -->
+                    </div>   
+                </div>
+            </div>
+        </div>
         <!--[D] 모바일 이용불가 안내 팝업-->
         <div class="modal mobile_alert" onclick=" close_modal(this)">
             <div class="modal_inner">

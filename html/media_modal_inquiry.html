@@ -859,6 +859,31 @@
             </div>
             <img src="../assets/images/logo_footer.svg" alt="" class="footer_logo">
         </footer>
+        <!--[D] 광고 문의하기 팝업-->
+        <div class="modal media_inquiry on" onclick=" close_modal(this)">
+            <div class="modal_inner">
+                <div class="modal_cont ty_small">
+                    <div class="modal_txt ty2">
+                        <p class="modal_tit fc_font fw_7 fz_8">광고 문의하기</p>
+                        <p class="modal_desc fc_darkGrey fz_3">가입한 메일 주소로 매체에 궁금한 내용을 보낼 수 있어요</p>
+                    </div>
+                    <form action="">
+                        <div class="mediaMin d_flex _gap8 ai_c fw_w mt24">
+                            <span class="mediaMin_ico"></span>
+                            <div class="mediaMin_name fw_5 fz_4">스노우</div>
+                            <div class="mediaMin_mail fz_2 fc_disabled">ads@snow.kr</div>
+                        </div>
+                        <div class="f_ta_box mt8">
+                            <textarea name="" id="" class="f_ta h_250 ty_default_value">매체사의 정확한 응대를 위해 아래 문의 사항을 입력해주세요!&#10;&#10;· 담당 브랜드(서비스) :&#10;· 문의사항 : &#10;· 연락처(휴대폰 또는 이메일 주소) : &#10;· 기타 요청사항 : </textarea>
+                        </div>
+                        <div class="modal_bot d_flex _gap15 mt24">
+                            <button type="button" class="f_btn ty_big _ol flex1" onclick="close_modal(this)">취소하기</button>
+                            <button type="submit" class="f_btn ty_big _blue flex1 disabled">보내기</button><!--[D] 'disabled' 제거 시 활성화 -->
+                        </div>   
+                    </form>
+                </div>
+            </div>
+        </div>
         <!--[D] 모바일 이용불가 안내 팝업-->
         <div class="modal mobile_alert" onclick=" close_modal(this)">
             <div class="modal_inner">

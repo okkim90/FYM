@@ -67,17 +67,42 @@
     }
 }
 
-.media {
+.mediaMin {
+    &_ico {
+        width: 24px;
+        height: 24px;
+        border-radius: 7px;
+        flex-shrink: 0;
+        background-color: #eee;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+}
 
+.media {
+    &_wrap {
+        padding-bottom: 50px;
+    }
     &_scroll_trigger {
         position: absolute;
         &1 {
             top: -152px;
+            @include mobile {
+                top: -120px;
+            }
         }
-        &2, &3, &4 {
-            top: -120px;
+        &2, &3, &4, &5 {
+            top: -110px;
+            @include mobile {
+                top: -80px;
+            }
         }
     }
+
     &_top {
         display: flex;
         align-items: center;
@@ -85,7 +110,24 @@
         padding: 27px 0 32px;
         gap: 30px 16px;
         width: 100%;
+        .mediaSet {
+            min-width: 0;
+        }
+        @include mobile {
+            &_btns {
+                width: 100%;
+                .f_btn {
+                    flex: 1;
+                }
+            }
+            
+        }
+        
         &_info {
+            flex-wrap: wrap;
+            @include mobile {
+                width: 100%;
+            }
             .info_item {
                 display: flex;
                 width: 260px;
@@ -94,6 +136,9 @@
                 align-items: center;
                 background-color: $c_grey3;
                 border-radius: 16px;
+                @include mobile {
+                    width: 100%;
+                }
                 .tit {
                     font-size: $fz_5;
                     color: $c_darkGrey;
@@ -118,7 +163,15 @@
         }
         @include mobile {
             top: 80px;
+            .tit_tab.ty_big {
+                gap: 16px;
+                .tit_tab_btn {
+                    font-size: 14px;
+                    height: 50px;
+                }
+            } 
         }
+        
     }
     &_sec {
         padding-top: 80px;
@@ -127,6 +180,9 @@
             position: relative;
             display: flex;
             gap: 0 64px;
+            @include tablet2 {
+                display: block;
+            }
         }
     }
     &_info {
@@ -159,6 +215,10 @@
                 font-size: $fz_4;
             }
         }
+
+        @include tablet2 {
+            width: 100%;
+        }
     }
     
     &_graph {
@@ -172,17 +232,45 @@
         &_cont {
             display: flex;
             align-items: center;
+            @include mobile {
+                display: block;
+            }
             .chart {
                 height: 100%;
                 &.ty_pie {
                     width: 40%;
+                    @include mobile {
+                        width: 100%;
+                    }
                 }
                 &.ty_col {
                     width: 60%;
+                    @include mobile {
+                        width: 100%;
+                        margin-top: 24px;
+                    }
                 }
             }
         }
-        
+        @include tablet2 {
+            width: 100%;
+        }
+    }
+    &_review {
+        &_top {
+            flex-wrap: wrap;
+            gap: 10px 24px;
+        }
+    }
+
+    &_products_tbl {
+        min-width: 1600px;
+        .fixed_col {
+            width: 18%;
+            @include mobile {
+                width: 50vw;
+            }
+        }
     }
 }
 

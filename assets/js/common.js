@@ -120,6 +120,10 @@ function reset(target){
   this_form.reset();
 }
 
+function open_modal(target){
+  const modal = document.querySelector('.modal.'+target+'');
+  modal.classList.add('on');
+}
 
 function close_modal(target){
   const modal = target.closest('.modal');

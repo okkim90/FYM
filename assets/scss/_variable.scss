@@ -442,11 +442,9 @@ $inner: 1280px;
     }
 }
 
-.bd_box {
-    border: 1px solid $c_line;
-    padding: 24px 32px;
+.posR {
+    position: relative;
 }
-.bd_box2 {
-    border: 1px solid $c_line;
-    padding: 16px 24px;
+.posA {
+    position: absolute;
 }
