@@ -223,7 +223,7 @@ $inner: 1280px;
     }
 }
 
-@for $i from 1 through 30 {
+@for $i from 1 through 32 {
     $z : 5*$i;
     .mt#{$i} {
         margin-top: #{$i}px;
