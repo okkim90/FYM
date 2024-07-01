@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYM</title>
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script type="text/javascript" src="../assets/js/swiper.min.js"></script>
+
+    <!--[D] datepicker js&css-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="../assets/css/datePicker.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script>
+        $(function(){
+            // datepicker
+            $.datepicker.regional['ko'] = {
+                closeText: '닫기',
+                prevText: '이전달',
+                nextText: '다음달',
+                currentText: '오늘',
+                monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                dayNames: ['일','월','화','수','목','금','토'],
+                dayNamesShort: ['일','월','화','수','목','금','토'],
+                dayNamesMin: ['일','월','화','수','목','금','토'],
+                weekHeader: 'Wk',
+                dateFormat: 'yy.mm.dd',
+                firstDay: 0,
+                isRTL: false,
+                showMonthAfterYear: true,
+                changeMonth: true,
+                changeYear: true
+            };
+            $.datepicker.setDefaults($.datepicker.regional['ko']);
+
+ 
+            $(".datepicker").datepicker();
+            $(".datepicker").each(function(){
+                let min = $(this).data('min');
+                let max = $(this).data('max');
+                $(this).datepicker('option','minDate',min);
+                $(this).datepicker('option','maxDate',max);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <h1 class="logo">
+                <a href=""><img src="../assets/images/logo.svg" alt=""></a>
+            </h1>
+            <nav class="nav">
+                <a href="" class="nav_btn">데이터베이스</a></li>
+                <a href="" class="nav_btn">소재라이브러리</a></li>
+            </nav>
+            <div class="srch">
+                <div class="select-box ty_small">
+                    <input type="text" class="select-input" value="매체" readonly>
+                    <ul class="options">
+                        <li data-value="1" class="option">매체</li>
+                        <li data-value="2" class="option">상품</li>
+                    </ul>
+                </div>
+                <input type="text" class="srch_input" placeholder="찾고 싶은 매체/상품을 검색해보세요!">
+                <button type="submit" class="srch_btn"></button>
+                <span class="line"></span>
+                <!--[D] 'on' class 로 활성화-->
+                <div class="srch_result">
+                    <ul class="srch_list">
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _beauty">뷰티</span>
+                                    <span class="tag _university">Z세대</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _beauty">뷰티</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                    <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _sns">CPM 배너</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                    <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _sns">CPM 배너</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="no_result">
+                        <img src="../assets/images/no_result.svg" alt="">
+                        <div class="desc fz_5 fc_grey">
+                            조건에 맞는 결과가 없어요 <br> 검색어를 수정해주세요
+                        </div>
+                    </div>
+                </div>
+                <!-- [D][개발시 삭제] UI 확인용 스크립트 -->
+                <script>
+                    const srch_btn = document.querySelector('.srch_btn');
+                    const srch_result = document.querySelector('.srch_result');
+                    srch_btn.addEventListener('click', (event)=>{
+                        srch_result.classList.add('on');
+                    });
+
+                </script>
+                <!--// [D][개발시 삭제] UI 확인용 스크립트 -->
+            </div>
+            <div class="header_btns d_flex _gap8 ml_auto">
+                <a href="" class="f_btn _ol ty_small">로그인</a>
+                <a href="" type="button" class="f_btn _blue ty_small">회원가입</a>
+            </div>
+        </header>
+        <div id="container">
+            <div class="info_box">
+                <i class="info_box_ico"></i>
+                <p>작성한 모든 리뷰는 익명으로 게시돼요</p>
+            </div>
+            <div class="inner">
+                <div class="inner_sec review_step fc_grey fz_4">
+                    <b>step 02</b> / step 04
+                </div>
+                <div class="inner_sec">
+                    <div class="f_set_top">
+                        <label for="" class="label">광고 상품</label>
+                    </div>
+                    <div class="f_set_input">
+                        <div class="select-box ty_big">
+                            <input type="text" class="select-input" value="" placeholder="집행해본 광고 상품을 선택해주세요" readonly>
+                            <ul class="options">
+                                <li data-value="1" class="option">건강/헬스</li>
+                                <li data-value="2" class="option">금융</li>
+                                <li data-value="3" class="option">뷰티</li>
+                                <li data-value="4" class="option">의류</li>
+                                <li data-value="5" class="option">SNS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner_sec">
+                    <div class="f_set_top">
+                        <label for="" class="label">브랜드 업종</label>
+                    </div>
+                    <div class="f_set_input">
+                        <div class="select-box ty_big">
+                            <input type="text" class="select-input" value="" placeholder="집행한 브랜드의 업종을 선택해주세요" readonly>
+                            <ul class="options">
+                                <li data-value="1" class="option">건강/헬스</li>
+                                <li data-value="2" class="option">금융</li>
+                                <li data-value="3" class="option">뷰티</li>
+                                <li data-value="4" class="option">의류</li>
+                                <li data-value="5" class="option">SNS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner_sec">
+                    <div class="f_set_top">
+                        <label for="" class="label">집행일</label>
+                    </div>
+                    <div class="f_set_input">
+                        <!--[D] datepicker : minDate, MaxDate 있을 경우 data-attribute 설정 -->
+                        <input type="text" class="f_input ty_big datepicker" placeholder="집행한 달을 선택해주세요" data-min="-3M" data-max="today" >
+                    </div>
+                    <p class="f_set_info">최근 3개월 전까지만 선택할 수 있어요</p>
+                </div>
+                <div class="inner_sec">
+                    <div class="d_flex ai_c jc_sb">
+                        <button type="button" class="f_btn ty_big _ol w_100">
+                            <img src="../assets/images/arrow_l_b.svg" alt="" class="mr5">이전</button>
+                        <button type="button" class="f_btn ty_big _blue w_100 disabled">
+                            다음<img src="../assets/images/arrow_r_w.svg" alt="" class="ml5">
+                        </button>
+                    </div>
+                    <div class="d_flex ai_c jc_sb">
+                        <button type="button" class="f_btn ty_big _ol w_100">
+                            <img src="../assets/images/arrow_l_b.svg" alt="" class="mr5">이전</button>
+                        <button type="button" class="f_btn ty_big _blue w_100">
+                            다음<img src="../assets/images/arrow_r_w.svg" alt="" class="ml5">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--[D] 모바일 이용불가 안내 팝업-->
+        <div class="modal mobile_alert" onclick=" close_modal(this)">
+            <div class="modal_inner">
+                <div class="modal_cont ty_small">
+                    <div class="taC">
+                        <div class="modal_ico mb20">
+                            <img src="../assets/images/ico_alert.svg" alt="">
+                        </div>
+                        <div class="modal_txt">
+                            <p class="modal_tit fc_font fz_6">fym은 PC에서 이용할 수 있어요</p>
+                            <p class="modal_desc fc_dakrGrey fz_5">모바일에서는 상세 매체 정보, 소재 라이브러리 등 fym의 모든 기능을 상세히 이용할 수 없어요</p>
+                        </div>
+                        <div class="modal_bot mt40">
+                            <button class="f_btn ty_big _blue w100" onclick="close_modal(this)">확인</button>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -130,3 +130,37 @@
     width: 100%;
     height: 100%;
 }
+
+.info_box {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $fz_5;
+    background-color: $c_key3;
+    border-radius: 16px;
+    height: 57px;
+    &_ico {
+       width: 24px;
+       height: 24px;
+       background-image: url(../images/ico_info.svg);
+       margin-right: 8px; 
+       background-repeat: no-repeat;
+       background-position: center center;
+    }
+}
+
+.inner {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 480px;
+    padding-top: 100px;
+    &_sec {
+        & + & {
+            margin-top: 36px;
+        }
+    }
+} 
+.review_step {
+    margin-bottom: 36px;
+}

@@ -6309,6 +6309,39 @@ input::-webkit-search-results-decoration {
   height: 100%;
 }
 
+.info_box {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #EAEBFE;
+  border-radius: 16px;
+  height: 57px;
+}
+.info_box_ico {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/ico_info.svg);
+  margin-right: 8px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.inner {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 480px;
+  padding-top: 100px;
+}
+.inner_sec + .inner_sec {
+  margin-top: 36px;
+}
+
+.review_step {
+  margin-bottom: 36px;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -6646,6 +6679,12 @@ input::-webkit-search-results-decoration {
   font-size: 13px;
   margin-top: 8px;
 }
+.f_set_info {
+  display: block;
+  font-size: 13px;
+  color: #8C8C8C;
+  margin-top: 8px;
+}
 
 .f_input {
   width: 100%;
@@ -6699,6 +6738,13 @@ input::-webkit-search-results-decoration {
 }
 .f_input.error:focus {
   box-shadow: 0 0 0 2px #FF4E4E inset;
+}
+.f_input.datepicker {
+  padding-left: 54px;
+  background-image: url(../images/ico_calendar.svg);
+  background-size: 24px 24px;
+  background-position: 20px center;
+  background-repeat: no-repeat;
 }
 
 .chk_set_list {
