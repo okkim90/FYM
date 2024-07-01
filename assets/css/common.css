@@ -6385,7 +6385,7 @@ input::-webkit-search-results-decoration {
 /* templetes */
 .paging_wrap {
   display: flex;
-  margin-top: 24px;
+  margin-top: 32px;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -7185,6 +7185,18 @@ input::-webkit-search-results-decoration {
   padding: 15px;
   border-radius: 10px;
   background-color: rgba(63, 54, 244, 0.15);
+}
+
+.tbl_db_prod {
+  min-width: 2000px;
+}
+.tbl_db_prod .fixed_col {
+  width: 20%;
+}
+@media (max-width: 767px) {
+  .tbl_db_prod .fixed_col {
+    width: 40vw;
+  }
 }
 
 .card_list {

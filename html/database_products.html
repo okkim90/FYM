@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYM</title>
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script type="text/javascript" src="../assets/js/swiper.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <h1 class="logo">
+                <a href=""><img src="../assets/images/logo.svg" alt=""></a>
+            </h1>
+            <nav class="nav">
+                <a href="" class="nav_btn">데이터베이스</a></li>
+                <a href="" class="nav_btn">소재라이브러리</a></li>
+            </nav>
+            <div class="srch">
+                <div class="select-box ty_small">
+                    <input type="text" class="select-input" value="매체" readonly>
+                    <ul class="options">
+                        <li data-value="1" class="option">매체</li>
+                        <li data-value="2" class="option">상품</li>
+                    </ul>
+                </div>
+                <input type="text" class="srch_input" placeholder="찾고 싶은 매체/상품을 검색해보세요!">
+                <button type="submit" class="srch_btn"></button>
+                <span class="line"></span>
+                <!--[D] 'on' class 로 활성화-->
+                <div class="srch_result">
+                    <ul class="srch_list">
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _beauty">뷰티</span>
+                                    <span class="tag _university">Z세대</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _beauty">뷰티</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                    <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _sns">CPM 배너</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                    <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _sns">CPM 배너</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="no_result">
+                        <img src="../assets/images/no_result.svg" alt="">
+                        <div class="desc fz_5 fc_grey">
+                            조건에 맞는 결과가 없어요 <br> 검색어를 수정해주세요
+                        </div>
+                    </div>
+                </div>
+                <!-- [D][개발시 삭제] UI 확인용 스크립트 -->
+                <script>
+                    const srch_btn = document.querySelector('.srch_btn');
+                    const srch_result = document.querySelector('.srch_result');
+                    srch_btn.addEventListener('click', (event)=>{
+                        srch_result.classList.add('on');
+                    });
+
+                </script>
+                <!--// [D][개발시 삭제] UI 확인용 스크립트 -->
+            </div>
+            <div class="user ex_close">
+                <button type="button" class="user_ico" onclick="user_toggle()"></button>
+                <div class="user_cont ">
+                    <div class="user_info d_flex fw_w ai_c _gapX8 _gapY4">
+                        <div class="user_name fz_4 fwB">김하나</div>
+                        <div class="user_status tag _subscribe">구독중</div>
+                        <div class="user_mail w100 fz_3 fc_grey">hana@fym.im</div>
+                    </div>
+                    <ul class="user_menu">
+                        <li><a href="" class="user_menu_btn hv">로그인</a></li>
+                        <li><a href="" class="user_menu_btn hv">회원가입</a></li>
+                        <li><a href="" class="user_menu_btn hv">마이페이지</a></li>
+                        <li><a href="" class="user_menu_btn hv">매체 등록/수정 요청</a></li>
+                        <li><a href="" class="user_menu_btn hv">로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="container">
+            
+            <div class="tabs ty_big d_flex fw_w _gap16 mt16">
+                <!--[D] 활성화 'on'-->
+                <button type="button" class="btn_tab2">매체찾기</button>
+                <button type="button" class="btn_tab2 on">상품찾기</button>
+            </div>
+            <div class="tabs d_flex fw_w mt32">
+                <!--[D] 활성화 'on'-->
+                <button type="button" class="btn_tab on">CPM 배너</button>
+                <button type="button" class="btn_tab">CPP 배너</button>
+                <button type="button" class="btn_tab">PUSH/문자</button>
+                <button type="button" class="btn_tab">고객 참여형</button>
+                <button type="button" class="btn_tab">패키지</button>
+                <button type="button" class="btn_tab">팝업/스플래시</button>
+                <button type="button" class="btn_tab">뉴스레터</button>
+                <button type="button" class="btn_tab">체험단/협찬</button>
+                <button type="button" class="btn_tab">브랜디드</button>
+            </div>
+            <form class="sorting_area d_flex fw_w _gap16 mt16">
+                <div class="select-box ty_big w_200">
+                    <input type="text" class="select-input" value="" placeholder="타겟팅 여부" readonly>
+                    <ul class="options">
+                        <li data-value="1" class="option">YES</li>
+                        <li data-value="2" class="option">NO</li>
+                    </ul>
+                </div>
+                <div class="select-box ty_big w_200">
+                    <input type="text" class="select-input" value="" placeholder="핵심 타겟" readonly>
+                    <ul class="options">
+                        <li>
+                            <label class="f_chk">
+                                <input type="checkbox">
+                                <div class="f_chk_ico"></div>
+                                <div class="f_chk_txt">금융</div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="f_chk">
+                                <input type="checkbox">
+                                <div class="f_chk_ico"></div>
+                                <div class="f_chk_txt">뷰티</div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="f_chk">
+                                <input type="checkbox">
+                                <div class="f_chk_ico"></div>
+                                <div class="f_chk_txt">직장인</div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="f_chk">
+                                <input type="checkbox">
+                                <div class="f_chk_ico"></div>
+                                <div class="f_chk_txt">주부</div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="f_chk">
+                                <input type="checkbox">
+                                <div class="f_chk_ico"></div>
+                                <div class="f_chk_txt">Z세대</div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="f_btn ty_big _noBg" onclick="reset(this)">Clear</button>
+                <div class="sorting_area_right ml_auto d_flex _gap8 self_bot">
+                    <!--[D] on class로 활성화-->
+                    <button type="button" class="f_btn ty_small _grey_ol on">조회수</button>
+                </div>
+            </form>
+            <div class="mt24">
+                <div class="h_tbl_wrap">
+                    <table class="h_tbl tl_fixed tbl_db_prod" >
+                        <caption></caption> 
+                        <colgroup>
+                            <col class="fixed_col">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col style="width: 15%;">
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="sticky_left taL"><span class="posR">매체</span></th>
+                                <th>상품</th>
+                                <th>상품 종류</th>
+                                <th>핵심 타겟</th>
+                                <th>타게팅 여부</th>
+                                <th class="taR">가격</th>
+                                <th class="taR">
+                                    <!--[D] on class로 활성화-->
+                                    <button type="button" class="col_sort on">성과 지표</button>
+                                </th>
+                                <th>최소 집행 단가</th>
+                                <th class="taR">대행 수수료</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sticky_left">
+                                    <div class="mediaSet" >
+                                        <span class="mediaSet_ico skeleton_item"></span>
+                                        <div class="mediaSet_txt">
+                                            <div class="d_flex ai_c">
+                                                <span class="tit t_hidden_1 skeleton_item">스스노우스노우스노노우스노우노우</span> 
+                                                <span class="tag _update ty_small skeleton_item shrink0 ml8">Update!</span>
+                                            </div> 
+                                            <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="skeleton_item">메인 배너</span>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _grey skeleton_item">PUSH/문자</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _beauty skeleton_item">뷰티</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _key skeleton_item">YES</span>
+                                    </div>
+                                </td>
+                                <td class="taR"><span class="skeleton_item">CPM 3,000원</span></td>
+                                <td class="taR">
+                                    <span class="skeleton_item">구독자(팔로워) 99,999,999명 노출</span>
+                                </td>
+                                <td><span class="skeleton_item">3,000,000원</span></td>
+                                <td class="taR"><span class="skeleton_item">20%</span></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky_left">
+                                    <div class="mediaSet" >
+                                        <span class="mediaSet_ico skeleton_item"></span>
+                                        <div class="mediaSet_txt">
+                                            <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                            <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="skeleton_item">메인 배너</span>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _grey skeleton_item">PUSH/문자</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _beauty skeleton_item">뷰티</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _red skeleton_item">NO</span>
+                                    </div>
+                                </td>
+                                <td class="taR"><span class="skeleton_item">CPM 3,000원</span></td>
+                                <td class="taR">
+                                    <span class="skeleton_item">구독자(팔로워) 99,999,999명 노출</span>
+                                </td>
+                                <td><span class="skeleton_item">3,000,000원</span></td>
+                                <td class="taR"><span class="skeleton_item">20%</span></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky_left">
+                                    <div class="mediaSet" >
+                                        <span class="mediaSet_ico skeleton_item"></span>
+                                        <div class="mediaSet_txt">
+                                            <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                            <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="skeleton_item">메인 배너</span>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _grey skeleton_item">PUSH/문자</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _beauty skeleton_item">뷰티</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _red skeleton_item">NO</span>
+                                    </div>
+                                </td>
+                                <td class="taR"><span class="skeleton_item">CPM 3,000원</span></td>
+                                <td class="taR">
+                                    <span class="skeleton_item">구독자(팔로워) 99,999,999명 노출</span>
+                                </td>
+                                <td><span class="skeleton_item">3,000,000원</span></td>
+                                <td class="taR"><span class="skeleton_item">20%</span></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky_left">
+                                    <div class="mediaSet" >
+                                        <span class="mediaSet_ico skeleton_item"></span>
+                                        <div class="mediaSet_txt">
+                                            <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                            <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="skeleton_item">메인 배너</span>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _grey skeleton_item">PUSH/문자</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _beauty skeleton_item">뷰티</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _red skeleton_item">NO</span>
+                                    </div>
+                                </td>
+                                <td class="taR"><span class="skeleton_item">CPM 3,000원</span></td>
+                                <td class="taR">
+                                    <span class="skeleton_item">구독자(팔로워) 99,999,999명 노출</span>
+                                </td>
+                                <td><span class="skeleton_item">3,000,000원</span></td>
+                                <td class="taR"><span class="skeleton_item">20%</span></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky_left">
+                                    <div class="mediaSet" >
+                                        <span class="mediaSet_ico skeleton_item"></span>
+                                        <div class="mediaSet_txt">
+                                            <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                            <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="skeleton_item">메인 배너</span>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _grey skeleton_item">PUSH/문자</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _beauty skeleton_item">뷰티</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _red skeleton_item">NO</span>
+                                    </div>
+                                </td>
+                                <td class="taR"><span class="skeleton_item">CPM 3,000원</span></td>
+                                <td class="taR">
+                                    <span class="skeleton_item">구독자(팔로워) 99,999,999명 노출</span>
+                                </td>
+                                <td><span class="skeleton_item">3,000,000원</span></td>
+                                <td class="taR"><span class="skeleton_item">20%</span></td>
+                            </tr>
+                            <tr>
+                                <td class="sticky_left">
+                                    <div class="mediaSet" >
+                                        <span class="mediaSet_ico skeleton_item"></span>
+                                        <div class="mediaSet_txt">
+                                            <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                            <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="skeleton_item">메인 배너</span>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _grey skeleton_item">PUSH/문자</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _beauty skeleton_item">뷰티</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d_flex _gap8 fw_w jc_c">
+                                        <span class="tag _red skeleton_item">NO</span>
+                                    </div>
+                                </td>
+                                <td class="taR"><span class="skeleton_item">CPM 3,000원</span></td>
+                                <td class="taR">
+                                    <span class="skeleton_item">구독자(팔로워) 99,999,999명 노출</span>
+                                </td>
+                                <td><span class="skeleton_item">3,000,000원</span></td>
+                                <td class="taR"><span class="skeleton_item">20%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="paging_wrap">
+                    <button type="button" class="paging_btn ty_first paging_nav"></button>
+                    <button type="button" class="paging_btn ty_prev paging_nav"></button>
+                    <div class="paging_list">
+                        <button type="button" class="paging_btn current">1</button>
+                        <button type="button" class="paging_btn">2</button>
+                        <button type="button" class="paging_btn">3</button>
+                        <button type="button" class="paging_btn">4</button>
+                        <button type="button" class="paging_btn">5</button>                          
+                    </div>
+                    <button type="button" class="paging_btn ty_next paging_nav"></button>
+                    <button type="button" class="paging_btn ty_last paging_nav"></button>
+                </div>
+            </div>
+            <!--[D] 조건에 맞는 검색결과 없을 때-->
+            <div class="mt24">
+                <div class="result_box taC">
+                    <div class="result_box_ico">
+                        <img src="../assets/images/no_result.svg" alt="">
+                    </div>
+                    <div class="result_box_txt">
+                        <p class="fz_5 fc_grey">
+                            조건에 맞는 결과가 없어요 <br> 필터를 수정해주세요
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer_cont">
+                <img src="../assets/images/footer_tit.svg" class="footer_tit" alt="">
+                <div class="footer_info">
+                    <div class="footer_info_set">
+                        <span class="footer_info_item">디지털네이티브스 주식회사</span>
+                    </div>
+                    <div class="footer_info_set">
+                        <span class="footer_info_item">대표 김동규</span>
+                        <span class="footer_info_item">서울시 강남구 선릉로 551 5층</span>
+                    </div>
+                    <div class="footer_info_set">
+                        <span class="footer_info_item">사업자등록번호 628-81-02391</span>
+                        <span class="footer_info_item">통신판매업 신고번호 2021-서울강남-06131</span>
+                    </div>
+                </div>
+                <div class="footer_info">
+                    <div class="footer_info_set">
+                        <span class="footer_info_item"><a href="" class="fwB">서비스 이용 약관</a></span>
+                        <span class="footer_info_item"><a href="" class="fwB">개인정보처리방침</a></span>
+                    </div>
+                </div>
+            </div>
+            <img src="../assets/images/logo_footer.svg" alt="" class="footer_logo">
+        </footer>
+
+        <!--[D] 모바일 이용불가 안내 팝업-->
+        <div class="modal mobile_alert" onclick=" close_modal(this)">
+            <div class="modal_inner">
+                <div class="modal_cont ty_small">
+                    <div class="taC">
+                        <div class="modal_ico mb20">
+                            <img src="../assets/images/ico_alert.svg" alt="">
+                        </div>
+                        <div class="modal_txt">
+                            <p class="modal_tit fc_font fz_6">fym은 PC에서 이용할 수 있어요</p>
+                            <p class="modal_desc fc_dakrGrey fz_5">모바일에서는 상세 매체 정보, 소재 라이브러리 등 fym의 모든 기능을 상세히 이용할 수 없어요</p>
+                        </div>
+                        <div class="modal_bot mt40">
+                            <button class="f_btn ty_big _blue w100" onclick="close_modal(this)">확인</button>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--[D] 스켈레톤 로딩 ui 확인용-->
+    <script>
+        const skeletonItem = document.querySelectorAll('.skeleton_item');
+        const hideskeleton = () => {
+            skeletonItem.forEach(e => {
+                e.classList.add('load')
+            });
+        };
+        window.onload = setTimeout(hideskeleton, 1600);
+    </script>
+</body>
+</html>
+

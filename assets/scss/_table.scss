@@ -347,3 +347,14 @@
     border-radius: 10px;
     background-color: rgba($c_key,.15);
 }
+
+.tbl_db_prod {
+    min-width: 2000px;
+    .fixed_col {
+        //min-width: 430px;
+        width: 20%;
+        @include mobile {
+            width: 40vw;
+        }
+    }
+}

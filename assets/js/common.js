@@ -29,7 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
         let selectBox = e.closest('.select-box');
         let selectInput = selectBox.querySelector('.select-input');
         let chkCount = selectBox.querySelectorAll('.f_chk input[type=checkbox]:checked').length
-        selectInput.value = chkCount + '개 선택'
+        if(chkCount > 0){
+          selectInput.value = chkCount + '개 선택'
+        }else{
+          selectInput.value = '';
+        }
+        
       });
     });
     document.addEventListener('click', function(event) {
