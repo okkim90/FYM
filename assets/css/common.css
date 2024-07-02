@@ -6832,6 +6832,38 @@ input::-webkit-search-results-decoration {
   background-position: calc(100% - 20px) center;
 }
 
+.f_srch {
+  position: relative;
+}
+
+.f_dropbox {
+  position: absolute;
+  width: 100%;
+  border-radius: 16px;
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 8px;
+}
+.f_dropbox_list {
+  border-radius: 16px;
+  overflow: hidden;
+}
+.f_dropbox_link {
+  display: block;
+  line-height: 56px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100%;
+}
+.f_dropbox_link:hover {
+  background-color: #EAEBFE;
+}
+
 .btn_tab {
   padding: 0 20px;
   height: 48px;

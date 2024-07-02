@@ -354,3 +354,31 @@
         background-position: calc(100% - 20px) center;
     }
 }
+.f_srch {
+    position: relative;
+}
+.f_dropbox {
+    position: absolute;
+    width: 100%;
+    border-radius: 16px;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: 2px 8px 20px rgba(#000,.08) ;
+    margin-top: 8px;
+    &_list {
+        border-radius: 16px;
+        overflow: hidden;
+    }
+    &_link {
+        display: block;
+        line-height: 56px;
+        padding: 0 20px;
+        font-size: $fz_3;
+        font-weight: 500;
+        @include text-hidden-single;
+        &:hover {
+            background-color: $c_key3;
+        }
+
+    }
+}
