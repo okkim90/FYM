@@ -191,3 +191,26 @@
         }
     }
 }
+
+.chk_btn {
+    position: relative;
+    cursor: pointer;
+    .f_btn {
+        background-color: $c_disabled_bg;
+        color: #fff;
+        transition: background-color .1s ease-in-out;
+        &:hover {
+            background-color: darken($c_disabled_bg,10%) ;
+        }
+    }
+    .inp_hidden {
+        display: none;
+        &:checked ~ .f_btn {
+            background-color: $c_key;   
+            &:hover {
+                background-color: $c_key;  
+            }
+        }
+    }
+}
+ 

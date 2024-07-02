@@ -258,6 +258,15 @@
             box-shadow: 0 0 0 1px $c_line inset;
         }
     }
+    &.upload_input {
+        &:read-only {
+            background-color: #fff;
+            color: $c_font;
+            &:focus {
+                box-shadow: 0 0 0 1px $c_line inset;
+            }
+        }
+    }
     &:focus {
         //border-width: 2px;
         box-shadow: 0 0 0 2px $c_key2 inset;
@@ -311,5 +320,37 @@
         border-radius: 15px;
         border: 1px solid $c_line;
         overflow: hidden;
+        .countChar_wrap {
+            padding: 15px 20px;
+            text-align: right;
+        }
+    }
+}
+
+.countChar_wrap {
+    font-size: $fz_3;
+    color: $c_grey;
+    .countChar {
+        color: $c_key2;
+        font-weight: 700;
+    }
+}
+
+.uploadSet {
+    position: relative;
+    &_file {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        left: 0;
+        top: 0;
+        cursor: pointer;
+    }
+    .upload_input {
+        padding-right: 54px;
+        background-image: url(../images/ico_upload.svg);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 20px) center;
     }
 }

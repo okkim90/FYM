@@ -49,3 +49,70 @@
 
     }
 }
+
+.starChk {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    input {
+        display: none;
+        &:checked ~ .starChk_label {
+            .star_path {
+                fill: #FFC700;
+            }
+        }
+        // &:not(:checked) ~ .starChk_label:hover,
+        // &:not(:checked) ~ .starChk_label:hover ~ .starChk_label {
+        //     .star_path {
+        //         fill: darken(#FFC700, 30%) ;  
+        //         transform: scale(1.06);
+        //     }
+        // }
+    }
+    &_label {
+        line-height: 0;
+        padding: 0 2px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .star_path {
+            transition: all .15s ease-in-out;
+            transform-origin: center center;
+        }
+        &:hover {
+            .star_path {
+                fill: lighten(#FFC700, 30%) ;
+                transform: scale(1.06);  
+            } 
+            & ~ .starChk_label {
+                .star_path {
+                    fill: lighten(#FFC700, 30%);
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .star_path {
+            fill: #BABABA;
+        }
+    }
+}
+
+.reviewChk {
+    &_item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & + & {
+            margin-top: 36px;
+        }
+        dt {
+            font-weight: 500;
+        }
+        dt, dd {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
