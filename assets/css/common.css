@@ -5484,6 +5484,10 @@
   position: absolute;
 }
 
+.tdU {
+  text-decoration: underline;
+}
+
 /*반응형 화면 크기*/
 .t_hidden_1 {
   text-overflow: ellipsis;
@@ -6355,6 +6359,9 @@ input::-webkit-search-results-decoration {
 .inner.pt0 {
   padding-top: 0;
 }
+.inner.pt60 {
+  padding-top: 60px;
+}
 .inner_sec + .inner_sec {
   margin-top: 36px;
 }
@@ -6402,6 +6409,8 @@ input::-webkit-search-results-decoration {
 .bill_item dd {
   font-size: 16px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
 }
 
 .modal {
@@ -6937,6 +6946,14 @@ input::-webkit-search-results-decoration {
 }
 .btn_tab2.on {
   color: #191919;
+}
+
+.btn_detail {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background: url(../images/btn_detail.svg) no-repeat center center;
 }
 
 .f_btn {

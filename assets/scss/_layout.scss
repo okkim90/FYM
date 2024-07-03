@@ -173,6 +173,9 @@
     &.pt0{
         padding-top: 0;
     }
+    &.pt60{
+        padding-top: 60px;
+    }
     &_sec {
         & + & {
             margin-top: 36px;
@@ -224,6 +227,8 @@
         dd {
             font-size: $fz_5;
             font-weight: 600;
+            display: flex;
+            align-items: center;
         }
     }
 }

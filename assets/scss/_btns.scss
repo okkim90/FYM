@@ -21,7 +21,13 @@
     }
 }
 
-
+.btn_detail {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background: url(../images/btn_detail.svg) no-repeat center center;
+}
 
 
 
