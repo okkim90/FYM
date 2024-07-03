@@ -6305,6 +6305,17 @@ input::-webkit-search-results-decoration {
   }
 }
 
+.bd_box3 {
+  border: 1px solid #E1E1E1;
+  padding: 24px;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .bd_box3 {
+    padding: 18px;
+  }
+}
+
 .blur_layer {
   position: absolute;
   left: 0;
@@ -6350,6 +6361,47 @@ input::-webkit-search-results-decoration {
 
 .review_step {
   margin-bottom: 36px;
+}
+
+.benefit_item {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+.benefit_item + .benefit_item {
+  margin-top: 16px;
+}
+.benefit_item::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  background: url(../images/ico_check_circle.svg) no-repeat center center;
+  background-size: cover;
+  margin-right: 0.42em;
+}
+
+.bill_sec + .bill_sec {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #E1E1E1;
+}
+.bill_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 28px;
+}
+.bill_item + .bill_item {
+  margin-top: 16px;
+}
+.bill_item dt {
+  font-size: 15px;
+  font-weight: 500;
+}
+.bill_item dd {
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .modal {
@@ -6988,7 +7040,7 @@ input::-webkit-search-results-decoration {
   height: 56px;
   border-radius: 16px;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 16px;
   padding: 0 20px;
 }
 .f_btn.ty_small {

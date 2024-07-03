@@ -127,6 +127,14 @@
         padding: 12px 18px;
     }
 }
+.bd_box3 {
+    border: 1px solid $c_line;
+    padding: 24px;
+    overflow: hidden;
+    @include mobile {
+        padding: 18px;
+    }
+}
 
 .blur_layer {
     position: absolute;
@@ -173,4 +181,49 @@
 } 
 .review_step {
     margin-bottom: 36px;
+}
+.benefit_item {
+    display: flex;
+    align-items: center;
+    font-size: $fz_6;
+    font-weight: 500;
+    & + & {
+        margin-top: 16px;
+    }
+    &::before {
+        content: '';
+        width: 1em;
+        height: 1em;
+        background: url(../images/ico_check_circle.svg) no-repeat center center;
+        background-size: cover;
+        margin-right: 0.42em;
+    }
+}
+
+.bill {
+    &_sec {
+        & + & {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid $c_line;
+        }
+    }
+    &_item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 28px;
+        & + & {
+            margin-top: 16px;
+        }
+        dt {
+            font-size: $fz_4;
+            color: $c_darkGrey;
+            font-weight: 500;
+        }
+        dd {
+            font-size: $fz_5;
+            font-weight: 600;
+        }
+    }
 }
