@@ -19,6 +19,10 @@
         justify-content: center;
         flex-direction: column;
     }
+    &.ty_admin {
+        padding: 0;
+        
+    }
     @include mobile {
         padding: 0 16px;
         padding-bottom: 60px;

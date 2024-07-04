@@ -84,11 +84,36 @@
         border: 1px solid $c_line;
         color: $c_font;
         transition: background-color .1s ease-in-out;
+        background-color: #fff;
         &:hover {
             background-color: $c_grey3;
         }
         &.on {
             background-color: $c_grey3;
+        }
+        &.active {
+            background-color: $c_key;
+            color: #fff;
+            border-color: $c_key;
+        }
+        &.disabled {
+            background-color: $c_disabled_bg;
+            border-color: $c_disabled_bg;
+            color: $c_disabled;
+        }
+    }
+    &._ol2 {
+        border: 1px solid $c_line;
+        color: $c_font;
+        transition: background-color .1s ease-in-out;
+        background-color: #fff;
+        &:hover {
+            background-color: $c_key3;
+        }
+        &.on {
+            background-color: $c_key;
+            color: #fff;
+            border-color: $c_key;
         }
         &.disabled {
             background-color: $c_disabled_bg;

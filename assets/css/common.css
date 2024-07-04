@@ -5464,6 +5464,10 @@
   width: 100%;
 }
 
+.h100 {
+  height: 100%;
+}
+
 .lh0 {
   line-height: 0;
 }
@@ -6231,6 +6235,9 @@ input::-webkit-search-results-decoration {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+#container.ty_admin {
+  padding: 0;
 }
 @media (max-width: 767px) {
   #container {
@@ -7053,6 +7060,7 @@ input::-webkit-search-results-decoration {
   border: 1px solid #E1E1E1;
   color: #191919;
   transition: background-color 0.1s ease-in-out;
+  background-color: #fff;
 }
 .f_btn._ol:hover {
   background-color: #F4F4F4;
@@ -7060,7 +7068,31 @@ input::-webkit-search-results-decoration {
 .f_btn._ol.on {
   background-color: #F4F4F4;
 }
+.f_btn._ol.active {
+  background-color: #3F36F4;
+  color: #fff;
+  border-color: #3F36F4;
+}
 .f_btn._ol.disabled {
+  background-color: #e2e2e2;
+  border-color: #e2e2e2;
+  color: #A3A3A3;
+}
+.f_btn._ol2 {
+  border: 1px solid #E1E1E1;
+  color: #191919;
+  transition: background-color 0.1s ease-in-out;
+  background-color: #fff;
+}
+.f_btn._ol2:hover {
+  background-color: #EAEBFE;
+}
+.f_btn._ol2.on {
+  background-color: #3F36F4;
+  color: #fff;
+  border-color: #3F36F4;
+}
+.f_btn._ol2.disabled {
   background-color: #e2e2e2;
   border-color: #e2e2e2;
   color: #A3A3A3;
@@ -8820,4 +8852,56 @@ input::-webkit-search-results-decoration {
   100% {
     transform: rotate(360deg);
   }
+}
+.admin_container {
+  height: 100dvh;
+  display: grid;
+  grid-template-areas: "admin_lnb admin_header" "admin_lnb admin_cont";
+  grid-template-columns: 185px 1fr;
+  grid-template-rows: 120px 1fr;
+  background-color: #fff;
+}
+.admin_lnb {
+  grid-area: admin_lnb;
+  background-color: #F9F9F9;
+  text-align: center;
+  padding: 40px 0;
+}
+.admin_lnb .logo img {
+  height: 40px;
+}
+.admin_lnb .gnb {
+  margin-top: 40px;
+}
+.admin_lnb .gnb li + li {
+  margin-top: 16px;
+}
+.admin_lnb .gnb .f_btn._ol {
+  width: 100px;
+  padding: 0;
+}
+.admin_header {
+  grid-area: admin_header;
+  padding: 40px;
+  padding-bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  z-index: 10;
+}
+.admin_header .srch {
+  width: 440px;
+  margin-left: 48px;
+}
+.admin_cont {
+  grid-area: admin_cont;
+  padding: 40px;
+  overflow: hidden;
+}
+.admin_inner {
+  max-height: 100%;
+  overflow-y: scroll;
+  border-radius: 36px 0 0 36px;
+  border: 1px solid #E1E1E1;
+  padding: 24px;
 }
