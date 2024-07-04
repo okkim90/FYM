@@ -39,7 +39,7 @@ $colors: (
     _blue: #408CFF,
     _blue_l: #F2F7FF,
     _dim: rgba(#000,.3),
-    _placehoder: #BABABA,
+    _placeholder: #BABABA,
 );
 
 
@@ -105,7 +105,7 @@ $c_yellow : map-get($colors, _yellow);
 $c_title : map-get($colors, _title);
 $c_font : map-get($colors, _font);
 $c_desc : map-get($colors, _desc);
-$c_placehoder : map-get($colors, _placehoder);
+$c_placeholder : map-get($colors, _placeholder);
 $c_disabled : map-get($colors, _disabled);
 $c_disabled_bg : map-get($colors, _disabled_bg);
 $fz: (
@@ -299,6 +299,7 @@ $inner: 1280px;
 }
 @for $i from 1 through 10 {
     @include list_col($i ,12px, 20px);
+    
 }
 @mixin flex_col($col ,$gapX, $gapY){
     display: flex;
@@ -436,6 +437,13 @@ $inner: 1280px;
 .lh1 {
     line-height: 1;
 }
+
+@for $i from 1 through 9 {
+    .lh_1_#{$i} {
+        line-height: 1 + $i/10;
+    }
+}
+
 .hv {
     &:hover {
         background-color: $c_bg;

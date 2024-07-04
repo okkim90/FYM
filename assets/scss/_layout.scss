@@ -1,3 +1,10 @@
+
+@include mobile {
+    .m_hide {
+        display: none !important;
+    }
+}
+
 #container {
     padding: 0 32px;
     padding-bottom: 60px;

@@ -6,6 +6,9 @@
         justify-content: center;
         text-align: center;
         gap: 0 4px;
+        &.mt24 {
+            margin-top: 24px;
+        }
     }
     &_btn {
         

@@ -209,13 +209,13 @@ textarea:focus {
 ::-webkit-input-placeholder {
     font-size: inherit;
     font-family: $font;
-    color: $c_placehoder;
+    color: $c_placeholder;
 }
 
 *::placeholder {
     font-family: $font;
     font-size: inherit;
-    color: $c_placehoder
+    color: $c_placeholder
 }
 
 textarea {
