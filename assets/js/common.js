@@ -28,9 +28,15 @@ document.addEventListener('DOMContentLoaded', function() {
       e.addEventListener('click',(event)=>{
         let selectBox = e.closest('.select-box');
         let selectInput = selectBox.querySelector('.select-input');
-        let chkCount = selectBox.querySelectorAll('.f_chk input[type=checkbox]:checked').length
+        let chked = selectBox.querySelectorAll('.f_chk input[type=checkbox]:checked');
+        let chkCount = chked.length;
+        let arr= []
+        chked.forEach((chk)=>{
+            arr.push(chk.closest('.f_chk').querySelector('.f_chk_txt').textContent)
+        })
+        
         if(chkCount > 0){
-          selectInput.value = chkCount + '개 선택'
+          selectInput.value = chkCount + '개 선택' + ' ('+ arr.join(', ') +')' 
         }else{
           selectInput.value = '';
         }
@@ -48,6 +54,23 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
 
+    selectBoxes.forEach(e=>{
+      if(e.querySelector('.f_chk')){
+        let selectInput = e.querySelector('.select-input');
+        let chked = e.querySelectorAll('.f_chk input[type=checkbox]:checked');
+        let chkCount = chked.length;
+        let arr= []
+        chked.forEach((chk)=>{
+            arr.push(chk.closest('.f_chk').querySelector('.f_chk_txt').textContent)
+        })
+        
+        if(chkCount > 0){
+          selectInput.value = chkCount + '개 선택' + ' ('+ arr.join(', ') +')' 
+        }else{
+          selectInput.value = '';
+        }
+      }
+    });
 
     const h_tbl_wrap = document.querySelectorAll('.h_tbl_wrap');
     const mobile_alert = document.querySelector('.mobile_alert');
@@ -60,11 +83,14 @@ document.addEventListener('DOMContentLoaded', function() {
             e.classList.remove('scrolling');
           }
         });
-        if(window.innerWidth < 1023){
-          mobile_alert.classList.add('on')
-        }else{
-          mobile_alert.classList.remove('on')
+        if(mobile_alert){
+          if(window.innerWidth < 1023){
+            mobile_alert.classList.add('on')
+          }else{
+            mobile_alert.classList.remove('on')
+          }
         }
+        
       });
     });
 
@@ -140,3 +166,11 @@ function close_toast(target){
   toast.classList.remove('on');
 }
 
+
+function upload(e){
+                            
+  let val = e.value;
+  let uploadSet = e.closest('.uploadSet');
+  let upload_input = uploadSet.querySelector('.upload_input');
+  upload_input.value = val;
+}

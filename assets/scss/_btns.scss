@@ -80,6 +80,19 @@
             color: $c_disabled;
         }
     }
+    &._red_ol {
+        border: 1px solid $c_red;
+        color: $c_red;
+        transition: background-color .1s ease-in-out;
+        &:hover {
+            background-color: lighten($c_red, 32%);
+        }
+        &.disabled {
+            background-color: $c_disabled_bg;
+            border-color: $c_disabled_bg;
+            color: $c_disabled;
+        }
+    }
     &._ol {
         border: 1px solid $c_line;
         color: $c_font;

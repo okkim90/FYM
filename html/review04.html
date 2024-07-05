@@ -124,15 +124,6 @@
                         <input type="file" class="uploadSet_file" onchange="upload(this)">
                         <input type="text" class="f_input ty_big upload_input" placeholder="리포트를 등록해주세요" readonly>
                     </div>
-                    <script>
-                        function upload(e){
-                            
-                            let val = e.value;
-                            let uploadSet = e.closest('.uploadSet');
-                            let upload_input = uploadSet.querySelector('.upload_input');
-                            upload_input.value = val;
-                        }
-                    </script>
                 </div>
                 <div class="inner_sec">
                     <div class="d_flex ai_c jc_sb">

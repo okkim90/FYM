@@ -38,6 +38,7 @@
         background-color: $c_bg;
         flex: 1;
         font-size: 12px;
+        text-overflow: ellipsis;
         &:focus {
             border-color: none;
             background-color: $c_bg;

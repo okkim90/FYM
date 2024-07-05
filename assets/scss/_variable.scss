@@ -365,21 +365,22 @@ $inner: 1280px;
     &.ty_col {
         flex-direction: column;
     }
-    .flex1 {
-        flex: 1;
-    }
-    .shrink0 {
-        flex-shrink: 0;
-    }
-    .self_top {
-        align-self: flex-start;
-    }
-    .self_c {
-        align-self: center;
-    }
-    .self_bot {
-        align-self: flex-end;
-    }
+}
+
+.flex1 {
+    flex: 1;
+}
+.shrink0 {
+    flex-shrink: 0;
+}
+.self_top {
+    align-self: flex-start;
+}
+.self_c {
+    align-self: center;
+}
+.self_bot {
+    align-self: flex-end;
 }
 
 .d_block {

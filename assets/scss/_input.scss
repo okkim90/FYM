@@ -198,7 +198,7 @@
         margin-bottom: 8px;
         .label {
             font-size: 13px;
-            font-weight: 700;
+            font-weight: 600;
             color: $c_grey;
         }
         .sub {
@@ -236,6 +236,7 @@
     padding: 0 20px;
     border-radius: 12px;
     transition: box-shadow .1s ease-in-out;
+    text-overflow: ellipsis;
     &_box {
         position: relative;
     }

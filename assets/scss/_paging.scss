@@ -1,14 +1,14 @@
 .paging {
     &_wrap {
         display: flex;
-        margin-top: 32px;
+        margin-top: 24px;
         align-items: center;
         justify-content: center;
         text-align: center;
         gap: 0 4px;
-        &.mt24 {
-            margin-top: 24px;
-        }
+        // &.mt24 {
+        //     margin-top: 24px;
+        // }
     }
     &_btn {
         

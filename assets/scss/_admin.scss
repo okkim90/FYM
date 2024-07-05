@@ -41,6 +41,9 @@
         .srch {
             width: 440px;
             margin-left: 48px;
+            &_result {
+                left: 0;
+            }
         }
     }
     &_cont {
@@ -51,9 +54,32 @@
     }
     &_inner {
         max-height: 100%;
-        overflow-y: scroll;
-        border-radius: 36px 0 0 36px;
+        overflow-y: auto;
+        border-radius: 36px ;
         border: 1px solid $c_line;
         padding: 24px;
+        .list_top {
+            height: 48px;
+            padding: 0 16px;
+        }
+    }
+    &_media_list {
+        display: flex;
+        flex-wrap: wrap;
+        .list_item {
+            width: 25%;
+            padding: 20px 16px;
+        }
+    }
+    &_f_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 50px;
+        .admin_f_sec {
+            flex: 1;
+        }
+        .f_set + .f_set {
+            margin-top: 48px;
+        }
     }
 }
