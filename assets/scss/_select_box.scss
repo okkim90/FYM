@@ -18,6 +18,8 @@
     }
     .options {
         display: none;
+        overflow-y: auto;
+        max-height: 284px;
     }
     &.on {
         z-index: 100;

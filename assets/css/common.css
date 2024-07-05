@@ -8145,6 +8145,8 @@ input::-webkit-search-results-decoration {
 }
 .select-box .options {
   display: none;
+  overflow-y: auto;
+  max-height: 284px;
 }
 .select-box.on {
   z-index: 100;
@@ -8940,10 +8942,10 @@ input::-webkit-search-results-decoration {
 .admin_f_wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 0 50px;
+  gap: 48px 48px;
 }
-.admin_f_wrap .admin_f_sec {
-  flex: 1;
+.admin_f_wrap .col_item {
+  width: calc(33.3333333333% - 32px);
 }
 .admin_f_wrap .f_set + .f_set {
   margin-top: 48px;

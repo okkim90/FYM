@@ -72,14 +72,11 @@
         }
     }
     &_f_wrap {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0 50px;
-        .admin_f_sec {
-            flex: 1;
-        }
+        @include flex_col(3 ,48px, 48px);
         .f_set + .f_set {
             margin-top: 48px;
         }
     }
 }
+
+
