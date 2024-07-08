@@ -7163,6 +7163,19 @@ input::-webkit-search-results-decoration {
   background-repeat: no-repeat;
   background-position: calc(100% - 20px) center;
 }
+.f_btn.ty_big.btn_down2 {
+  max-width: 100%;
+  font-size: 14px;
+  gap: 5px;
+}
+.f_btn.ty_big.btn_down2::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../images/ico_down2.svg);
+}
 .f_btn.ty_small {
   height: 33px;
   padding: 0 10px;
