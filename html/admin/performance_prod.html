@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYM</title>
+    <link rel="stylesheet" href="../../assets/css/common.min.css">
+    <link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css">
+    <script type="text/javascript" src="../../assets/js/common.js"></script>
+    <script type="text/javascript" src="../../assets/js/swiper.min.js"></script>
+    <!--[D] datepicker js&css-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="../../assets/css/datePicker.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script>
+        $(function(){
+            // datepicker
+            $.datepicker.regional['ko'] = {
+                closeText: '닫기',
+                prevText: '이전달',
+                nextText: '다음달',
+                currentText: '오늘',
+                monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                dayNames: ['일','월','화','수','목','금','토'],
+                dayNamesShort: ['일','월','화','수','목','금','토'],
+                dayNamesMin: ['일','월','화','수','목','금','토'],
+                weekHeader: 'Wk',
+                dateFormat: 'yy.mm.dd',
+                firstDay: 0,
+                isRTL: false,
+                showMonthAfterYear: true,
+                changeMonth: true,
+                changeYear: true
+            };
+            $.datepicker.setDefaults($.datepicker.regional['ko']);
+
+ 
+            $(".datepicker").datepicker();
+            $(".datepicker").each(function(){
+                let min = $(this).data('min');
+                let max = $(this).data('max');
+                $(this).datepicker('option','minDate',min);
+                $(this).datepicker('option','maxDate',max);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="admin_container">
+        <div class="admin_lnb">
+            <div class="logo"><img src="../../assets/images/logo.svg" alt=""></div>
+            <ul class="gnb">
+                <li><a href="" class="f_btn ty_big _ol2 ">DB 관리</a></li>
+                <li><a href="" class="f_btn ty_big _ol2 ">노출 관리</a></li>
+                <li><a href="" class="f_btn ty_big _ol2 ">회원 관리</a></li>
+                <li><a href="" class="f_btn ty_big _ol2 on">실적 조회</a></li>
+            </ul>
+        </div>
+        <div class="admin_header">
+            <div class="d_flex ty_col fw_w jc_sb _gap10 h100">
+                <button type="button" class="f_btn ty_small _ol2 ">매체</button>
+                <button type="button" class="f_btn ty_small _ol2 on">상품</button>
+            </div>
+            <div class="d_flex fw_w jc_sb _gap10 ml_auto">
+                <div class="w_200">
+                    <input type="text" class="f_input ty_big datepicker" placeholder="시작일">
+                </div>
+                <div class="w_200">
+                    <input type="text" class="f_input ty_big datepicker" placeholder="종료일">
+                </div>
+            </div>
+        </div>
+        <div class="admin_cont">
+            <div class="admin_inner">
+                <div class="h_tbl_wrap">
+                    <table class="h_tbl tl_fixed">
+                        <caption></caption> 
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="taL">매체 명</th>
+                                <th class="taL">상품 명</th>
+                                <th class="taL"><button type="button" class="col_sort on">클릭수</button></th> <!-- [D] 'on' class 로 활성화-->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="taL">
+                                    <a href="" class="mediaSet" >
+                                        <span class="mediaSet_ico"></span>
+                                        <div class="mediaSet_txt">
+                                            <div><span class="tit t_hidden_1">Lorem ipsum dolor sit.</span></div> 
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="taL">메인 배너</td>
+                                <td class="taL">4</td>
+                            </tr>
+                            <tr>
+                                <td class="taL">
+                                    <a href="" class="mediaSet" >
+                                        <span class="mediaSet_ico"></span>
+                                        <div class="mediaSet_txt">
+                                            <div><span class="tit t_hidden_1">Lorem ipsum dolor sit.</span></div> 
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="taL">메인 배너</td>
+                                <td class="taL">4</td>
+                            </tr>
+                            <tr>
+                                <td class="taL">
+                                    <a href="" class="mediaSet" >
+                                        <span class="mediaSet_ico"></span>
+                                        <div class="mediaSet_txt">
+                                            <div><span class="tit t_hidden_1">Lorem ipsum dolor sit.</span></div> 
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="taL">메인 배너</td>
+                                <td class="taL">4</td>
+                            </tr>
+                            <tr>
+                                <td class="taL">
+                                    <a href="" class="mediaSet" >
+                                        <span class="mediaSet_ico"></span>
+                                        <div class="mediaSet_txt">
+                                            <div><span class="tit t_hidden_1">Lorem ipsum dolor sit.</span></div> 
+                                        </div>
+                                    </a>
+                                </td>
+                                <td class="taL">메인 배너</td>
+                                <td class="taL">4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="paging_wrap">
+                    <button type="button" class="paging_btn ty_first paging_nav"></button>
+                    <button type="button" class="paging_btn ty_prev paging_nav"></button>
+                    <div class="paging_list">
+                        <button type="button" class="paging_btn current">1</button>
+                        <button type="button" class="paging_btn">2</button>
+                        <button type="button" class="paging_btn">3</button>
+                        <button type="button" class="paging_btn">4</button>
+                        <button type="button" class="paging_btn">5</button>                          
+                    </div>
+                    <button type="button" class="paging_btn ty_next paging_nav"></button>
+                    <button type="button" class="paging_btn ty_last paging_nav"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
