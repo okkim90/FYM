@@ -176,6 +176,14 @@
         font-weight: 500;
         font-size: 16px;
         padding: 0 20px; 
+        &.btn_down {
+            max-width: 100%;
+            font-size: 14px;
+            padding-right: 54px;
+            background-image: url(../images/ico_down.svg);
+            background-repeat: no-repeat;
+            background-position: calc(100% - 20px) center;
+        }
     }
     &.ty_small {
         height: 33px;

@@ -12,6 +12,7 @@
             display: table-row;
         }
     }
+    
 
     th, td {
         padding: 6px 10px;
@@ -93,6 +94,9 @@
         table-layout: fixed;
     }
 
+    .tr_link {
+        cursor: pointer;
+    }
     
     .sticky_left {
         position: sticky;
@@ -275,8 +279,14 @@
             }
         }
     }
-
-}
+    &.ty2 {
+        tbody {
+            td {
+                padding: 24px 16px;
+            }
+        }
+    }
+}   
 
 .tbl_area {
     &.col2 {

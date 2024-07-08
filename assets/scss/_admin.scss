@@ -6,7 +6,7 @@
         "admin_lnb admin_header"
         "admin_lnb admin_cont";
         grid-template-columns: 185px 1fr;
-        grid-template-rows: 120px 1fr;
+        grid-template-rows: 160px 1fr;
         background-color: #fff;
     }
     &_lnb {
@@ -33,14 +33,12 @@
     &_header {
         grid-area: admin_header;
         padding: 40px;
-        padding-bottom: 0;
         display: flex;
         align-items: flex-end;
         position: relative;
-        z-index: 10;
+        z-index: 20;
         .srch {
             width: 440px;
-            margin-left: 48px;
             &_result {
                 left: 0;
             }
@@ -50,14 +48,16 @@
         grid-area: admin_cont;
         
         padding: 40px;
+        padding-top: 0;
         overflow: hidden;
     }
     &_inner {
-        max-height: 100%;
         overflow-y: auto;
+        max-height: 100%;
         border-radius: 36px ;
         border: 1px solid $c_line;
         padding: 24px;
+        //@include scrollY;
         .list_top {
             height: 48px;
             padding: 0 16px;
@@ -75,6 +75,40 @@
         @include flex_col(3 ,48px, 48px);
         .f_set + .f_set {
             margin-top: 48px;
+            @include tablet2 { 
+                margin-top: 36px;
+            }
+        }
+        .reviewChk_item + .reviewChk_item {
+            margin-top: 48px;
+            @include tablet2 { 
+                margin-top: 36px;
+            }
+        }
+        @include tablet2 {
+            @include flex_col(1 ,0px, 36px);
+        }
+    }
+
+    &_cont {
+        .thumb_box {
+            width: 275px;
+            max-width: 100%;
+            border-radius: 13px;
+            overflow: hidden;
+            
+            &_inner {
+                padding-top: 70%;
+                position: relative;
+            }
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
 }
