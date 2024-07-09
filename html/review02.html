@@ -5,46 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FYM</title>
+
+     <!--[D] datepicker js&css-->
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+     <script src="../assets/js/MonthPicker.js"></script>
+
     <link rel="stylesheet" href="../assets/css/common.min.css">
     <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
     <script type="text/javascript" src="../assets/js/common.js"></script>
     <script type="text/javascript" src="../assets/js/swiper.min.js"></script>
 
-    <!--[D] datepicker js&css-->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="../assets/css/datePicker.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+   
     <script>
         $(function(){
-            // datepicker
-            $.datepicker.regional['ko'] = {
-                closeText: '닫기',
-                prevText: '이전달',
-                nextText: '다음달',
-                currentText: '오늘',
-                monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-                monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-                dayNames: ['일','월','화','수','목','금','토'],
-                dayNamesShort: ['일','월','화','수','목','금','토'],
-                dayNamesMin: ['일','월','화','수','목','금','토'],
-                weekHeader: 'Wk',
-                dateFormat: 'yy.mm.dd',
-                firstDay: 0,
-                isRTL: false,
-                showMonthAfterYear: true,
-                changeMonth: true,
-                changeYear: true
-            };
-            $.datepicker.setDefaults($.datepicker.regional['ko']);
-
- 
-            $(".datepicker").datepicker();
-            $(".datepicker").each(function(){
-                let min = $(this).data('min');
-                let max = $(this).data('max');
-                $(this).datepicker('option','minDate',min);
-                $(this).datepicker('option','maxDate',max);
+            $('.monthpicker').MonthPicker({
+                Button: false,
+                MinMonth: -9,
+                MaxMonth: 0 // Or you could just pass 18.
             });
         });
     </script>
@@ -193,7 +172,7 @@
                     </div>
                     <div class="f_set_input">
                         <!--[D] datepicker : minDate, MaxDate 있을 경우 data-attribute 설정 -->
-                        <input type="text" class="f_input ty_big datepicker" placeholder="집행한 달을 선택해주세요" data-min="-3M" data-max="today" >
+                        <input type="text" class="f_input ty_big monthpicker" placeholder="집행한 달을 선택해주세요">
                     </div>
                     <p class="f_set_info">최근 3개월 전까지만 선택할 수 있어요</p>
                 </div>

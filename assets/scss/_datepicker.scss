@@ -1,0 +1,59 @@
+.ui-datepicker {
+    &.ui-widget.ui-widget-content { width: 248px; margin-top: 5px; padding: 15px 10px 10px; border: 1px solid #d9d9d9; box-sizing: border-box;box-shadow: 0 5px 10px rgba(0,0,0, .2);z-index: 9999 !important; }
+    .ui-datepicker-header { display: flex; padding: 0; border: none; background: none; margin-bottom: 10px; }
+    .ui-datepicker-title { display: flex; align-items: center; margin: 0; padding-left: 5px; box-sizing: border-box; font-family: 'Pretendard'; font-size: 14px; text-align: left; }
+    select.ui-datepicker-month,
+    select.ui-datepicker-year {  border: none; box-sizing: border-box; font-family: 'Pretendard'; font-size: 14px; font-weight: 500; color: #000; background-image: url(../images/select_arrow.svg);background-repeat: no-repeat;background-position: 100% center; background-size: 16px;}
+    select.ui-datepicker-month {width: 50px;}
+    select.ui-datepicker-year { width: 60px; margin-right: 15px; }
+
+    .ui-datepicker-prev,
+    .ui-datepicker-next { display: flex; justify-content: center; align-items: center; top: 0; padding: 0; cursor: pointer; background-color: #f6f6f6;}
+    .ui-datepicker-prev.ui-state-hover,
+    .ui-datepicker-next.ui-state-hover {
+        background-color: #eee;
+    }
+    .ui-datepicker-prev { left: auto; right: 35px; }
+    .ui-datepicker-next { right: 0; }
+    .ui-datepicker-prev span,
+    .ui-datepicker-next span { position: static; margin: 0; background: center center no-repeat; }
+    .ui-datepicker-prev span { background-image: url('../images/paging_prev_b.svg'); }
+    .ui-datepicker-next span { background-image: url('../images/paging_next_b.svg'); }
+
+    .ui-state-hover,
+    .ui-widget-content .ui-state-hover,
+    .ui-widget-header .ui-state-hover,
+    .ui-state-focus,
+    .ui-widget-content .ui-state-focus,
+    .ui-widget-header .ui-state-focus,
+    .ui-button:hover,
+    .ui-button:focus { padding: 0; border: none; box-sizing: border-box; background: none; }
+
+    table { margin-bottom: 0; }
+    th { width: 14.28%; height: 30px; padding: 0; font-family: 'Pretendard'; font-size: 12px; font-weight: 400; color: #a6a6a6; }
+    td { width: 14.28%; height: 30px; padding: 0; font-family: 'Pretendard'; font-size: 12px; }
+
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default,
+    .ui-button { display: flex; justify-content: center; align-items: center; width: 30px; height: 30px; margin: 0 auto; padding: 0; border: none; box-sizing: border-box; background: none; font-weight: 400; color: #000; text-align: center; }
+
+    .ui-state-default:hover {
+        background-color: #EAEBFE;
+        border-radius: 50%;
+    }
+
+    .ui-state-highlight,
+    .ui-widget-content .ui-state-highlight,
+    .ui-widget-header .ui-state-highlight { color: #0B02B8; font-weight: bold;}
+
+    .ui-state-active,
+    .ui-widget-content .ui-state-active,
+    .ui-widget-header .ui-state-active,
+    a.ui-button:active,
+    .ui-button:active,
+    .ui-button.ui-state-active:hover { border-radius: 50%; box-sizing: border-box; background: #EAEBFE; font-weight: 700; color: #3F36F4; }
+
+
+
+}

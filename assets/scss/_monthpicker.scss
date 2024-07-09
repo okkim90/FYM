@@ -1,0 +1,63 @@
+.month-picker {
+    &.ui-widget.ui-widget-content {
+        width: 355px;
+        position: absolute;
+    }
+    .month-picker-title {
+        .ui-button {
+            font-weight: bold;
+            font-size: $fz_3;
+            color: $c_font;
+            &:active {
+                color: $c_font;
+            }
+        }
+        
+    }
+    .ui-state-hover,
+    .ui-widget-content .ui-state-hover,
+    .ui-widget-header .ui-state-hover,
+    .ui-state-focus,
+    .ui-widget-content .ui-state-focus,
+    .ui-widget-header .ui-state-focus,
+    .ui-button:hover,
+    .ui-button:focus { padding: 0; border: none; box-sizing: border-box; background: none; }
+
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default,
+    .ui-button { 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; width: 80px; height: 75px; margin: 0 auto; padding: 0; border: none; box-sizing: border-box; background: none; font-weight: 400; color: #000; text-align: center; }
+
+    .ui-state-default:hover {
+        background-color: #EAEBFE;
+        border-radius: 15px;
+    }
+    .month-picker-month-table {
+        display: flex;
+        flex-wrap: wrap;
+        .cell {
+            width: 25%;
+            .ui-button {
+                margin: 0;
+                padding: 0;
+                font-size: $fz_3;
+            }
+        }
+        .ui-state-highlight,
+        .ui-widget-content .ui-state-highlight,
+        .ui-widget-header .ui-state-highlight { color: #0B02B8; font-weight: bold; border: none; background: none;}
+
+        .ui-state-active,
+        .ui-widget-content .ui-state-active,
+        .ui-widget-header .ui-state-active,
+        a.ui-button:active,
+        .ui-button:active,
+        .ui-button.ui-state-active:hover { border: none; box-sizing: border-box; background: #EAEBFE; font-weight: 700; color: #3F36F4; }
+
+
+    }
+    
+}
