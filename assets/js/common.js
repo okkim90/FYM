@@ -76,13 +76,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobile_alert = document.querySelector('.mobile_alert');
     ['load', 'resize'].forEach(function(event) {
       window.addEventListener(event, ()=>{
-        h_tbl_wrap.forEach(e=>{
-          if(e.querySelector('.h_tbl').offsetWidth > e.offsetWidth){
-            e.classList.add('scrolling');
-          }else{
-            e.classList.remove('scrolling');
-          }
-        });
+        // h_tbl_wrap.forEach(e=>{
+        //   if(e.querySelector('.h_tbl').offsetWidth > e.offsetWidth){
+        //     e.classList.add('scrolling');
+        //   }else{
+        //     e.classList.remove('scrolling');
+        //   }
+        // });
         if(mobile_alert){
           if(window.innerWidth < 1023){
             mobile_alert.classList.add('on')
@@ -92,6 +92,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
       });
+    });
+   
+    
+    h_tbl_wrap.forEach(e=>{
+      e.addEventListener('scroll',()=>{
+        let sticky = e.querySelector('.sticky_left');
+        if(sticky && sticky.offsetLeft > 0){
+          e.classList.add('scrolling');
+        }else{
+          e.classList.remove('scrolling');
+        }
+      })
     });
 
     const modal_cont = document.querySelectorAll('.modal_cont');

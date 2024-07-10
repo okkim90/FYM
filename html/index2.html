@@ -488,7 +488,7 @@
                             </li>
                         </ul>
                     </div>
-                    <button type="button" class="f_btn ty_big _noBg" onclick="reset(this)">Clear</button>
+                    <button type="button" class="f_btn ty_big _grey_noBg" onclick="reset(this)">clear</button>
                     <div class="sorting_area_right ml_auto d_flex _gap8 self_bot">
                         <!--[D] on class로 활성화-->
                         <button type="button" class="f_btn ty_small _grey_ol on">조회수</button>
@@ -506,6 +506,8 @@
                                 <col>
                                 <col>
                                 <col style="width: 18%;">
+                                <col>
+                                <col>
                             </colgroup>
                             <thead>
                                 <tr>
@@ -519,6 +521,8 @@
                                         <!--[D] on class로 활성화-->
                                         <button type="button" class="col_sort on">성과 지표</button>
                                     </th>
+                                    <th class="taR">최소 집행 단가</th>
+                                    <th class="taR">대행수수료</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -557,71 +561,11 @@
                                     <td class="taR">
                                         <span class="skeleton_item">구독자(팔로워) 99,999,999명 노출</span>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td class="sticky_left">
-                                        <div class="mediaSet" >
-                                            <span class="mediaSet_ico skeleton_item"></span>
-                                            <div class="mediaSet_txt">
-                                                <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
-                                                <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="skeleton_item">메인 배너</span>
-                                    </td>
-                                    <td>
-                                        <div class="d_flex _gap8 fw_w jc_c">
-                                            <span class="tag _grey skeleton_item">PUSH/문자</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d_flex _gap8 fw_w jc_c">
-                                            <span class="tag _beauty skeleton_item">뷰티</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d_flex _gap8 fw_w jc_c">
-                                            <span class="tag _red skeleton_item">NO</span>
-                                        </div>
-                                    </td>
-                                    <td class="taR"><span class="skeleton_item">CPM 3,000원</span></td>
                                     <td class="taR">
-                                        <span class="skeleton_item">구독자(팔로워) 99,999,999명 노출</span>
+                                        <span class="skeleton_item">3,000,000원</span>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td class="sticky_left">
-                                        <div class="mediaSet" >
-                                            <span class="mediaSet_ico skeleton_item"></span>
-                                            <div class="mediaSet_txt">
-                                                <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
-                                                <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span class="skeleton_item">메인 배너</span>
-                                    </td>
-                                    <td>
-                                        <div class="d_flex _gap8 fw_w jc_c">
-                                            <span class="tag _grey skeleton_item">PUSH/문자</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d_flex _gap8 fw_w jc_c">
-                                            <span class="tag _beauty skeleton_item">뷰티</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d_flex _gap8 fw_w jc_c">
-                                            <span class="tag _red skeleton_item">NO</span>
-                                        </div>
-                                    </td>
-                                    <td class="taR"><span class="skeleton_item">CPM 3,000원</span></td>
                                     <td class="taR">
-                                        <span class="skeleton_item">구독자(팔로워) 99,999,999명 노출</span>
+                                        <span class="skeleton_item">20%</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -656,6 +600,12 @@
                                     <td class="taR">
                                         <span class="skeleton_item">구독자(팔로워) 99,999,999명 노출</span>
                                     </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">3,000,000원</span>
+                                    </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">20%</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="sticky_left">
@@ -689,6 +639,12 @@
                                     <td class="taR">
                                         <span class="skeleton_item">구독자(팔로워) 99,999,999명 노출</span>
                                     </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">3,000,000원</span>
+                                    </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">20%</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="sticky_left">
@@ -721,6 +677,90 @@
                                     <td class="taR"><span class="skeleton_item">CPM 3,000원</span></td>
                                     <td class="taR">
                                         <span class="skeleton_item">구독자(팔로워) 99,999,999명 노출</span>
+                                    </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">3,000,000원</span>
+                                    </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">20%</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky_left">
+                                        <div class="mediaSet" >
+                                            <span class="mediaSet_ico skeleton_item"></span>
+                                            <div class="mediaSet_txt">
+                                                <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                                <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="skeleton_item">메인 배너</span>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _grey skeleton_item">PUSH/문자</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _beauty skeleton_item">뷰티</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _red skeleton_item">NO</span>
+                                        </div>
+                                    </td>
+                                    <td class="taR"><span class="skeleton_item">CPM 3,000원</span></td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">구독자(팔로워) 99,999,999명 노출</span>
+                                    </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">3,000,000원</span>
+                                    </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">20%</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky_left">
+                                        <div class="mediaSet" >
+                                            <span class="mediaSet_ico skeleton_item"></span>
+                                            <div class="mediaSet_txt">
+                                                <div><span class="tit t_hidden_1 skeleton_item">스노우</span></div> 
+                                                <div><span class="desc t_hidden_1 skeleton_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="skeleton_item">메인 배너</span>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _grey skeleton_item">PUSH/문자</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _beauty skeleton_item">뷰티</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d_flex _gap8 fw_w jc_c">
+                                            <span class="tag _red skeleton_item">NO</span>
+                                        </div>
+                                    </td>
+                                    <td class="taR"><span class="skeleton_item">CPM 3,000원</span></td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">구독자(팔로워) 99,999,999명 노출</span>
+                                    </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">3,000,000원</span>
+                                    </td>
+                                    <td class="taR">
+                                        <span class="skeleton_item">20%</span>
                                     </td>
                                 </tr>
                             </tbody>

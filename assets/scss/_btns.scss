@@ -168,13 +168,31 @@
         }
     }
 
+    &._kakao {
+        background-color: map-get($colors, _kakao);
+        transition: background-color .1s ease-in-out;
+        &:hover {
+            background-color: map-get($colors, _kakao_ov);
+        }
+        &::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/ico_kakao.png);
+            background-size: 24px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin-right: 8px;
+        }
+    }
+
     &.ty_big {
         
         height: 56px;
         //line-height: 56px;
         border-radius: 16px;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 15px;
         padding: 0 20px; 
         &.btn_down {
             max-width: 100%;

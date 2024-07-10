@@ -467,6 +467,30 @@
   border-color: #BABABA;
 }
 
+.fc_kakao {
+  color: #F9E000;
+}
+
+.bg_kakao {
+  background-color: #F9E000;
+}
+
+.bd_kakao {
+  border-color: #F9E000;
+}
+
+.fc_kakao_ov {
+  color: #E8D000;
+}
+
+.bg_kakao_ov {
+  background-color: #E8D000;
+}
+
+.bd_kakao_ov {
+  border-color: #E8D000;
+}
+
 .fz_1 {
   font-size: 12px;
 }
@@ -6498,7 +6522,8 @@ input::-webkit-search-results-decoration {
   background-color: #fff;
   border-radius: 24px;
   width: 100%;
-  padding: 30px 24px;
+  padding: 24px;
+  padding-top: 18px;
   box-sizing: border-box;
   max-height: 100%;
   overflow-y: auto;
@@ -6878,7 +6903,7 @@ input::-webkit-search-results-decoration {
 .f_input.error:focus {
   box-shadow: 0 0 0 2px #FF4E4E inset;
 }
-.f_input.datepicker {
+.f_input.datepicker, .f_input.monthpicker {
   padding-left: 54px;
   background-image: url(../images/ico_calendar.svg);
   background-size: 24px 24px;
@@ -7148,11 +7173,28 @@ input::-webkit-search-results-decoration {
 .f_btn._grey_noBg:hover {
   background-color: #F4F4F4;
 }
+.f_btn._kakao {
+  background-color: #F9E000;
+  transition: background-color 0.1s ease-in-out;
+}
+.f_btn._kakao:hover {
+  background-color: #E8D000;
+}
+.f_btn._kakao::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/ico_kakao.png);
+  background-size: 24px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-right: 8px;
+}
 .f_btn.ty_big {
   height: 56px;
   border-radius: 16px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   padding: 0 20px;
 }
 .f_btn.ty_big.btn_down {
@@ -8071,6 +8113,9 @@ input::-webkit-search-results-decoration {
   border-radius: 10px;
   background-color: #F9F9F9;
 }
+.review_score .only_membership::after {
+  background-color: #E1E1E1;
+}
 @media (max-width: 1023px) {
   .review_score {
     display: block;
@@ -8133,21 +8178,40 @@ input::-webkit-search-results-decoration {
 }
 .skeleton_item::before {
   content: "";
-  width: 100%;
-  height: 100%;
+  width: calc(100% + 4px);
+  height: calc(100% + 2px);
   position: absolute;
-  left: 0;
-  top: 0;
-  background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%);
+  left: -2px;
+  top: -1px;
+  background: linear-gradient(120deg, #F4F4F4 30%, #f9f9f9 38%, #f9f9f9 40%, #F4F4F4 48%);
   z-index: 10;
   background-size: 200% 100%;
   background-position: 100% 0;
   animation: skeleton_load 1s infinite;
+  border-radius: 12px;
 }
 .skeleton_item.load::before {
   visibility: hidden;
   opacity: 0;
   transition: all 0.15s ease-in-out;
+}
+
+.only_membership {
+  position: relative;
+  overflow: hidden;
+}
+.only_membership::after {
+  content: "";
+  width: calc(100% + 4px);
+  height: calc(100% + 2px);
+  position: absolute;
+  left: -2px;
+  top: -1px;
+  background: #F4F4F4;
+  z-index: 9;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  border-radius: 12px;
 }
 
 @keyframes skeleton_load {
@@ -9029,6 +9093,10 @@ input::-webkit-search-results-decoration {
 .month-picker.ui-widget.ui-widget-content {
   width: 355px;
   position: absolute;
+  z-index: 9999 !important;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 3px 8px 20px rgba(0, 0, 0, 0.1);
 }
 .month-picker .month-picker-title .ui-button {
   font-weight: bold;
@@ -9051,10 +9119,65 @@ input::-webkit-search-results-decoration {
   box-sizing: border-box;
   background: none;
 }
-.month-picker .ui-state-default,
-.month-picker .ui-widget-content .ui-state-default,
+.month-picker .ui-state-default:hover {
+  background-color: #EAEBFE;
+  border-radius: 15px;
+}
+.month-picker .ui-widget-header {
+  border: none;
+  background-color: transparent;
+  padding: 16px;
+  padding-bottom: 0;
+}
 .month-picker .ui-widget-header .ui-state-default,
-.month-picker .ui-button {
+.month-picker .ui-widget-header .ui-widget-content .ui-state-default,
+.month-picker .ui-widget-header .ui-widget-header .ui-state-default,
+.month-picker .ui-widget-header .ui-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  background: none;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+}
+.month-picker .ui-widget-header .month-picker-title .ui-button {
+  font-weight: 700;
+  font-size: 14px;
+}
+.month-picker .ui-widget-header .month-picker-previous .ui-button,
+.month-picker .ui-widget-header .month-picker-next .ui-button {
+  width: 24px;
+}
+.month-picker .ui-widget-header .month-picker-previous .ui-icon-circle-triangle-w {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../images/chevron_left.svg);
+  background-position: center center;
+}
+.month-picker .ui-widget-header .month-picker-next .ui-icon-circle-triangle-e {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../images/chevron_right.svg);
+  background-position: center center;
+}
+.month-picker .month-picker-month-table {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px;
+  padding-top: 10px;
+}
+.month-picker .month-picker-month-table .ui-state-default,
+.month-picker .month-picker-month-table .ui-widget-content .ui-state-default,
+.month-picker .month-picker-month-table .ui-widget-header .ui-state-default,
+.month-picker .month-picker-month-table .ui-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9069,14 +9192,6 @@ input::-webkit-search-results-decoration {
   color: #000;
   text-align: center;
 }
-.month-picker .ui-state-default:hover {
-  background-color: #EAEBFE;
-  border-radius: 15px;
-}
-.month-picker .month-picker-month-table {
-  display: flex;
-  flex-wrap: wrap;
-}
 .month-picker .month-picker-month-table .cell {
   width: 25%;
 }
@@ -9085,11 +9200,14 @@ input::-webkit-search-results-decoration {
   padding: 0;
   font-size: 14px;
 }
+.month-picker .month-picker-month-table .cell .ui-button:hover {
+  background-color: #EAEBFE;
+}
 .month-picker .month-picker-month-table .ui-state-highlight,
 .month-picker .month-picker-month-table .ui-widget-content .ui-state-highlight,
 .month-picker .month-picker-month-table .ui-widget-header .ui-state-highlight {
   color: #0B02B8;
-  font-weight: bold;
+  font-weight: 500;
   border: none;
   background: none;
 }
@@ -9101,9 +9219,9 @@ input::-webkit-search-results-decoration {
 .month-picker .month-picker-month-table .ui-button.ui-state-active:hover {
   border: none;
   box-sizing: border-box;
-  background: #EAEBFE;
-  font-weight: 700;
-  color: #3F36F4;
+  background: #3F36F4;
+  font-weight: 500;
+  color: #fff;
 }
 
 .ui-datepicker.ui-widget.ui-widget-content {

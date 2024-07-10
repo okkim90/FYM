@@ -291,6 +291,11 @@
     padding: 16px;
     border-radius: 10px;
     background-color: $c_bg;
+    .only_membership {
+        &::after {
+            background-color: #E1E1E1;
+        }
+    }
     @include tablet {
         display: block;
     }

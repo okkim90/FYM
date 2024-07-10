@@ -284,7 +284,7 @@
             box-shadow: 0 0 0 2px $c_red inset;
         }
     }
-    &.datepicker {
+    &.datepicker, &.monthpicker {
         padding-left: 54px;
         background-image: url(../images/ico_calendar.svg);
         background-size: 24px 24px;
