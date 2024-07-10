@@ -192,15 +192,15 @@
 }
 
 .fc_key3 {
-  color: #EAEBFE;
+  color: #ECEBFE;
 }
 
 .bg_key3 {
-  background-color: #EAEBFE;
+  background-color: #ECEBFE;
 }
 
 .bd_key3 {
-  border-color: #EAEBFE;
+  border-color: #ECEBFE;
 }
 
 .fc_line {
@@ -6414,7 +6414,7 @@ input::-webkit-search-results-decoration {
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  background-color: #EAEBFE;
+  background-color: #ECEBFE;
   border-radius: 16px;
   height: 57px;
 }
@@ -6618,7 +6618,7 @@ input::-webkit-search-results-decoration {
   background-color: #F9F9F9;
 }
 .paging_list .paging_btn:hover {
-  background-color: #EAEBFE;
+  background-color: #ECEBFE;
 }
 .paging_list .paging_btn.current {
   background-color: #3F36F4;
@@ -6800,7 +6800,7 @@ input::-webkit-search-results-decoration {
   color: #fff;
 }
 .f_radio_btn:hover .btn_cont {
-  background-color: #EAEBFE;
+  background-color: #ECEBFE;
 }
 
 .f_set + .f_set {
@@ -7010,7 +7010,7 @@ input::-webkit-search-results-decoration {
   max-width: 100%;
 }
 .f_dropbox_link:hover {
-  background-color: #EAEBFE;
+  background-color: #ECEBFE;
 }
 
 .btn_tab {
@@ -7022,7 +7022,7 @@ input::-webkit-search-results-decoration {
   font-size: 14px;
 }
 .btn_tab.on {
-  background-color: #EAEBFE;
+  background-color: #ECEBFE;
 }
 .btn_tab:hover {
   background-color: #F9F9F9;
@@ -7073,7 +7073,7 @@ input::-webkit-search-results-decoration {
   transition: background-color 0.1s ease-in-out;
 }
 .f_btn._blue_noBg:hover {
-  background-color: #EAEBFE;
+  background-color: #ECEBFE;
 }
 .f_btn._blue_noBg.disabled {
   background-color: #e2e2e2;
@@ -7086,7 +7086,7 @@ input::-webkit-search-results-decoration {
   transition: background-color 0.1s ease-in-out;
 }
 .f_btn._blue_ol:hover {
-  background-color: #EAEBFE;
+  background-color: #ECEBFE;
 }
 .f_btn._blue_ol.disabled {
   background-color: #e2e2e2;
@@ -7135,7 +7135,7 @@ input::-webkit-search-results-decoration {
   background-color: #fff;
 }
 .f_btn._ol2:hover {
-  background-color: #EAEBFE;
+  background-color: #ECEBFE;
 }
 .f_btn._ol2.on {
   background-color: #3F36F4;
@@ -9197,6 +9197,7 @@ input::-webkit-search-results-decoration {
   font-weight: 400;
   color: #000;
   text-align: center;
+  border-radius: 15px;
 }
 .month-picker .month-picker-month-table .cell {
   width: 25%;
@@ -9207,7 +9208,7 @@ input::-webkit-search-results-decoration {
   font-size: 14px;
 }
 .month-picker .month-picker-month-table .cell .ui-button:hover {
-  background-color: #EAEBFE;
+  background-color: #ECEBFE;
 }
 .month-picker .month-picker-month-table .ui-state-highlight,
 .month-picker .month-picker-month-table .ui-widget-content .ui-state-highlight,
