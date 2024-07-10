@@ -6532,6 +6532,12 @@ input::-webkit-search-results-decoration {
 .modal_cont.ty_small {
   width: 450px;
 }
+.modal_cont.pt40 {
+  padding-top: 40px;
+}
+.modal_cont.pt50 {
+  padding-top: 50px;
+}
 .mobile_alert .modal_cont {
   height: 100%;
   display: flex;
