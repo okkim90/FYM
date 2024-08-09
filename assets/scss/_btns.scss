@@ -54,6 +54,14 @@
             border-color: $c_disabled_bg;
             color: #fff;
         }
+        &.checked {
+            background-color: $c_disabled_bg;
+            border-color: $c_disabled_bg;
+            color: #fff;
+            &:hover {
+                background-color: darken($c_disabled_bg, 6%);
+            }
+        }
     }
     &._blue_noBg {
         color: $c_key;
@@ -246,6 +254,18 @@
             background-size: cover;
         }
     }
+    &.ty_link2 {
+        &::after {
+            content: '';
+            width: 16px;
+            height: 16px;
+            background-image: url(../images/btn_next.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin-left: 2px;
+            //background-size: cover;
+        }
+    }
     &.ty_next {
         position: relative;
         &::after {
@@ -261,6 +281,18 @@
             margin-top: -9px;
         }
     }
+    &.ty_add {
+        &::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background-image: url(../images/ico_plus.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin-right: 2px;
+        }
+    }
+
     &.btn_write {
         &::before {
             content: '';

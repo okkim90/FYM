@@ -1,175 +1,135 @@
-.card {
+.libCard {
     &_list {
         display: flex;
-        flex-wrap: wrap;
+        
+        @include flex_col(3 ,32px, 32px);
+        flex-wrap: nowrap;
+        overflow-x: auto;
     }
     &_item {
-        .img_box {
-            padding-top: calc(200%/3);
-            position: relative;
-            background: url(../images/common/logo_bg.png) no-repeat center center;
-            background-color: $c_bg;
+        border: 1px solid $c_line;
+        border-radius: 24px;
+        padding: 24px;
+        min-width: 440px;
+        cursor: pointer;
+        @at-root .modal & {
+            cursor: auto;
+            min-width: auto;
+        }
+    }
+    &_top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        .ci_box {
+            width: 25px;
+            height: 25px;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-right: 12px;
             img {
-                position: absolute;
                 width: 100%;
                 height: 100%;
-                left: 0;
-                top: 0;
-                object-fit: cover;
-            }
-            .tag_box {
-                display: flex;
-                gap: 5px;
-                position: absolute;
-                z-index: 10;
-                left: 5px;
-                top: 5px;
-            }
-            
-        }
-        background-color: #fff;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 2px 8px rgba(#000, .15);
-        transition: all .2s ease;
-        
-        &_info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 11px;
-            margin-bottom: 8px;
-            color: #666;
-            flex-wrap: wrap;
-            i {
-                margin-right: 4px;
-                color: #222;
-                font-size: 12px;
+                object-fit: contain;
             }
         }
         .txt_box {
-            padding:10px 10px 12px;
-            background-color: #fff;
-            .tit {
-                display: block;
-                font-size: 12px;
-                //font-weight: 500;
-            }
-            .desc {
-                
-                display: block;
-                font-size: 12px;
-                padding-top: 5px;
-                margin-top: 5px;
-                box-sizing: content-box;
-                border-top: 1px dotted $c_line;
-                color: #666;
-            }
-        }
-    }
-}
-
-
-.card2 {
-    &_wrap {
-        background-color: $c_bg;
-        padding: 10px 0;
-        border-radius: 10px;
-        border: 1px solid $c_line;
-        &_top {
-            padding: 0 20px;
-            
             display: flex;
-           
-            align-items: flex-end;
-            margin-bottom: 6px;
-        }
-    }
-   
-    &_list {
-        padding: 0 10px;
-    
-        border-radius: 10px;
-        font-size: 12px;
-        line-height: 1.5;
-        overflow-y: auto;
-    }
-    &_item {
-        background-color: #fff;
-        border-radius: 6px;
-        box-shadow: 0 4px 4px rgba(#000, .02);
-        padding: 10px;
-        & + & {
-            margin-top: 10px;
-        }
-        &.chk_row {
-            cursor: pointer;
-        }
-        &:hover {
-            background-color: rgb(255, 255, 246);
-        }
-        &.on {
-            background-color: rgb(254, 254, 233);
-        }
-    }
-    &_inner {
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
-    }
-    &_row {
-        &.ty_flex {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2px 8px;
             align-items: center;
         }
-        .list_sepBar {
-            .list_item {
-                padding-right: 9px;
+
+        @at-root .modal & {
+            margin-bottom: 24px;
+            .ci_box {
+                width: 48px;
+                height: 48px;
+                border-radius: 14px;
                 margin-right: 8px;
-                &:last-child {
-                    padding-right: 0;
-                    margin-right: 0;
-                }
-                &::after {
-                    background-color: $c_grey3;
-                    height: 12px;
-                    margin-top: -5px;
-                }
             }
-        }
-        &.bdT {
-            border-top: 1px dashed $c_line;
-            padding-top: 4px;
-            margin-top: 2px;
-        }
-        .btn_t_link {
-            text-decoration: none;
-
-            font-weight: bold;
-            &.fwM {
-                font-weight: 500;
-            }
-            &:hover {
-                text-decoration: underline;
+            .txt_box {
+                display: block;
+                * {
+                    display: block;
+                }
             }
         }
     }
-}
+    &_date {
+        margin-bottom: 12px;
+        @at-root .modal & {
+            margin-bottom: 36px;
+        }
+    }
+    &_thumb {
+        padding-top: 47.54%;
+        overflow: hidden;
+        position: relative;
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
 
-.chk_wrap {
-    
-    .chk_all_btn {
-        display: inline-flex;
-        
+        @at-root .modal & {
+            padding-top: 0;
+            
+            img {
+                position: relative;
+                max-height: 400px;
+            }
+        }
+    }
+    &_bot {
+        margin-top: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         align-items: center;
-        gap: 5px;
-        font-size: 13px;
-        font-weight: bold;
-        cursor: pointer;
-        user-select: none;
     }
-    
+    &_btns {
+        display: flex;
+        column-gap: 20px;
+        @at-root .modal & {
+            width: 100%;
+            margin-top: 36px;
+        }
+    }
+    &_btn {
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+        font-size: $fz_3;
+        .ico {
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            &.ico_like {
+                background-image: url(../images/ico_like.svg);
+            }
+            &.ico_save {
+                background-image: url(../images/ico_save.svg);
+            }
+        }
+        &.on {
+            .ico {
+                &.ico_like {
+                    background-image: url(../images/ico_like_on.svg);
+                }
+                &.ico_save {
+                    background-image: url(../images/ico_save_on.svg);
+                }
+            }
+        }
+    }
+    &_desc {
+        font-size: $fz_2;
+        margin-top: 24px;
+        width: 100%;
+    }
 }
 

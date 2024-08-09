@@ -64,7 +64,8 @@ $tag_color: (
     _fashion : #FF2D78,
     _sports : #82AF00,
     _health : #00BE85,
-    _update : #FF4E4E
+    _update : #FF4E4E,
+    _blue : #fff
 );
 
 $tag_color_bg: (
@@ -86,7 +87,8 @@ $tag_color_bg: (
     _fashion : #FFE8F0,
     _sports : #F4FFD6,
     _health : #E9FFF9,
-    _update : #FFF2F2
+    _update : #FFF2F2,
+    _blue : #3F36F4
 );
 
 $c_key : map-get($colors, _key);

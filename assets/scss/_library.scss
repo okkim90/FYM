@@ -1,0 +1,55 @@
+.library {
+    &_info {
+        display: flex;
+        align-items: center;
+        border-radius: 16px;
+        background-color: $c_key3;
+        padding: 16px;
+        .ico_chk {
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/ico_chk.svg);
+            margin-right: 8px;
+        }
+        &_txt {
+            display: flex;
+            align-items: center;
+            font-size: $fz_4;
+            .tag {
+                margin: 0 8px;
+                line-height: 32px;
+                font-size: $fz_5;
+            }
+        }
+        .f_btn {
+            margin-left: auto;
+        }
+    }
+    &_sec {
+        margin-top: 48px;
+    }
+    &_sort {
+        padding: 4px;
+        border-radius: 16px;
+        background-color: $c_bg;
+        gap: 4px;
+        display: inline-flex;
+        flex-wrap: wrap;
+        vertical-align: top;
+        min-width: 720px;
+        .btn_sort {
+            border-radius: 16px;
+            line-height: 48px;
+            font-size: $fz_3;
+            color: $c_desc;
+            font-weight: 500;
+            padding: 0 20px;
+            &:hover {
+                background-color: rgba(#fff,.7);
+            }
+            &.on {
+                background-color: #fff;
+            }
+        }
+    }
+}
