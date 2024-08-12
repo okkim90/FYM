@@ -176,6 +176,14 @@
         }
     }
 
+    &._grey {
+        background-color: $c_desc;
+        transition: background-color .1s ease-in-out;
+        color: #fff;
+        &:hover {
+            background-color: darken($c_desc , 10%);
+        }
+    }
     &._kakao {
         background-color: map-get($colors, _kakao);
         transition: background-color .1s ease-in-out;
@@ -290,6 +298,13 @@
             background-repeat: no-repeat;
             background-position: center center;
             margin-right: 2px;
+        }
+        &.ty_big {
+            &::before {
+                width: 18px;
+                height: 18px;
+                background-size: cover;
+            }
         }
     }
 

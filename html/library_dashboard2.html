@@ -120,27 +120,27 @@
         </header>
         <div id="container">
             
-            <div class="tabs ty_big d_flex fw_w _gap16 mt16">
+            <div class="tabs ty_big d_flex fw_w _gap16 mt16 skeleton_item">
                 <!--[D] 활성화 'on'-->
                 <button type="button" class="btn_tab2 on">대시보드</button>
                 <button type="button" class="btn_tab2">모든 소재</button>
                 <button type="button" class="btn_tab2">브랜드 구독</button>
                 <button type="button" class="btn_tab2">내 컬렉션</button>
             </div>
-            <div class="library_info mt24">
+            <div class="library_info mt24 skeleton_item">
                 <i class="ico_chk"></i>
                 <span class="library_info_txt">5월 24일 08:00에 새로운 광고 소재  <span class="tag _blue">1,392</span>  개가 추가되었어요!</span> 
                 <a href="" class="f_btn _blue ty_small ty_link2">모든 소재 보러가기</a>
             </div>
             <div class="library_sec">
-                <div class="tit_set_2 d_flex">
+                <div class="tit_set_2 d_flex skeleton_item">
                     <h2 class="tit_2">프리미엄 리뷰</h2>
                     <div class="tooltip self_c ty_left ml3">
                         <i class="tooltip_ico"></i>
                         <span class="tooltip_cont taC">일주일동안 좋아요가 가장 많은 소재 순서대로 노출돼요</span>
                     </div>
                 </div>
-                <div class="library_sort mb16">
+                <div class="library_sort mb16 skeleton_item">
                     <button type="button" class="btn_sort on">전체</button>
                     <button type="button" class="btn_sort">건강</button>
                     <button type="button" class="btn_sort">금융</button>
@@ -152,91 +152,93 @@
                     <button type="button" class="btn_sort">패션</button>
                     <button type="button" class="btn_sort">전자/가전</button>
                 </div>
-                <div class="libCard_list">
-                    <div class="libCard_item col_item" onclick="open_modal('library_modal')">
-                        <div class="libCard_top"> 
-                            <span class="ci_box">
-                                <img src="../assets/images/ico_dummy.png" alt="">
-                            </span>
-                            <div class="txt_box">
-                                <span class="fz_4 fw_6 mr4">카카오톡</span>
-                                <span class="fz_3 fw_5 fc_grey">비즈보드</span> 
-                            </div>  
-                        </div>
-                        <p class="libCard_date fz_1 fc_grey">발견일 2024.05.24  -  2024.05.28</p>
-                        <div class="libCard_thumb">
-                            <img src="../assets/images/lib_thumb.png" alt="">
-                        </div>
-                        <div class="libCard_bot">
-                            <div class="d_flex ai_c">
-                                <span class="tag _key mr8">엔터테인먼트</span> 
-                                <span class="fz_4 ">이월드</span> 
+                <div class="libCard_list_wrap skeleton_item">
+                    <div class="libCard_list col3">
+                        <div class="libCard_item col_item" onclick="open_modal('library_modal')">
+                            <div class="libCard_top"> 
+                                <span class="ci_box">
+                                    <img src="../assets/images/ico_dummy.png" alt="">
+                                </span>
+                                <div class="txt_box">
+                                    <span class="fz_4 fw_6 mr4">카카오톡</span>
+                                    <span class="fz_3 fw_5 fc_grey">비즈보드</span> 
+                                </div>  
                             </div>
-                            <div class="libCard_btns">
-                                <button type="button" class="libCard_btn">
-                                    <i class="ico ico_like"></i> 345
-                                </button>
-                                <button type="button" class="libCard_btn">
-                                    <i class="ico ico_save"></i> 145
-                                </button>
+                            <p class="libCard_date fz_1 fc_grey">발견일 2024.05.24  -  2024.05.28</p>
+                            <div class="libCard_thumb">
+                                <img src="../assets/images/lib_thumb.png" alt="">
                             </div>
-                        </div>                  
-                    </div>
-                    <div class="libCard_item col_item" onclick="open_modal('library_modal')">
-                        <div class="libCard_top"> 
-                            <span class="ci_box">
-                                <img src="../assets/images/ico_dummy.png" alt="">
-                            </span>
-                            <div class="txt_box">
-                                <span class="fz_4 fw_6 mr4">카카오톡</span>
-                                <span class="fz_3 fw_5 fc_grey">비즈보드</span> 
-                            </div>  
+                            <div class="libCard_bot">
+                                <div class="d_flex ai_c">
+                                    <span class="tag _key mr8">엔터테인먼트</span> 
+                                    <span class="fz_4 ">이월드</span> 
+                                </div>
+                                <div class="libCard_btns">
+                                    <button type="button" class="libCard_btn">
+                                        <i class="ico ico_like"></i> 345
+                                    </button>
+                                    <button type="button" class="libCard_btn">
+                                        <i class="ico ico_save"></i> 145
+                                    </button>
+                                </div>
+                            </div>                  
                         </div>
-                        <p class="libCard_date fz_1 fc_grey">발견일 2024.05.24  -  2024.05.28</p>
-                        <div class="libCard_thumb">
-                            <img src="../assets/images/lib_thumb2.png" alt="">
-                        </div>
-                        <div class="libCard_bot">
-                            <div class="d_flex ai_c">
-                                <span class="tag _key mr8">엔터테인먼트</span> 
-                                <span class="fz_4 ">이월드</span> 
+                        <div class="libCard_item col_item" onclick="open_modal('library_modal')">
+                            <div class="libCard_top"> 
+                                <span class="ci_box">
+                                    <img src="../assets/images/ico_dummy.png" alt="">
+                                </span>
+                                <div class="txt_box">
+                                    <span class="fz_4 fw_6 mr4">카카오톡</span>
+                                    <span class="fz_3 fw_5 fc_grey">비즈보드</span> 
+                                </div>  
                             </div>
-                            <div class="libCard_btns">
-                                <button type="button" class="libCard_btn">
-                                    <i class="ico ico_like"></i> 345
-                                </button>
-                                <button type="button" class="libCard_btn">
-                                    <i class="ico ico_save"></i> 145
-                                </button>
+                            <p class="libCard_date fz_1 fc_grey">발견일 2024.05.24  -  2024.05.28</p>
+                            <div class="libCard_thumb">
+                                <img src="../assets/images/lib_thumb2.png" alt="">
+                            </div>
+                            <div class="libCard_bot">
+                                <div class="d_flex ai_c">
+                                    <span class="tag _key mr8">엔터테인먼트</span> 
+                                    <span class="fz_4 ">이월드</span> 
+                                </div>
+                                <div class="libCard_btns">
+                                    <button type="button" class="libCard_btn">
+                                        <i class="ico ico_like"></i> 345
+                                    </button>
+                                    <button type="button" class="libCard_btn">
+                                        <i class="ico ico_save"></i> 145
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="libCard_item col_item" onclick="open_modal('library_modal')">
-                        <div class="libCard_top"> 
-                            <span class="ci_box">
-                                <img src="../assets/images/ico_dummy.png" alt="">
-                            </span>
-                            <div class="txt_box">
-                                <span class="fz_4 fw_6 mr4">카카오톡</span>
-                                <span class="fz_3 fw_5 fc_grey">비즈보드</span> 
-                            </div>  
-                        </div>
-                        <p class="libCard_date fz_1 fc_grey">발견일 2024.05.24  -  2024.05.28</p>
-                        <div class="libCard_thumb">
-                            <img src="../assets/images/lib_thumb3.png" alt="">
-                        </div>
-                        <div class="libCard_bot">
-                            <div class="d_flex ai_c">
-                                <span class="tag _key mr8">엔터테인먼트</span> 
-                                <span class="fz_4 ">이월드</span> 
+                        <div class="libCard_item col_item" onclick="open_modal('library_modal')">
+                            <div class="libCard_top"> 
+                                <span class="ci_box">
+                                    <img src="../assets/images/ico_dummy.png" alt="">
+                                </span>
+                                <div class="txt_box">
+                                    <span class="fz_4 fw_6 mr4">카카오톡</span>
+                                    <span class="fz_3 fw_5 fc_grey">비즈보드</span> 
+                                </div>  
                             </div>
-                            <div class="libCard_btns">
-                                <button type="button" class="libCard_btn">
-                                    <i class="ico ico_like"></i> 345
-                                </button>
-                                <button type="button" class="libCard_btn">
-                                    <i class="ico ico_save"></i> 145
-                                </button>
+                            <p class="libCard_date fz_1 fc_grey">발견일 2024.05.24  -  2024.05.28</p>
+                            <div class="libCard_thumb">
+                                <img src="../assets/images/lib_thumb3.png" alt="">
+                            </div>
+                            <div class="libCard_bot">
+                                <div class="d_flex ai_c">
+                                    <span class="tag _key mr8">엔터테인먼트</span> 
+                                    <span class="fz_4 ">이월드</span> 
+                                </div>
+                                <div class="libCard_btns">
+                                    <button type="button" class="libCard_btn">
+                                        <i class="ico ico_like"></i> 345
+                                    </button>
+                                    <button type="button" class="libCard_btn">
+                                        <i class="ico ico_save"></i> 145
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

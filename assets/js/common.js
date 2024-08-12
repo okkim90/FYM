@@ -151,7 +151,7 @@ document.addEventListener('click', (event)=> {
   const srchArea = document.querySelectorAll('.srch');
   srchArea.forEach((e)=>{
     let srchResult = e.querySelector('.srch_result');
-    if (!event.target.closest('.srch')) {
+    if (!event.target.closest('.srch') && srchResult) {
       srchResult.classList.remove('on')
     }
   });

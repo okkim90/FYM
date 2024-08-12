@@ -48,6 +48,10 @@
             width: 480px;
             padding: 0;
         }
+        &.ty_brand {
+            width: 750px;
+            padding: 18px 24px 24px;
+        }
         &.pt40 {
             padding-top: 40px;
         }
@@ -95,4 +99,93 @@
         font-weight: 700;
     }
     
+}
+
+.brand_sub {
+    display: grid;
+    grid-template-columns: calc(52% - 12px) calc(48% - 12px);
+    grid-template-areas: 
+        "a c"
+        "b c";
+    gap: 16px 24px;
+    &_srch {
+        grid-area: a;
+        .srch {
+            width: 100%;
+            position: relative;
+            z-index: 10;
+        }
+    }
+    &_list {
+        grid-area: b;
+        border: 1px solid $c_line;
+        
+       
+        border-radius: 16px;
+        height: 352px;
+        overflow: hidden;
+        //@include scrollY;
+        .list {
+            padding: 14px 16px;
+            height: 100%;
+            overflow-y: auto;
+        }
+        .f_chk {
+            line-height: 23px;
+        }
+        li + li {
+            margin-top: 8px;
+        }
+    }
+    &_right {
+        grid-area: c;
+        background-color: $c_bg;
+        border-radius: 16px;
+        padding: 14px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        height: 422px;
+    }
+    &_selected {
+        flex: 1;
+        background-image: url(../images/logo_bg.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 0;
+        .seleted_list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 10px;
+            overflow-y: auto;
+            height: 100%;
+        }
+        .seleted_item {
+            padding: 0 12px;
+            line-height: 39px;
+            border-radius: 20px;
+            color: $c_key;
+            font-size: $fz_3;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            background-color: $c_key3;
+            .btn_del {
+                width: 18px;
+                height: 18px;
+                margin-right: 2px;
+                background-image: url(../images/ico_del.svg);
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+    }
+    &_btns {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+    }
 }
