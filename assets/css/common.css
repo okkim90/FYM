@@ -7394,6 +7394,15 @@ input::-webkit-search-results-decoration {
   background-position: center center;
   margin-left: 2px;
 }
+.f_btn.ty_link3::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/btn_arrow_b.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-left: 2px;
+}
 .f_btn.ty_next {
   position: relative;
 }
@@ -7870,7 +7879,12 @@ input::-webkit-search-results-decoration {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  row-gap: 10px;
 }
+.modal .libCard_bot {
+  row-gap: 0;
+}
+
 .libCard_btns {
   display: flex;
   -moz-column-gap: 20px;
@@ -8927,6 +8941,9 @@ input::-webkit-search-results-decoration {
 .tit_set_2 {
   margin-bottom: 16px;
 }
+.tit_set_2.skeleton_item.load {
+  overflow: visible;
+}
 .tit_1 {
   font-size: 24px;
   font-weight: bold;
@@ -9596,6 +9613,9 @@ input::-webkit-search-results-decoration {
 }
 .library_sec2 {
   margin-top: 32px;
+}
+.library_sec3 {
+  margin-top: 68px;
 }
 .library_sort {
   padding: 4px;

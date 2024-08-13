@@ -12,6 +12,9 @@
         }
         &_2 {
             margin-bottom: 16px;
+            &.skeleton_item.load {
+                overflow: visible;
+            }
         }
     }
     &_1 {
