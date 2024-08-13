@@ -15,18 +15,25 @@
         }
     }
     &_item {
-        border: 1px solid $c_line;
+        
         border-radius: 24px;
-        padding: 24px;
-        cursor: pointer;
-        background-color: #fff;
+        
+        
         // &.masonry_item {
         //     width: 25%;
         //     box-sizing: border-box;
         // }
-        @at-root .modal & {
-            cursor: auto;
-            min-width: auto;
+       
+        &_inner {
+            border: 1px solid $c_line;
+            border-radius: 24px;
+            padding: 24px;
+            background-color: #fff;
+            cursor: pointer;
+            @at-root .modal & {
+                cursor: auto;
+                min-width: auto;
+            }
         }
     }
     &_top {

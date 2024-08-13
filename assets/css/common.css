@@ -6310,6 +6310,9 @@ input::-webkit-search-results-decoration {
 .result_box_btn {
   margin-top: 24px;
 }
+.result_box.ty2 {
+  height: 450px;
+}
 
 @media (max-width: 767px) {
   .sorting_area_right {
@@ -6613,6 +6616,15 @@ input::-webkit-search-results-decoration {
   height: 352px;
   overflow: hidden;
 }
+.brand_sub_list .no_result {
+  height: 100%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
 .brand_sub_list .list {
   padding: 14px 16px;
   height: 100%;
@@ -6640,6 +6652,9 @@ input::-webkit-search-results-decoration {
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 0;
+}
+.brand_sub_selected.has_item {
+  background-image: none;
 }
 .brand_sub_selected .seleted_list {
   display: flex;
@@ -7757,13 +7772,16 @@ input::-webkit-search-results-decoration {
   min-width: 440px;
 }
 .libCard_item {
+  border-radius: 24px;
+}
+.libCard_item_inner {
   border: 1px solid #E1E1E1;
   border-radius: 24px;
   padding: 24px;
-  cursor: pointer;
   background-color: #fff;
+  cursor: pointer;
 }
-.modal .libCard_item {
+.modal .libCard_item_inner {
   cursor: auto;
   min-width: auto;
 }

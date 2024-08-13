@@ -125,6 +125,16 @@
         height: 352px;
         overflow: hidden;
         //@include scrollY;
+
+        .no_result {
+            height: 100%;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
         .list {
             padding: 14px 16px;
             height: 100%;
@@ -153,6 +163,9 @@
         background-repeat: no-repeat;
         background-position: center center;
         min-height: 0;
+        &.has_item {
+            background-image: none;
+        }
         .seleted_list {
             display: flex;
             flex-wrap: wrap;

@@ -670,6 +670,193 @@
                 </div>
             </div>
         </div>
+
+        <!--[D] 브랜드 구독 모달-->
+        <div class="modal brand_modal on" onclick=" close_modal(this)">
+            <div class="modal_inner">
+                <div class="modal_cont ty_brand">
+                    <div class="tit_set_1">
+                        <h1 class="tit_1">브랜드 구독</h1>
+                        <p class="desc fz_3 mt3 fw_5 fc_desc">원하는 브랜드에 새로운 광고가 발견되면 이메일로 알려드려요</p>
+                    </div>
+                    <div class="brand_sub">
+                        <div class="brand_sub_srch">
+                            <div class="srch">
+                                <input type="text" class="srch_input" placeholder="구독하고 싶은 브랜드를 검색해보세요">
+                                <button type="submit" class="srch_btn"></button>
+                                <span class="line"></span>                 
+                            </div>
+                        </div>
+                        <div class="brand_sub_list">
+                            <ul class="list">
+                                <li>
+                                    <label class="f_chk">
+                                        <input type="checkbox">
+                                        <div class="f_chk_ico"></div>
+                                        <div class="f_chk_txt">넷플릭스</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="f_chk">
+                                        <input type="checkbox">
+                                        <div class="f_chk_ico"></div>
+                                        <div class="f_chk_txt">뉴트로지나</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="f_chk">
+                                        <input type="checkbox">
+                                        <div class="f_chk_ico"></div>
+                                        <div class="f_chk_txt">다락</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="f_chk">
+                                        <input type="checkbox">
+                                        <div class="f_chk_ico"></div>
+                                        <div class="f_chk_txt">다우니</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="f_chk">
+                                        <input type="checkbox">
+                                        <div class="f_chk_ico"></div>
+                                        <div class="f_chk_txt">닥터자르트</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="f_chk">
+                                        <input type="checkbox">
+                                        <div class="f_chk_ico"></div>
+                                        <div class="f_chk_txt">런드리고</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="f_chk">
+                                        <input type="checkbox">
+                                        <div class="f_chk_ico"></div>
+                                        <div class="f_chk_txt">르꼬끄</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="f_chk">
+                                        <input type="checkbox">
+                                        <div class="f_chk_ico"></div>
+                                        <div class="f_chk_txt">르꼬끄스포르티브</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="f_chk">
+                                        <input type="checkbox">
+                                        <div class="f_chk_ico"></div>
+                                        <div class="f_chk_txt">르르</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="f_chk">
+                                        <input type="checkbox">
+                                        <div class="f_chk_ico"></div>
+                                        <div class="f_chk_txt">KREAM</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="f_chk">
+                                        <input type="checkbox">
+                                        <div class="f_chk_ico"></div>
+                                        <div class="f_chk_txt">번개장터</div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="f_chk">
+                                        <input type="checkbox">
+                                        <div class="f_chk_ico"></div>
+                                        <div class="f_chk_txt">후르츠패밀리</div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="brand_sub_right">
+                            <!--[D] 선택된 브랜드가 있을 경우 'has_item' class 추가됨 (배경에 로고 제거되는 css) -->
+                            <div class="brand_sub_selected has_item">
+                                <div class="seleted_list">
+                                    <span class="seleted_item">
+                                        <button type="button" class="btn_del"></button>
+                                        <span class="title">농심</span>
+                                    </span>
+                                    <span class="seleted_item">
+                                        <button type="button" class="btn_del"></button>
+                                        <span class="title">KREAM</span>
+                                    </span>
+                                    <span class="seleted_item">
+                                        <button type="button" class="btn_del"></button>
+                                        <span class="title">번개장터</span>
+                                    </span>
+                                    <span class="seleted_item">
+                                        <button type="button" class="btn_del"></button>
+                                        <span class="title">넷플릭스</span>
+                                    </span>
+                                    <span class="seleted_item">
+                                        <button type="button" class="btn_del"></button>
+                                        <span class="title">후르츠패밀리</span>
+                                    </span>
+                                    <span class="seleted_item">
+                                        <button type="button" class="btn_del"></button>
+                                        <span class="title">KREAM</span>
+                                    </span>
+                                    <span class="seleted_item">
+                                        <button type="button" class="btn_del"></button>
+                                        <span class="title">번개장터</span>
+                                    </span>
+                                    <span class="seleted_item">
+                                        <button type="button" class="btn_del"></button>
+                                        <span class="title">넷플릭스</span>
+                                    </span>
+                                    <span class="seleted_item">
+                                        <button type="button" class="btn_del"></button>
+                                        <span class="title">후르츠패밀리</span>
+                                    </span>
+                                    <span class="seleted_item">
+                                        <button type="button" class="btn_del"></button>
+                                        <span class="title">KREAM</span>
+                                    </span>
+                                    <span class="seleted_item">
+                                        <button type="button" class="btn_del"></button>
+                                        <span class="title">번개장터</span>
+                                    </span>
+                                    <span class="seleted_item">
+                                        <button type="button" class="btn_del"></button>
+                                        <span class="title">넷플릭스</span>
+                                    </span>
+                                    <span class="seleted_item">
+                                        <button type="button" class="btn_del"></button>
+                                        <span class="title">후르츠패밀리</span>
+                                    </span>
+                                    <span class="seleted_item">
+                                        <button type="button" class="btn_del"></button>
+                                        <span class="title">KREAM</span>
+                                    </span>
+                                    <span class="seleted_item">
+                                        <button type="button" class="btn_del"></button>
+                                        <span class="title">번개장터</span>
+                                    </span>
+                                    <span class="seleted_item">
+                                        <button type="button" class="btn_del"></button>
+                                        <span class="title">넷플릭스</span>
+                                    </span>
+                                </div> 
+                            </div>
+                            <div class="brand_sub_btns">
+                                <div class="brand_sub_btns">
+                                    <!-- <button type="button" class="f_btn ty_big w100 _blue disabled">선택한 브랜드 구독하기</button> -->
+                                    <button type="button" class="f_btn ty_big w100 _blue">선택한 브랜드 구독하기</button>
+                                    <button type="button" class="f_btn ty_big w100 _grey">브랜드 구독 해지하기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!--[D] 스켈레톤 로딩 ui 확인용-->
     <script>

@@ -670,6 +670,46 @@
                 </div>
             </div>
         </div>
+
+        <!--[D] 브랜드 구독 모달-->
+        <div class="modal brand_modal on" onclick=" close_modal(this)">
+            <div class="modal_inner">
+                <div class="modal_cont ty_brand">
+                    <div class="tit_set_1">
+                        <h1 class="tit_1">브랜드 구독</h1>
+                        <p class="desc fz_3 mt3 fw_5 fc_desc">원하는 브랜드에 새로운 광고가 발견되면 이메일로 알려드려요</p>
+                    </div>
+                    <div class="brand_sub">
+                        <div class="brand_sub_srch">
+                            <div class="srch">
+                                <input type="text" class="srch_input" placeholder="구독하고 싶은 브랜드를 검색해보세요">
+                                <button type="submit" class="srch_btn"></button>
+                                <span class="line"></span>                 
+                            </div>
+                        </div>
+                        <div class="brand_sub_list">
+                            <div class="no_result">
+                                <img src="../assets/images/no_result.svg" alt="">
+                                <div class="desc fz_3 fc_grey">
+                                    조건에 맞는 결과가 없어요 <br> 검색어를 수정해주세요
+                                </div>
+                            </div>
+                        </div>
+                        <div class="brand_sub_right">
+                            <!--[D] 선택된 브랜드가 있을 경우 'has_item' class 추가됨 (배경에 로고 제거되는 css) -->
+                            <div class="brand_sub_selected">
+                                
+                            </div>
+                            <div class="brand_sub_btns">
+                                <button type="button" class="f_btn ty_big w100 _blue disabled">선택한 브랜드 구독하기</button>
+                                <!-- <button type="button" class="f_btn ty_big w100 _blue">선택한 브랜드 구독하기</button> -->
+                                <!-- <button type="button" class="f_btn ty_big w100 _grey">브랜드 구독 해지하기</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!--[D] 스켈레톤 로딩 ui 확인용-->
     <script>
