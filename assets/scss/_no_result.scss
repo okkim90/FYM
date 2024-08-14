@@ -1,6 +1,9 @@
 .no_result {
     padding: 64px 0;
     text-align: center;
+    &.ty2 {
+        padding: 47px 0;
+    }
     .desc {
         margin-top: 10px;
     }

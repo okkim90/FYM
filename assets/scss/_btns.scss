@@ -332,6 +332,30 @@
             margin-right: 2px;
         }
     }
+    &.btn_del {
+        &::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-image: url(../images/ico_del2.svg);
+            margin-right: 2px;
+        }
+    }
+    &.btn_down {
+        &::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-image: url(../images/ico_down3.svg);
+            margin-right: 2px;
+        }
+    }
 }
 
 .chk_btn {

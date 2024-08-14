@@ -58,6 +58,10 @@
     &.ty2 {
         height: 450px;
     }
+    &.ty3 {
+        height: auto;
+        padding: 22px 0 16px;
+    }
 }
 
 .sorting_area {
@@ -251,4 +255,16 @@
     max-width: 438px;
     margin: 0 auto;
     padding: 158px 0;
+}
+
+.collection_chk_list {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-left: 24px;
+    margin-left: -24px;
+    .list_item {
+        & + .list_item {
+            margin-top: 16px;
+        }
+    }
 }

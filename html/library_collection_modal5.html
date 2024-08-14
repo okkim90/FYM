@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYM</title>
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+    <script type="text/javascript" src="../assets/js/swiper.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <h1 class="logo">
+                <a href=""><img src="../assets/images/logo.svg" alt=""></a>
+            </h1>
+            <nav class="nav">
+                <a href="" class="nav_btn">데이터베이스</a></li>
+                <a href="" class="nav_btn">소재라이브러리</a></li>
+            </nav>
+            <div class="srch">
+                <div class="select-box ty_small">
+                    <input type="text" class="select-input" value="매체" readonly>
+                    <ul class="options">
+                        <li data-value="1" class="option">매체</li>
+                        <li data-value="2" class="option">상품</li>
+                    </ul>
+                </div>
+                <input type="text" class="srch_input" placeholder="찾고 싶은 매체/상품을 검색해보세요!">
+                <button type="submit" class="srch_btn"></button>
+                <span class="line"></span>
+                <!--[D] 'on' class 로 활성화-->
+                <div class="srch_result">
+                    <ul class="srch_list">
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _beauty">뷰티</span>
+                                    <span class="tag _university">Z세대</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _beauty">뷰티</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                    <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _sns">CPM 배너</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="srch_list_item">
+                            <div class="mediaSet">
+                                <span class="mediaSet_ico "></span>
+                                <div class="mediaSet_txt">
+                                    <div><span class="tit t_hidden_1 ">스노우</span></div> 
+                                    <div><span class="desc t_hidden_1 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, expedita.</span></div>
+                                </div>
+                                <div class="mediaSet_tag">
+                                    <span class="tag _sns">CPM 배너</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="no_result">
+                        <img src="../assets/images/no_result.svg" alt="">
+                        <div class="desc fz_5 fc_grey">
+                            조건에 맞는 결과가 없어요 <br> 검색어를 수정해주세요
+                        </div>
+                    </div>
+                </div>
+                <!-- [D][개발시 삭제] UI 확인용 스크립트 -->
+                <script>
+                    const srch_btn = document.querySelector('.srch_btn');
+                    const srch_result = document.querySelector('.srch_result');
+                    srch_btn.addEventListener('click', (event)=>{
+                        srch_result.classList.add('on');
+                    });
+
+                </script>
+                <!--// [D][개발시 삭제] UI 확인용 스크립트 -->
+            </div>
+            <div class="user ex_close">
+                <button type="button" class="user_ico" onclick="user_toggle()"></button>
+                <div class="user_cont ">
+                    <div class="user_info d_flex fw_w ai_c _gapX8 _gapY4">
+                        <div class="user_name fz_4 fwB">김하나</div>
+                        <div class="user_status tag _subscribe">구독중</div>
+                        <div class="user_mail w100 fz_3 fc_grey">hana@fym.im</div>
+                    </div>
+                    <ul class="user_menu">
+                        <li><a href="" class="user_menu_btn hv">로그인</a></li>
+                        <li><a href="" class="user_menu_btn hv">회원가입</a></li>
+                        <li><a href="" class="user_menu_btn hv">마이페이지</a></li>
+                        <li><a href="" class="user_menu_btn hv">매체 등록/수정 요청</a></li>
+                        <li><a href="" class="user_menu_btn hv">로그아웃</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="container">
+            <div class="tabs ty_big d_flex fw_w _gap16 mt16">
+                <!--[D] 활성화 'on'-->
+                <button type="button" class="btn_tab2">대시보드</button>
+                <button type="button" class="btn_tab2">모든 소재</button>
+                <button type="button" class="btn_tab2">브랜드 구독</button>
+                <button type="button" class="btn_tab2 on">내 컬렉션</button>
+            </div>
+            <div class="library_sec">
+                <div class="tit_set_2 d_flex ai_c skeleton_item">
+                    <h2 class="tit_2">경쟁사</h2>
+                    <span class="fz_3 fw_5 fc_grey ml8">3개 소재</span>
+                    <button type="button" class="f_btn _ol ty_small btn_write ml_auto">컬렉션 수정</button>
+                </div>
+                <div class="libCard_list_wrap skeleton_item">
+                    <div class="libCard_list col3">
+                        <div class="libCard_item col_item" onclick="open_modal('library_modal')">
+                            <div class="libCard_item_inner">
+                                <div class="libCard_top"> 
+                                    <span class="ci_box">
+                                        <img src="../assets/images/ico_dummy.png" alt="">
+                                    </span>
+                                    <div class="txt_box">
+                                        <span class="fz_4 fw_6 mr4">카카오톡</span>
+                                        <span class="fz_3 fw_5 fc_grey">비즈보드</span> 
+                                    </div>  
+                                </div>
+                                <p class="libCard_date fz_1 fc_grey">발견일 2024.05.24  -  2024.05.28</p>
+                                <div class="libCard_thumb">
+                                    <img src="../assets/images/lib_thumb.png" alt="">
+                                </div>
+                                <div class="libCard_bot">
+                                    <div class="d_flex ai_c">
+                                        <span class="tag _key mr8">엔터테인먼트</span> 
+                                        <span class="fz_4 ">이월드</span> 
+                                    </div>
+                                    <div class="libCard_btns">
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_like"></i> 345
+                                        </button>
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_save"></i> 145
+                                        </button>
+                                    </div>
+                                </div>     
+                            </div>             
+                        </div>
+                        <div class="libCard_item col_item" onclick="open_modal('library_modal')">
+                            <div class="libCard_item_inner">
+                                <div class="libCard_top"> 
+                                    <span class="ci_box">
+                                        <img src="../assets/images/ico_dummy.png" alt="">
+                                    </span>
+                                    <div class="txt_box">
+                                        <span class="fz_4 fw_6 mr4">카카오톡</span>
+                                        <span class="fz_3 fw_5 fc_grey">비즈보드</span> 
+                                    </div>  
+                                </div>
+                                <p class="libCard_date fz_1 fc_grey">발견일 2024.05.24  -  2024.05.28</p>
+                                <div class="libCard_thumb">
+                                    <img src="../assets/images/lib_thumb2.png" alt="">
+                                </div>
+                                <div class="libCard_bot">
+                                    <div class="d_flex ai_c">
+                                        <span class="tag _key mr8">엔터테인먼트</span> 
+                                        <span class="fz_4 ">이월드</span> 
+                                    </div>
+                                    <div class="libCard_btns">
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_like"></i> 345
+                                        </button>
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_save"></i> 145
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="libCard_item col_item" onclick="open_modal('library_modal')">
+                            <div class="libCard_item_inner">
+                                <div class="libCard_top"> 
+                                    <span class="ci_box">
+                                        <img src="../assets/images/ico_dummy.png" alt="">
+                                    </span>
+                                    <div class="txt_box">
+                                        <span class="fz_4 fw_6 mr4">카카오톡</span>
+                                        <span class="fz_3 fw_5 fc_grey">비즈보드</span> 
+                                    </div>  
+                                </div>
+                                <p class="libCard_date fz_1 fc_grey">발견일 2024.05.24  -  2024.05.28</p>
+                                <div class="libCard_thumb">
+                                    <img src="../assets/images/lib_thumb3.png" alt="">
+                                </div>
+                                <div class="libCard_bot">
+                                    <div class="d_flex ai_c">
+                                        <span class="tag _key mr8">엔터테인먼트</span> 
+                                        <span class="fz_4 ">이월드</span> 
+                                    </div>
+                                    <div class="libCard_btns">
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_like"></i> 345
+                                        </button>
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_save"></i> 145
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt16">
+                    <a href="" class="f_btn _blue_noBg ty_small ty_link3 skeleton_item">모두 보기</a>
+                </div>
+            </div>
+            <div class="library_sec3">
+                <div class="tit_set_2 d_flex ai_c skeleton_item">
+                    <h2 class="tit_2">분위기 참고</h2>
+                    <span class="fz_3 fw_5 fc_grey ml8">3개 소재</span>
+                    <button type="button" class="f_btn _ol ty_small btn_write ml_auto">컬렉션 수정</button>
+                </div>
+                <div class="libCard_list_wrap skeleton_item">
+                    <div class="libCard_list col3">
+                        <div class="libCard_item col_item" onclick="open_modal('library_modal')">
+                            <div class="libCard_item_inner">
+                                <div class="libCard_top"> 
+                                    <span class="ci_box">
+                                        <img src="../assets/images/ico_dummy.png" alt="">
+                                    </span>
+                                    <div class="txt_box">
+                                        <span class="fz_4 fw_6 mr4">카카오톡</span>
+                                        <span class="fz_3 fw_5 fc_grey">비즈보드</span> 
+                                    </div>  
+                                </div>
+                                <p class="libCard_date fz_1 fc_grey">발견일 2024.05.24  -  2024.05.28</p>
+                                <div class="libCard_thumb">
+                                    <img src="../assets/images/lib_thumb.png" alt="">
+                                </div>
+                                <div class="libCard_bot">
+                                    <div class="d_flex ai_c">
+                                        <span class="tag _key mr8">엔터테인먼트</span> 
+                                        <span class="fz_4 ">이월드</span> 
+                                    </div>
+                                    <div class="libCard_btns">
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_like"></i> 345
+                                        </button>
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_save"></i> 145
+                                        </button>
+                                    </div>
+                                </div>     
+                            </div>             
+                        </div>
+                        <div class="libCard_item col_item" onclick="open_modal('library_modal')">
+                            <div class="libCard_item_inner">
+                                <div class="libCard_top"> 
+                                    <span class="ci_box">
+                                        <img src="../assets/images/ico_dummy.png" alt="">
+                                    </span>
+                                    <div class="txt_box">
+                                        <span class="fz_4 fw_6 mr4">카카오톡</span>
+                                        <span class="fz_3 fw_5 fc_grey">비즈보드</span> 
+                                    </div>  
+                                </div>
+                                <p class="libCard_date fz_1 fc_grey">발견일 2024.05.24  -  2024.05.28</p>
+                                <div class="libCard_thumb">
+                                    <img src="../assets/images/lib_thumb2.png" alt="">
+                                </div>
+                                <div class="libCard_bot">
+                                    <div class="d_flex ai_c">
+                                        <span class="tag _key mr8">엔터테인먼트</span> 
+                                        <span class="fz_4 ">이월드</span> 
+                                    </div>
+                                    <div class="libCard_btns">
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_like"></i> 345
+                                        </button>
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_save"></i> 145
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="libCard_item col_item" onclick="open_modal('library_modal')">
+                            <div class="libCard_item_inner">
+                                <div class="libCard_top"> 
+                                    <span class="ci_box">
+                                        <img src="../assets/images/ico_dummy.png" alt="">
+                                    </span>
+                                    <div class="txt_box">
+                                        <span class="fz_4 fw_6 mr4">카카오톡</span>
+                                        <span class="fz_3 fw_5 fc_grey">비즈보드</span> 
+                                    </div>  
+                                </div>
+                                <p class="libCard_date fz_1 fc_grey">발견일 2024.05.24  -  2024.05.28</p>
+                                <div class="libCard_thumb">
+                                    <img src="../assets/images/lib_thumb3.png" alt="">
+                                </div>
+                                <div class="libCard_bot">
+                                    <div class="d_flex ai_c">
+                                        <span class="tag _key mr8">엔터테인먼트</span> 
+                                        <span class="fz_4 ">이월드</span> 
+                                    </div>
+                                    <div class="libCard_btns">
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_like"></i> 345
+                                        </button>
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_save"></i> 145
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt16">
+                    <a href="" class="f_btn _blue_noBg ty_small ty_link3 skeleton_item">모두 보기</a>
+                </div>
+            </div>
+            <div class="library_sec3">
+                <div class="tit_set_2 d_flex ai_c skeleton_item">
+                    <h2 class="tit_2">패션 업종</h2>
+                    <span class="fz_3 fw_5 fc_grey ml8">3개 소재</span>
+                    <button type="button" class="f_btn _ol ty_small btn_write ml_auto">컬렉션 수정</button>
+                </div>
+                <div class="libCard_list_wrap skeleton_item">
+                    <div class="libCard_list col3">
+                        <div class="libCard_item col_item" onclick="open_modal('library_modal')">
+                            <div class="libCard_item_inner">
+                                <div class="libCard_top"> 
+                                    <span class="ci_box">
+                                        <img src="../assets/images/ico_dummy.png" alt="">
+                                    </span>
+                                    <div class="txt_box">
+                                        <span class="fz_4 fw_6 mr4">카카오톡</span>
+                                        <span class="fz_3 fw_5 fc_grey">비즈보드</span> 
+                                    </div>  
+                                </div>
+                                <p class="libCard_date fz_1 fc_grey">발견일 2024.05.24  -  2024.05.28</p>
+                                <div class="libCard_thumb">
+                                    <img src="../assets/images/lib_thumb.png" alt="">
+                                </div>
+                                <div class="libCard_bot">
+                                    <div class="d_flex ai_c">
+                                        <span class="tag _key mr8">엔터테인먼트</span> 
+                                        <span class="fz_4 ">이월드</span> 
+                                    </div>
+                                    <div class="libCard_btns">
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_like"></i> 345
+                                        </button>
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_save"></i> 145
+                                        </button>
+                                    </div>
+                                </div>     
+                            </div>             
+                        </div>
+                        <div class="libCard_item col_item" onclick="open_modal('library_modal')">
+                            <div class="libCard_item_inner">
+                                <div class="libCard_top"> 
+                                    <span class="ci_box">
+                                        <img src="../assets/images/ico_dummy.png" alt="">
+                                    </span>
+                                    <div class="txt_box">
+                                        <span class="fz_4 fw_6 mr4">카카오톡</span>
+                                        <span class="fz_3 fw_5 fc_grey">비즈보드</span> 
+                                    </div>  
+                                </div>
+                                <p class="libCard_date fz_1 fc_grey">발견일 2024.05.24  -  2024.05.28</p>
+                                <div class="libCard_thumb">
+                                    <img src="../assets/images/lib_thumb2.png" alt="">
+                                </div>
+                                <div class="libCard_bot">
+                                    <div class="d_flex ai_c">
+                                        <span class="tag _key mr8">엔터테인먼트</span> 
+                                        <span class="fz_4 ">이월드</span> 
+                                    </div>
+                                    <div class="libCard_btns">
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_like"></i> 345
+                                        </button>
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_save"></i> 145
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="libCard_item col_item" onclick="open_modal('library_modal')">
+                            <div class="libCard_item_inner">
+                                <div class="libCard_top"> 
+                                    <span class="ci_box">
+                                        <img src="../assets/images/ico_dummy.png" alt="">
+                                    </span>
+                                    <div class="txt_box">
+                                        <span class="fz_4 fw_6 mr4">카카오톡</span>
+                                        <span class="fz_3 fw_5 fc_grey">비즈보드</span> 
+                                    </div>  
+                                </div>
+                                <p class="libCard_date fz_1 fc_grey">발견일 2024.05.24  -  2024.05.28</p>
+                                <div class="libCard_thumb">
+                                    <img src="../assets/images/lib_thumb3.png" alt="">
+                                </div>
+                                <div class="libCard_bot">
+                                    <div class="d_flex ai_c">
+                                        <span class="tag _key mr8">엔터테인먼트</span> 
+                                        <span class="fz_4 ">이월드</span> 
+                                    </div>
+                                    <div class="libCard_btns">
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_like"></i> 345
+                                        </button>
+                                        <button type="button" class="libCard_btn">
+                                            <i class="ico ico_save"></i> 145
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt16">
+                    <a href="" class="f_btn _blue_noBg ty_small ty_link3 skeleton_item">모두 보기</a>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer_cont">
+                <img src="../assets/images/footer_tit.svg" class="footer_tit" alt="">
+                <div class="footer_info">
+                    <div class="footer_info_set">
+                        <span class="footer_info_item">디지털네이티브스 주식회사</span>
+                    </div>
+                    <div class="footer_info_set">
+                        <span class="footer_info_item">대표 김동규</span>
+                        <span class="footer_info_item">서울시 강남구 선릉로 551 5층</span>
+                    </div>
+                    <div class="footer_info_set">
+                        <span class="footer_info_item">사업자등록번호 628-81-02391</span>
+                        <span class="footer_info_item">통신판매업 신고번호 2021-서울강남-06131</span>
+                    </div>
+                </div>
+                <div class="footer_info">
+                    <div class="footer_info_set">
+                        <span class="footer_info_item"><a href="" class="fwB">서비스 이용 약관</a></span>
+                        <span class="footer_info_item"><a href="" class="fwB">개인정보처리방침</a></span>
+                    </div>
+                </div>
+            </div>
+            <img src="../assets/images/logo_footer.svg" alt="" class="footer_logo">
+        </footer>
+
+        <!--[D] 모바일 이용불가 안내 팝업-->
+        <div class="modal mobile_alert" onclick=" close_modal(this)">
+            <div class="modal_inner">
+                <div class="modal_cont ty_small">
+                    <div class="taC">
+                        <div class="modal_ico mb20">
+                            <img src="../assets/images/ico_alert.svg" alt="">
+                        </div>
+                        <div class="modal_txt">
+                            <p class="modal_tit fc_font fz_6">fym은 PC에서 이용할 수 있어요</p>
+                            <p class="modal_desc fc_darkGrey fz_5">모바일에서는 상세 매체 정보, 소재 라이브러리 등 fym의 모든 기능을 상세히 이용할 수 없어요</p>
+                        </div>
+                        <div class="modal_bot mt40">
+                            <button class="f_btn ty_big _blue w100" onclick="close_modal(this)">확인</button>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--[D] 소재 라이브러리 모달-->
+        <div class="modal library_modal" onclick=" close_modal(this)">
+            <div class="modal_inner">
+                <div class="modal_cont ty_library">
+                    <div class="libCard_item col_item">
+                        <div class="libCard_item_inner">
+                            <p class="libCard_date fz_1 fc_grey">발견일 2024.05.24  -  2024.05.28</p>
+                            <div class="libCard_top"> 
+                                <span class="ci_box">
+                                    <img src="../assets/images/ico_dummy.png" alt="">
+                                </span>
+                                <div class="txt_box">
+                                    <span class="fz_4 fw_6 mr4">카카오톡</span>
+                                    <span class="fz_3 fw_5 fc_grey">비즈보드</span> 
+                                </div>  
+                            </div>
+                            <div class="libCard_thumb">
+                                <img src="../assets/images/lib_thumb3.png" alt="">
+                            </div>
+                            <div class="libCard_bot">
+                                <div class="d_flex ai_c">
+                                    <span class="tag _key mr8">엔터테인먼트</span> 
+                                    <span class="fz_4 ">이월드</span> 
+                                </div>
+                                <div>
+                                    <button type="button" class="f_btn ty_small ty_add _blue">브랜드 구독</button>
+                                    <button type="button" class="f_btn ty_small _blue checked">구독중</button>
+                                </div>
+                                <div class="libCard_desc">
+                                    신규회원을 위해 준비한 특별 혜택🎁 <br>
+                                    #뉴발란스 #나이키 #카시오 #디올 <br>
+                                    KREAM 인기 아이템 단 1,000원🤑 <br><br>
+                                    <a href="">지금 가입하고 선착순 쿠폰 받기></a> 
+                                </div>
+                                <div class="libCard_btns">
+                                    <!--[D] 'on' class 로 활성화-->
+                                    <button type="button" class="libCard_btn on">
+                                        <i class="ico ico_like"></i> 345
+                                    </button>
+                                    <button type="button" class="libCard_btn on">
+                                        <i class="ico ico_save"></i> 145
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal collection_modal on" onclick=" close_modal(this)">
+            <div class="modal_inner">
+                <div class="modal_cont ty_collection">
+                    <div class="result_box taC ty3">
+                        <div class="modal_ico mb10">
+                            <img src="../assets/images/ico_alert_r.svg" alt="">
+                        </div>
+                        <div class="modal_txt">
+                            <p class="modal_tit fc_font fz_6">컬렉션을 삭제하시겠어요?</p>
+                            <p class="modal_desc fc_darkGrey fz_5">삭제한 컬렉션은 다시 되돌릴 수 없어요</p>
+                        </div>
+                    </div>
+                    <div class="modal_bot d_flex _gap15 mt24">
+                        <button type="button" class="f_btn ty_big _ol flex1 ">취소하기</button>
+                        <button type="button" class="f_btn ty_big _blue flex1">삭제하기</button>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--[D] 스켈레톤 로딩 ui 확인용-->
+    <script>
+        const skeletonItem = document.querySelectorAll('.skeleton_item');
+        const hideskeleton = () => {
+            skeletonItem.forEach(e => {
+                e.classList.add('load')
+            });
+        };
+        window.onload = setTimeout(hideskeleton, 1600);
+    </script>
+</body>
+</html>
+
